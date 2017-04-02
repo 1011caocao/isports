@@ -1,0 +1,102 @@
+<extend name="Layout:index_base"/>
+<block name="css">
+	<link rel="stylesheet" href="/public/css/detail/schoolActivityApply.css" />
+</block>
+<block name="js">
+	<script src="/public/js/require/require.js" defer async="true" data-main='/public/js/commercialActivity/commercialActivity'></script>
+</block>
+<block name="main">
+		<div class="header"></div>
+		<div class="content">
+			<div class="w">
+				<div class="left l">
+					<h2>{$row.name}</h2>
+					<div class="activityAbout">
+						<span class='l actDate'>发布时间:<span class="actDateNew">{$row.add_time|date='Y-m-d',###}</span></span>
+						<span class='l actTime'>浏览次数：<span class='actNumber'>{$row.read_total}次</span></span>
+						
+						<span class='r actCompany'><a href='../commercialActivity/companyMessage.html'>{$row.company_name}</a></span>
+					</div>
+					<div class="activityDetail">
+						<div class="type">
+							<span class="actType l">活动类型：{$row.activity_name}</span>
+							<span class="deadLine l">
+								申请期限：
+								<span class="typeLeft">{$row.apply_start_time|date="Y.m.d",###}-{$row.apply_end_time|date="Y.m.d",###}</span>
+							</span>
+						</div>
+						<div class="type">
+							<span class="actType l">赞助金额：{$row.money}元</span>
+							<span class="deadLine l">
+								预付比例：
+								<span class="typeLeft">{$row.prepay_ratio}%</span>
+							</span>
+						</div>
+						<div class="type">
+							<span class="actType l">活动时间：{$row.activity_start_time|date="Y.m.d",###}</span>
+							<span class="deadLine l">
+								所在院校：
+								<span class="typeLeft">{$row.school_name}</span>
+							</span>
+						</div>
+					</div>
+					<div class="contentDetail">
+						<div class="actDetail">
+							<p class='first'>人气指数：{$row.popular}人</p>
+							<p>学校规模：{$row.school_size}</p>
+							<p>社团规模：{$row.organize_size}</p>
+							<p>申请名额：{$row.apply_total}个</p>
+							<p>广告植入方式：{$row.advertise_name}</p>
+							<p>验收方式：{$row.check_type}</p>
+							<p>已申请人数：{$row.apply_ing}</p>
+							<p>已成功申请人数：{$row.apply_success}</p>
+							<p>留言申请：</p>
+						</div>
+						<textarea class='extraMessage' placeholder="可输入20-100字。请仔细阅读活动详情，并且查看发布人信息及合作历史后留言申请。对方同意申请后将收到回执以及联系方式，未通过也将收到回执。
+"></textarea>
+						<p class='attention'>注：所有活动只能申请一次，请仔细检查填写内容！本次申请需要消耗1颗贝壳币</p>
+						<div class="ApplyBox">
+							<button id='Apply' value="{$row.id}">确认申请</button>
+							<div class="pearlBox">
+								<span class="pearlBoxHead">贝壳币余额:</span>
+								<span class="pearlBoxNumber">{$row.icowry_coin}</span>
+								 <a href="#" class="pearlBoxHelp" ></a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="right r">
+                    <div class="publisherMessageBox">
+                        <div class="publisherMessageLgo">
+                            <div class="pMLogoImg">
+                                <img src="{$row.portrait}" alt="">
+                            </div>
+                            <p class="pMCompanyName">{$row.company_name}</p>
+                        </div>
+                        <a href="#" class="checkOutPublisherMessage">
+                            <span class="ckPMHead">查看发布人信息</span>
+                            <img class="ckPMImg" src="/public/img/commercialActivity/Next%20page2.png" alt="">
+                        </a>
+                    </div>
+				</div>
+			</div>
+		</div>
+<script type="text/javascript">
+	scope.url = '/group/groupApplyAjax';
+</script>
+		</block>
+		<div class="popBox">
+				
+		</div>
+		<div id="popUp">
+			<h2>抱歉</h2>
+			<p class='firstOne'>你当前没有认证传媒公司或校园社团身份，无法进行申请</p>
+			<p class='secondOne'>请选择一种身份后前去认证！</p>
+			<div class="buttonBxo">
+				<input class='l mediaCompany' type="button" value='传媒公司' />
+				<input class='r schoolClub' type="button" value='校园社团'/>
+			</div>
+			<div class="close"></div>
+		</div>
+	</body>
+</html>

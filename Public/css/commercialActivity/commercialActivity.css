@@ -1,0 +1,250 @@
+.content{
+	width:100%;
+	height:966px;
+}
+.content .w{
+	width:1024px;
+	height:966px;
+	margin:0 auto;
+}
+.content .w .left{
+	width:634px;
+	height:100%;
+	
+}
+.content .w .left h2{
+	width:100%;
+	height:41px;
+	font-size:40px;
+	line-height:41px;
+	margin-top:34px;
+	font-weight:normal;
+}
+.content .w .left .activityAbout{
+	width:100%;
+	height:14px;
+	margin-top:10px;
+	font-size:14px;
+	line-height:14px;
+}
+.content .w .left .activityAbout{
+	display:block;
+}
+.content .w .left .activityAbout .actDate{
+	width:176px;
+	height:14px;
+	text-indent: 4px;
+}
+.content .w .left .activityAbout .actDate .actDateNew{
+	margin-left:10px;
+}
+.content .w .left .activityAbout .actTime{
+	width:140px;
+	height:14px;
+	text-align:center;
+	padding-left:4px;
+}
+.content .w .left .activityAbout .actCompany{
+	width:300px;
+	height:14px;
+	text-align: left;
+	color:#ff9a02;
+}
+.content .w .left .activityAbout .actCompany a{
+	text-decoration: none;
+	color:#2f2f2f;
+}
+.content .w .left .activityDetail{
+	width:597px;
+	height:110px;
+	background:#fff4e6;
+	margin-top:24px;
+	padding:9px 20px;
+}
+.content .w .left .activityDetail .type{
+	width:100%;
+	height:35px;
+	line-height:35px;
+	font-size:14px;
+	letter-spacing:1px;
+}
+.content .w .left .activityDetail .type .actType{
+	width:170px;
+	padding-right:4px;
+}
+.content .w .left .activityDetail .type .deadLine{
+	width:350px;
+	height:35px;
+	padding-left:28px;
+	padding-right:6px;
+}
+.content .w .left .activityDetail .type .deadLine .typeLeft{
+	margin-left:6px;
+}
+.content .w .left .contentDetail{
+	width:465px;
+	height:702px;
+	padding-right:171px;
+	font-size:14px;
+	
+}
+.content .w .left .contentDetail .actDetail{
+	width:446px;
+	height:345px;
+	overflow: hidden;
+	padding-left:20px;
+}
+.content .w .left .contentDetail .actDetail p{
+	width: 100%;
+	height:35px;
+	line-height:35px;
+}
+.content .w .left .contentDetail .actDetail p.first{
+	margin-top:8px;
+}
+.content .w .left .contentDetail .extraMessage{
+	width:426px;
+	height:65px;
+	font-size:12px;
+	border:1px solid #bfbfbf;
+	border-radius:6px;
+	padding:14px 20px 14px 20px;
+	resize:none;
+	outline:none;
+	color:#8e8e8e;
+	font-family:'Microsoft Yahei','Arial','Helvetica','sans-self';
+	line-height:20px;
+}
+.attention{
+	width:445px;
+	height:32px;
+	line-height:32px;
+	padding-left:21px;
+	color:#fe9600;
+}
+.ApplyBox{
+	width:100%;
+	height:66px;
+	margin-top:17px;
+}
+.ApplyBox .pearlBox{
+	float:left;
+	height:16px;
+	margin-top:48px;
+}
+.ApplyBox .pearlBox .pearlBoxHead{
+	display:block;
+	float:left;
+	width:80px;
+	height:16px;
+	line-height:16px;
+	text-align:center;
+	font-size:14px;
+}
+.ApplyBox .pearlBox  .pearlBoxNumber{
+	padding:0 2px;
+	height:16px;
+	line-height:16px;
+	float:left;
+	display:block;
+	color:#ff9700;
+}
+.ApplyBox .pearlBox .pearlBoxHelp{
+	display:block;
+	float:left;
+	width:16px;
+	height:16px;
+	margin-left:6px;
+	background:url('../../img/commercialActivity/Event Details-help.png') no-repeat center;
+}
+#Apply{
+	float:left;
+	width:280px;
+	height:66px;
+	background:#fe9600;
+	border-radius:6px;
+	font-size:30px;
+	margin-left:16px;
+
+	outline: none;
+	color:#fff;
+	cursor: pointer;
+	font-family:"微软雅黑";
+}
+#Apply:hover{
+	background:#f58a00;
+}
+.content .w .right{
+	width:390px;
+	height:100%;
+}
+.content .w .right .publisherMessageBox{
+	width:246px;
+	margin-top:34px;
+	height:260px;
+	float:right;
+	border-radius:6px;
+	box-shadow:-10px 0 10px rgba(0,0,0,0.1), /*左边阴影*/
+	10px 0 10px rgba(0,0,0,0.1), /*右边阴影*/
+	0 -10px 10px rgba(0,0,0,0.1), /*顶部阴影*/
+	0 10px 10px rgba(0,0,0,0.1); /*底边阴影*/
+
+}
+.content .w .right .publisherMessageBox .publisherMessageLgo{
+	width:100%;
+	height:199px;
+	background:url('../../img/commercialActivity/Publisher-Information_03.png') no-repeat center;
+}
+.content .w .right .publisherMessageBox .publisherMessageLgo .pMLogoImg{
+	width:89px;
+	height:89px;
+	padding-top:50px;
+	padding-left:78px;
+}
+.content .w .right .publisherMessageBox .publisherMessageLgo .pMLogoImg img{
+	width:89px;
+	height:89px;
+	display:block;
+	border-radius:89px;
+}
+.content .w .right .publisherMessageBox .publisherMessageLgo .pMCompanyName{
+	height:54px;
+	line-height:54px;
+	text-align: center;
+	font-size:14px;
+	color:#fff;
+	letter-spacing: 2px;
+}
+.content .w .right .publisherMessageBox .checkOutPublisherMessage{
+	width:100%;
+	height:60px;
+	display:block;
+	text-decoration: none;
+	color:#2e2e2e;
+}
+.content .w .right .publisherMessageBox .checkOutPublisherMessage .ckPMHead{
+	display:block;
+	width:145px;
+	float:left;
+	height:60px;
+	line-height:60px;
+	text-align:center;
+	font-size:18px;
+	margin-left:34px;
+}
+.content .w .right .publisherMessageBox .checkOutPublisherMessage .ckPMImg{
+	float:left;
+	display:block;
+	width:34px;
+	height:34px;
+	margin-top:13px;
+
+}
+
+
+
+
+
+
+
+

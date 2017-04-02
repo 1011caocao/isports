@@ -1,0 +1,208 @@
+<extend name="Layout:index_base"/>
+<block name="css">
+	<link rel="stylesheet" href="/public/css/index/index.css" />
+</block>
+<block name="js">
+	<script src="/public/js/require/require.js" defer async="true" data-main='/public/js/index/index.js'></script>
+</block>
+<block name="main">
+		<div class="header"></div>
+		<nav>
+		<div class="banner" id="b04">
+		    <ul>
+		        <li><img src="/public/img/common/newBanner.png" alt=""  ></li>
+		        <li><img src="/public/img/common/newBanner.png" alt=""  ></li>
+		        <li><img src="/public/img/common/newBanner.png" alt="" ></li>
+		       
+		    </ul>
+		    <!--<a href="javascript:void(0);" class="unslider-arrow04 prev"><img class="arrow" id="al" src="arrowl.png" alt="prev" width="20" height="35"></a>
+		    <a href="javascript:void(0);" class="unslider-arrow04 next"><img class="arrow" id="ar" src="arrowr.png" alt="next" width="20" height="37"></a>-->
+		</div>
+		</nav>
+		<div id="content">
+			<div class="w">
+				<div class="newMessageBox">
+					<div class="enterMessage">
+						<h4>入驻信息</h4>
+						<div class="eMPBox">
+							<p class="eMP eMpfirst">
+								企业入驻
+								<span class="companyEnter eMPC">{$companyCount}</span>
+								家
+							</p>
+							<p class="eMP">
+								社团入驻
+								<span class="clubsEnter eMPC">{$groupCount}</span>
+								个
+							</p>
+							<p class="eMP">
+								传媒资源入驻
+								<span class="mediaSourcesEnter eMPC">{$resourceCount}</span>
+								个
+							</p>
+							<p class="eMP">
+								演艺人入驻
+								<span class="entertainerEnter eMPC">{$actorCount}</span>
+								人
+							</p>
+						</div>
+					</div>
+					<div class="newCondition">
+						<h4>最新动态</h4>
+						<div class="newConditionBox">
+							<p class="nCBP nCBPFirst">【系统公告】爱贝壳使用助手</p>
+							<p class="nCBP">【惩罚通知】关于成都广告传媒有限公司惩罚公告</p>
+							<div class="marguneeBox">
+								<ul>
+									<li>
+										<p class="nCBP">【合作信息】百事可乐与成都大学话剧社达成合作</p>
+									</li>
+									<li>
+										<p class="nCBP">【合作信息】百事可乐与成都大学话剧社达成合作</p>
+									</li>
+									<li>
+										<p class="nCBP">【合作信息】百事可乐与四川大学锦江学院话剧社达成合作</p>
+									</li>
+									<li>
+										<p class="nCBP">【合作信息】百事可乐与四川大学锦江学院话剧社达成合作</p>
+									</li>
+									<li>
+										<p class="nCBP">【合作信息】百事可乐与四川大学锦江学院话剧社达成合作</p>
+								</li>
+
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="mainContent">
+
+						<!--------------------商业活动---------------------->
+						<div class="mainExampleBox commercialActivty">
+							<div class="mainExampleHeadBox">
+								<div class="mainHead">商业活动</div>
+								<div class="mainMore businessMore">更多</div>
+							</div>
+							<div class="mainContentHead">
+								<span class="title">标题</span>
+								<span class="type">类型</span>
+								<span class="school">学校</span>
+								<span class="date">活动时间</span>
+								<span class="money">金额</span>
+							</div>
+							<div class="mainContentBox">
+								<foreach name="businessList" item="business">
+									<a href="{:U('Business/businessDetails',array('id'=>$business['id']))}" style="color:black;">
+										<div class="exampleContent">
+											<span class="exampleName">{$business.name}</span>
+											<span class="exampleType">{$business.activity_name}</span>
+											<span class="exampleSchool">{$business.school_name}</span>
+											<span class="exampleDate">{$business.activity_start_time|date="Y.m.d",###}-{$business.activity_end_time|date="Y.m.d",###}</span>
+											<span class="exampleMoney">￥{$business.money}</span>
+										</div>
+									</a>
+								</foreach>
+						</div>
+						</div>
+						<!-------------------校园活动----------------------->
+						<div class="mainExampleBox schoolActivity">
+								<div class="mainExampleHeadBox">
+									<div class="mainHead">校园活动</div>
+									<div class="mainMore group_more">更多</div>
+								</div>
+								<div class="mainContentHead">
+									<span class="title">标题</span>
+									<span class="type">类型</span>
+									<span class="school">学校</span>
+									<span class="date">活动时间</span>
+									<span class="money">金额</span>
+								</div>
+								<div class="mainContentBox">
+									<foreach name="groupList" item="group">
+										<a href="{:U('Group/groupDetails',array('id'=>$group['id']))}" style="color:black;">
+											<div class="exampleContent">
+												<span class="exampleName">{$group.name}</span>
+												<span class="exampleType">{$group.activity_name}</span>
+												<span class="exampleSchool">{$group.school_name}</span>
+												<span class="exampleDate">{$group.activity_start_time|date="Y.m.d",###}-{$group.activity_end_time|date="Y.m.d",###}</span>
+												<span class="exampleMoney">￥{$group.money}</span>
+											</div>
+										</a>
+									</foreach>
+								</div>
+							</div>
+						<!-------------------校园活动end----------------------->
+						<div class="mainExampleBox mediaSources">
+						<div class="mainExampleHeadBox">
+							<div class="mainHead">传媒资源</div>
+							<div class="mainMore resourceMore">更多</div>
+						</div>
+						<div class="mainContentHead">
+							<span class="title">标题</span>
+							<span class="type">类型</span>
+							<span class="school">学校</span>
+							<span class="date">活动时间</span>
+							<span class="money">金额</span>
+						</div>
+						<div class="mainContentBox">
+							<foreach name="resourceList" item="resource">
+								<a href="{:U('Resource/resourceDetails',array('id'=>$resource['id']))}" style="color:black;">
+									<div class="exampleContent">
+										<span class="exampleName">{$resource.name}</span>
+										<span class="exampleType">{$resource.resource_name}</span>
+										<span class="exampleSchool">{$resource.school_name}</span>
+										<span class="exampleDate">{$resource.activity_start_time|date="Y.m.d",###}-{$resource.activity_end_time|date="Y.m.d",###}</span>
+										<span class="exampleMoney">￥{$resource.money}</span>
+									</div>
+								</a>
+							</foreach>
+						</div>
+					</div>
+						<!--------------------演艺人才---------------------------->
+						<div class="mainExampleBox showTimeTalents">
+								<div class="mainExampleHeadBox">
+									<div class="mainHead">演艺人才</div>
+									<div class="mainMore art_more">更多</div>
+								</div>
+								<div class="showTimeCBox">
+									<div class="showTimeWheel" id="showTimeLunbo">
+										<ul>
+											<foreach name="artLists" item="artList">
+											<li>
+												<foreach name="artList" item="art">
+												<dl class="stExample">
+													<a href="{:U('Art/artDetails',array('id'=>$art['uid']))}" style="color:black;text-decoration: none;">
+													<dt><img src="{$art.portrait}"></dt>
+													<dd>
+														<div class="personalHead">
+															<div class="personalNumber">{$art.price}/场</div>
+															<div class="personalType">{$art.name}</div>
+														</div>
+														<p class="personalName">{$art.real_name}</p>
+														<p class="personalHeight">{$art.height}cm</p>
+														<div class="personalPosition">
+															<img src="/public/img/index/position-down.png" alt="">
+															<span class="position">{$art.city_name}</span>
+														</div>
+													</dd>
+													</a>
+												</dl>
+												</foreach>
+											</li>
+											</foreach>
+										</ul>
+										<a href="javascript:void(0);" class="unslider-arrow04 prev">
+											<img class="arrow" id="al" src="/public/img/index/arrowl.png" alt="prev" width="20" height="35">
+										</a>
+										<a href="javascript:void(0);" class="unslider-arrow04 next">
+											<img class="arrow" id="ar" src="/public/img/index/arrowr.png" alt="next" width="20" height="37">
+										</a>
+									</div>
+								</div>
+							</div>
+
+				</div>
+			</div>
+
+		</div>
+</block>

@@ -1,0 +1,106 @@
+<extend name="Layout:index_base"/>
+<block name="css">
+    <link rel="stylesheet" href="/public/css/authentication/authentication.css">
+</block>
+<block name="js">
+    <script src="/public/js/require/require.js" defer async="true"  data-main='/public/js/authentication/authentication.js'></script>
+</block>
+<block name="main">
+    <div class="header"></div>
+    <div class="content">
+        <div class="w">
+            <include file="user:nav" />
+            <div class="right">
+                <div class="identityTab tab">
+                    <div class="headTab">
+                        <input choose="t" type="button" class="owner tabB" value="会员认证">
+                    </div>
+                    <div class="secondTabBox">
+                        <!-----------------------------------甲方企业认证板块---------------------  ----------------------------->
+
+                        <div class="ownerTab secondTab">
+                            <form id="form" action="/home/user/certification" method="post" enctype="multipart/form-data">
+                                <input type="hidden" name="form" value="1">
+                                <div class="ownerBox">
+                                    <div class="realName">
+                                        <span class="headContent">真实姓名:</span>
+                                        <input  name="real_name" type="text" class="input"/>
+                                    </div>
+                                    <div class="chooseSex">
+                                        <span class="headContent">性&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;别:</span>
+                                        <div class="sex">
+                                            <input checked value="1" name="gender" type="radio" class="boy">男
+                                            <input value="2" name="gender" type="radio" class="girl">女
+                                        </div>
+                                    </div>
+                                    <div class="QQBox">
+                                        <span class="headContent">Q&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Q:</span>
+                                        <input name="qq" type="text" class="input" placeholder="请输入有效QQ号码"/>
+                                    </div>
+                                    <div class="phoneBox">
+                                        <span class="headContent">电&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;话:</span>
+                                        <input name="contact_number" type="text" class="input" placeholder="请输入有效电话号码"/>
+                                    </div>
+                                    <div class="emailBox">
+                                        <span class="headContent">邮&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;箱:</span>
+                                        <input name="email" type="text" class="input" placeholder="请输入常用的邮箱地址"/>
+                                    </div>
+                                    <div class="departmentName">
+                                        <span class="headContent">卡&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;号:</span>
+                                        <input name="company_dept" type="text" class="input" placeholder="请输入请输入卡背后数字"/>
+                                    </div>
+                                    <div class="detailAddress">
+                                        <span class="headContent">详细地址:</span>
+                                        <input name="address" type="text" class="input"/>
+                                    </div>
+                                    <div class="clickUpLoadImgExample">
+                                        <div class="uploadingImgBox">
+                                            <div class="licenseHead">上传头像:</div>
+                                            <div class="upImg uploadPortrait">
+                                                <img src='/public/img/authenticaton/AddTo.png' alt="" onclick="$('#head_portrait').click()">
+                                                <input type="file" style="display:none;" name="portrait" id="head_portrait" class="dentityB_picture">
+                                            </div>
+                                            <div class="upButton">
+                                                <div class="noShow">未选择任何文件</div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="businessReminder">
+                                        格式需为JPG、PNG,大小不超过3M,文字清晰能够辨认
+                                    </div>
+                                    <input type="button" value="提交" class="submitAplly owner_company"  />
+                                    <div class="ownerBoxStrut"></div>
+                                </div>
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <span class="is_error" style="display:none;">{$res}</span>
+</block>
+<div id="nav">
+    <div class="planar lastBox">
+        <div class='online'>在线服务</div>
+        <img class='planarP' src='/public/img/common/services.png' />
+    </div>
+    <div class="contact1 lastBox">
+        <img class='contactP' src="/public/img/common/QRsmall.png"  />
+    </div>
+    <div class="up lastBox">
+        <div class='return'>返回顶部</div>
+        <img class='upP' src="/public/img/common/returnTop.png" alt="" />
+    </div>
+    <div class="slightlyQR">
+        <img src="/public/img/common/QRcode.png" />
+
+    </div>
+    <div class="triangle"></div>
+</div>
+</body>
+
+</html>

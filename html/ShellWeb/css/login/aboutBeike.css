@@ -1,0 +1,88 @@
+.content{
+	
+}
+.wellcome{
+	width:100%;
+	height:202px;
+	background:#ff9700;
+}
+.wellcome .w{
+	width:1024px;
+	height:202px;
+	text-align:center;
+	line-height:202px;
+	font-size:68px;
+	color:#fff;
+	margin:0 auto;
+	font-weight:bold;
+}
+.content1{
+	width:100%;
+	height:4820px;
+	
+}
+.content1 .w1{
+	width:1024px;
+	height:4820px;
+	margin:0 auto;
+	
+}
+.content1 .w1 .aboutHead{
+	width:1024px;
+	height:175px;
+	
+	overflow: hidden;
+}
+.content1 .w1 .aboutHead h2{
+	width:100%;
+	height:81px;
+	line-height:81px;
+	text-align: center;
+	font-size:24px;
+	margin-top:8px;
+}
+.content1 .w1 .aboutHead .aggrement{
+	width:100%;
+	height:86px;
+	
+	font-size:14px;
+	line-height:24px;
+	text-align: justify;
+	text-indent:30px;
+}
+.example{
+	width:1024px;
+	padding-bottom:24px;
+}
+.example h4{
+	width:1024px;
+	height:30px;
+	line-height:30px;
+	font-size:18px;
+}
+.example .about{
+	font-size: 14px;
+	line-height:24px;
+	text-align: justify;
+}
+.buttonBox{
+	width:1024px;
+	height:45px;
+	margin-top:22px;
+	
+}
+.clickAggrement{
+	width:428px;
+	height:45px;
+	margin:0 auto;
+	background:#ff9700;
+	border-radius:6px;
+	font-size:28px;
+	color:#fff;
+	display: block;
+	outline:none;
+	cursor:pointer;
+}
+.clickAggrement:hover{
+	background:#f58a00;
+}

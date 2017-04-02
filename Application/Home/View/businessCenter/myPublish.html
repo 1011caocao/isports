@@ -1,0 +1,80 @@
+<extend name="Layout:index_base"/>
+<block name="css">
+    <link rel="stylesheet" href="/public/css/authentication/authentication.css">
+    <link rel="stylesheet" href="/public/css/authentication/rightList.css">
+</block>
+<block name="js">
+    <script src="/public/js/require/require.js" defer async="true"  data-main='/public/js/authentication/authentication.js'></script>
+    <script>
+        var scope={
+        }
+    </script>
+</block>
+<block name="main">
+    <div class="header"></div>
+    <div class="content">
+        <div class="w">
+            <include file="user:nav" />
+            <div class="right">
+                <div class="myPublishTab tab">
+                    <div class="myPubActDetailBox">
+                        <span class="myPubActDetailBHead">发布活动详情</span>
+
+                    </div>
+                    <div class="myPubActDetailTitleHead">
+                        <p class="rightListHeader">标题</p>
+                        <p class="listOfApplicants">申请动态</p>
+                        <p class="listDeadline">截止时间</p>
+                        <p class="listStatus">状态</p>
+
+
+                    </div>
+                    <div class="rightList">
+                        <foreach name="myPublishLists" item="myPublishList">
+
+                        <a href="<switch name='myPublishList.status' >
+                            <case value='0'>javascript:void(0)</case>
+                            <case value='4|3'></case>
+                            <default/>/BusinessCenter/myPublishDetail/id/{$myPublishList.id}/style/{$myPublishList.style}</switch>" class="publishA">
+                            <div <if condition="$myPublishList.status eq 3 OR ($myPublishList.status eq 4)">class="cooperationIno"<else/>class=" cooperationIn"</if>>
+                                <p class="rightListHeaders">{$myPublishList.name}</p>
+                                <p class="listOfApplicantss">0<sup>0</sup></p>
+                                <p class="listDeadlines">{$myPublishList.apply_end_time|date="Y.m.d",###}</p>
+                                <p class="listStatuss">{$myPublishList.type}</p>
+                                <if condition="($myPublishList.status eq 3) OR ($myPublishList.status eq 4)"><div class="chen">
+                                    <img src="/public/img/authenticaton/modify.png" >
+                                </div></if>
+                            </div>
+                        </a>
+                        </foreach>
+                    </div>
+                    <div class="listPage">
+                           {$pageRes}
+                    </div>
+                </div>
+            <!------------------------------------------我的发布结尾----------------------------------->
+            </div>
+        </div>
+    </div>
+</block>
+<div id="nav">
+    <div class="planar lastBox">
+        <div class='online'>在线服务</div>
+        <img class='planarP' src='/public/img/common/services.png' />
+    </div>
+    <div class="contact1 lastBox">
+        <img class='contactP' src="/public/img/common/QRsmall.png"  />
+    </div>
+    <div class="up lastBox">
+        <div class='return'>返回顶部</div>
+        <img class='upP' src="/public/img/common/returnTop.png" alt="" />
+    </div>
+    <div class="slightlyQR">
+        <img src="/public/img/common/QRcode.png" />
+
+    </div>
+    <div class="triangle"></div>
+</div>
+</body>
+
+</html>

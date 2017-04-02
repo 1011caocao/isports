@@ -1,0 +1,139 @@
+header .w_nav .nav .headNav .pullBox .talents{
+	
+	 display:block;
+	 position:absolute;
+	 left:0;
+	 bottom:0; 
+	 transform:translate(-50%,-50%);
+	 width:0;
+	 height:1px;
+	 border:0 #e0a240 solid; 
+	 border-radius:20px;
+	 transition:all 0.2s; 
+	 opacity:0;
+}
+header .w_nav .nav .headNav li .borderActive:before{
+	 content:""; 
+	 display:block;
+	 position:absolute;
+	 left:0;
+	 bottom:0; 
+	 transform:translate(-50%,-50%);
+	 width:0;
+	 height:1px;
+	 border:0 #ff9700 solid; 
+	 border-radius:20px;
+	 transition:all 0.3s; 
+	 opacity:0;
+}
+header .w_nav .headNav li .borderActive:hover:before{
+	border:1px #ff9700 solid;
+	height:100%; 
+	padding:0 50%;
+	opacity:1;
+	color:#ff9700;
+}
+
+#content .w .platformMessage>.box+.box+.box{
+	margin-right:0;
+}
+
+
+#content .w .content>.contentBox+.contentBox{
+	margin-right:0;
+}
+#content .w .content>.contentBox+.contentBox+.contentBox+.contentBox{
+	margin-right:0;
+}
+
+#content .w .content>.contentBox+.contentBox+.contentBox{
+	margin-right:24px;
+}
+#content .w .content .contentBox .detailMessage>span{
+	width:90px;
+	height:100%;
+	text-align: center;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	
+}
+#content .w .content .contentBox .detailMessage>span+span{
+	width:68px;
+	height:100%;
+	text-align:center;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	
+}
+#content .w .content .contentBox .detailMessage>span+span+span{
+	width:214px;
+	height:100%;
+	text-align:center;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+#content .w .content .contentBox .detailMessage>span+span+span+span{
+	width:43px;
+	height:100%;
+	text-align: center;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+
+#content .w .content .contentBox .detailMessage>span+span+span+span+span{
+	width:84px;
+	height:100%;
+	text-align:center;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+
+#content .w .content .contentBox .contentNav>span{
+	width:90px;
+	height:100%;
+	text-align: center;
+	
+	
+	
+}
+#content .w .content .contentBox .contentNav>span+span{
+	width:68px;
+	height:100%;
+	text-align:center;
+	
+}
+#content .w .content .contentBox .contentNav>span+span+span{
+	width:214px;
+	height:100%;
+	text-align:center;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	/*margin-left:20px;*/
+}
+#content .w .content .contentBox .contentNav>span+span+span+span{
+	width:43px;
+	height:100%;
+	text-align: center;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	
+}
+
+#content .w .content .contentBox .contentNav>span+span+span+span+span{
+	width:84px;
+	height:100%;
+	text-align:center;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	
+}
+
+/*//演艺人才*/

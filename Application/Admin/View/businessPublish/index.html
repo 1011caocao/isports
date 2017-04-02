@@ -1,0 +1,105 @@
+<include file="Index/header" />
+<body>
+
+<div id="wrapper">
+
+    <include file="Index/nav"/>
+
+    <div id="page-wrapper">
+
+        <div class="container-fluid" >
+
+            <!-- Page Heading -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <ol class="breadcrumb">
+                        <li>
+                            <i class="fa fa-dashboard"></i>  <a href="/admin/businessPublish">商业活动发布管理</a>
+                        </li>
+                        <li class="active">
+                            <i class="fa fa-table"></i>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+            <!-- /.row -->
+            <div class="row">
+                <form action="/admin/menu/index" method="get">
+                </form>
+            </div>
+            <div>
+                <button id="button-add" type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>添加 </button>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <h3></h3>
+                    <div class="table-responsive">
+                        <form id="singcms-listorder">
+                            <table class="table table-bordered table-hover singcms-table">
+                                <thead>
+                                <tr>
+                                    <th>活动ID</th>
+                                    <th>状态</th>
+                                    <th>活动名称</th>
+                                    <th>活动开始---结束时间</th>
+                                    <th>活动发布时间</th>
+                                    <th>操作</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <foreach name="businessLists" item="businessList">
+                                    <tr>
+                                        <td>{$businessList.id}</td>
+                                        <td>
+                                            <switch name="businessList.status" >
+                                                <case value="0">未通过</case>
+                                                <case value="1">合作中</case>
+                                                <case value="2">待评论</case>
+                                                <case value="3">已完成</case>
+                                                <case value="4">未通过审核</case>
+                                                <default />默认情况</switch>
+                                        </td>
+                                        <td>{$businessList.name}</td>
+                                        <td>{$businessList.activity_start_time|date='Y.m.d',###}-{$businessList.activity_end_time|date='Y.m.d',###}</td>
+                                        <td>{$businessList.add_time|date='Y.m.d',###}</td>
+                                        <td class="text-right">
+                                            <button type="button" <if condition="$businessList['status']">style="display:none"</if> class="btn btn-primary business-info" attr-id="{$businessList.id}">通过审核</button>
+                                            <button type="button" class="btn btn-primary edit" attr-id="{$businessList.id}">申请详情</button>
+                                            <button type="button" class="btn btn-danger delete" attr-id="{$user.id}"  attr-message="删除">删除</button>
+                                        </td>
+                                    </tr>
+                                </foreach>
+
+                                </tbody>
+                            </table>
+                        </form>
+                        <div>
+                            {$pageRes}
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- /.row -->
+
+        </div>
+        <!-- /.container-fluid -->
+
+    </div>
+    <!-- /#page-wrapper -->
+
+</div>
+<!-- /#wrapper -->
+<!-- Morris Charts JavaScript -->
+<script>
+    var SCOPE = {
+        'jump_url':'/admin/BusinessPublish/index?page={$page}',//跳转url
+        'business_info_url' : '/admin/BusinessPublish/businessInfo', //跳转URL
+    }
+</script>
+<include file="Index/footer" />
+
+
+
+
+

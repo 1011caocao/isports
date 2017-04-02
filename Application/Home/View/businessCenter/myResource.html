@@ -1,0 +1,71 @@
+<extend name="Layout:index_base"/>
+<block name="css">
+    <link rel="stylesheet" href="/public/css/authentication/authentication.css">
+    <link rel="stylesheet" href="/public/css/authentication/rightList.css">
+</block>
+<block name="js">
+    <script src="/public/js/require/require.js" defer async="true"  data-main='/public/js/authentication/authentication.js'></script>
+    <script>
+        var scope={
+
+        }
+
+    </script>
+</block>
+<block name="main">
+    <div class="header"></div>
+    <div class="content">
+        <div class="w">
+            <include file="user:nav" />
+            <div class="right">
+                <!------------------------------------------我的资源结尾----------------------------------->
+                <div class="mySourcesTab">
+                    <div class="myPubActDetailBox">
+                        <span class="myPubActDetailBHead">资源列表</span>
+                    </div>
+                    <div class="myPubActDetailTitleHead">
+                        <p class="rightListHeader">标题</p>
+                        <p class="resourcePrice">价格</p>
+                        <p class="listOfApplicants">申请动态</p>
+                        <p class="listDeadline">截止时间</p>
+                        <p class="listStatus">状态</p>
+                    </div>
+                    <div class="rightLista">
+                        <foreach name="myResourceLists" item="myResourceList">
+                            <div <if condition="$myResourceList.status eq 2">class="cooperationInoo"<else/>class="cooperationIna"</if>>
+                            <p class="rightListHeadersa">{$myResourceList.name}</p>
+                            <p class="resourcePricesa">{$myResourceList.money}</p>
+                            <p class="listOfApplicantssa">0<sup>0</sup></p>
+                            <p class="listDeadlinesa">{$myResourceList.activity_end_time|date="Y.m.d",###}</p>
+                            <p class="listStatussa">{$myResourceList.type}</p>
+                            <if condition="$myResourceList.status eq 2">
+                                <div class="chen1">
+                                <img src="/public/img/authenticaton/modify.png" >
+                                </div>
+                            </if>
+                        </div>
+                        </foreach>
+                        </div>
+                <!--<div class="cooperationInoo">-->
+                    <!--<p class="rightListHeaderso">成都大学校园电台</p>-->
+                    <!--<p class="resourcePriceso">600/次</p>-->
+                    <!--<p class="listOfApplicantsso">43</p>-->
+                    <!--<p class="listDeadlineso">2016.11.05</p>-->
+                    <!--<p class="">已结束</p>
+                    <!--<div class="chen1">-->
+                        <!--<img src="/public/img/authenticaton/modify.png" >-->
+                    <!--</div>-->
+                <!--</div>-->
+                    </div>
+                    <div class="listPage">
+                       {$pageRes}
+                    </div>
+                </div>
+                <!------------------------------------------我的资源结尾----------------------------------->
+            </div>
+        </div>
+    </div>
+</block>
+</body>
+
+</html>

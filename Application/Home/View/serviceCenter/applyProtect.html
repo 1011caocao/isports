@@ -1,0 +1,104 @@
+<extend name="Layout:index_base"/>
+<block name="css">
+    <link rel="stylesheet" href="/public/css/authentication/authentication.css">
+    <link rel="stylesheet" href="/public/css/authentication/rightList.css">
+</block>
+<block name="js">
+    <script src="/public/js/require/require.js" defer async="true"  data-main='/public/js/authentication/applyFeedback.js'></script>
+    <script>
+        var scope={
+
+        }
+
+    </script>
+</block>
+<block name="main">
+    <div class="header"></div>
+    <div class="content">
+        <div class="w">
+            <include file="user:nav" />
+            <div class="right">
+                <!--------------------申请维权start---------------------------------------------------->
+                <div class="applySafeguardTab tab">
+                    <div class="apply_safeguard">
+                        <div class="apply_safeguardTBox">
+                            <span style="cursor: pointer" class="select tl">投诉</span>
+                            <span style="cursor: pointer" class="tr1">反馈历史</span>
+                        </div>
+                        <p class="submitFeedbackUnderline"></p>
+                        <div id="com">
+                            <div class="show commonLi">
+                                <form action="/home/ServiceCenter/applyProtect"  method="post" enctype="multipart/form-data">
+                                    <div class="respondentPerson">
+                                        被投诉人：<input name="nameed" type="text" placeholder="简要说明反馈内容，20字符以内"/>
+                                    </div>
+                                    <div class="cooperationContent">
+                                        合作内容：<input name="content" type="text" placeholder="简要说明反馈内容，20字符以内"/>
+                                    </div>
+                                    <div class="complaintContent">
+                                        <span>投诉内容：</span><textarea name="compiain_content" placeholder="请描述您的意见或者问题，200字以内" style="width:496px;height:108px;"/></textarea>
+                                    </div>
+                                    <div class="addPhotos">
+                                        <span class="addPhotosl">添加照片：</span>
+                                        <div class="addPhotosr">
+                                            <img class="applyFeedbackUp" style="cursor: pointer" src="/public/img/authenticaton/addSchool.png" onclick="$('#feedBackUpload').click()">
+                                            <input type="file" accept="image/jpg,image/jpeg,image/png" id="feedBackUpload" name="img_path" style="display:none;" class="applyFeedback_picture">
+                                            <span>未选择任何文件(非必填项)</span><br>
+                                            <span style="color:red;">格式为JPG、PNG，大小不超过3M，内容合法健康</span>
+                                        </div>
+                                    </div>
+                                    <button class="submita" style="outline:none;cursor:pointer;" type="submit">提&nbsp;&nbsp;交</button>
+                                </form>
+
+                            </div>
+                            <div class="commonLi">
+                                <div class="feedbackHistory">
+                                    <div class="feedbackHistorytop">
+                                        <p class="feedbackHistoryTitle">标题</p>
+                                        <p class="feedbackHistoryTime">时间</p>
+                                        <p class="feedbackHistoryResults">受理结果</p>
+                                    </div>
+                                    <div class="feedbackHistorybottom">
+                                        <foreach name="applyLists" item="applyList">
+                                            <p class="feedbackHistoryTitles">{$applyList.content}</p>
+                                            <p class="feedbackHistoryTimes"><span>{$applyList.option_time|date="Y.m.d H:i:s",###}</span><span>13:07</span></p>
+                                            <p class="feedbackHistoryResultss">{$applyList.option_content}</p>
+                                            </foreach>
+                                    </div>
+                                </div>
+                                <div class="listPage" style="width:300px;height:80px;">
+                                    {$pageRes}
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+                <!------------------申请维权end-------------------------------------------------------->
+            </div>
+        </div>
+    </div>
+    <span class="is_error" style="display:none;">{$res}</span>
+</block>
+<div id="nav">
+    <div class="planar lastBox">
+        <div class='online'>在线服务</div>
+        <img class='planarP' src='/public/img/common/services.png' />
+    </div>
+    <div class="contact1 lastBox">
+        <img class='contactP' src="/public/img/common/QRsmall.png"  />
+    </div>
+    <div class="up lastBox">
+        <div class='return'>返回顶部</div>
+        <img class='upP' src="/public/img/common/returnTop.png" alt="" />
+    </div>
+    <div class="slightlyQR">
+        <img src="/public/img/common/QRcode.png" />
+
+    </div>
+    <div class="triangle"></div>
+</div>
+</body>
+
+</html>

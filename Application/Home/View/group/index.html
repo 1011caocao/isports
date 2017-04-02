@@ -1,0 +1,138 @@
+<extend name="Layout:index_base"/>
+<block name="css">
+	<link rel="stylesheet" href="/public/css/detail/schoolActivity.css" />
+</block>
+<block name="js">
+<script>
+var page={$page};
+</script>
+	<script src="/public/js/require/require.js" defer async="true" data-main='/public/js/schoolActivity/schoolActivity'></script>
+</block>
+<block name="main">
+		<div class="header"></div>
+		<nav>
+			
+		<div class="banner" id="b04">
+		    <ul>
+		        <li><img src="/public/img/common/newBanner.png" alt=""  ></li>
+		        <li><img src="/public/img/common/newBanner.png" alt=""  ></li>
+		        <li><img src="/public/img/common/newBanner.png" alt="" ></li>
+		       
+		    </ul>
+		    <!--<a href="javascript:void(0);" class="unslider-arrow04 prev"><img class="arrow" id="al" src="arrowl.png" alt="prev" width="20" height="35"></a>
+		    <a href="javascript:void(0);" class="unslider-arrow04 next"><img class="arrow" id="ar" src="arrowr.png" alt="next" width="20" height="37"></a>-->
+		</div>
+		</nav>
+		<div class="content">
+			<div class="w">
+				<div class="screeningCondition">
+					<h3 id="F">筛选条件</h3>
+					<div class="place">
+						<span class='placeHead'>所在地区:</span>
+						<div id="city">
+							<select  id='province' class='prov selec'>
+								<option value="0">不限</option>
+								<foreach name="provinces" item="province">
+									<option value="{$province.area_id}" <if condition="I('get.province_id') eq $province['area_id']">selected</if>>{$province.area_name}</option>
+								</foreach>
+							</select>
+							<select  id='cities' class='city selec'>
+								<option value="0">不限</option>
+								<foreach name="cities" item="city">
+									<option value="{$city.area_id}" <if condition="I('get.city_id') eq $city['area_id']">selected</if>>{$city.area_name}</option>
+								</foreach>
+							</select>
+							<select  id='area' class='dist selec'>
+								<option value="0">不限</option>
+								<foreach name="areas" item="area">
+									<option value="{$area.area_id}" <if condition="I('get.county_id') eq $area['area_id']">selected</if>>{$area.area_name}</option>
+								</foreach>
+							</select>
+						</div>
+						<div class="schoolActivitySearchBox">
+							<input placeholder="请输入学校名称" class="sASInput" type="text" <if condition="I('get.school_name')"> value="{:I('get.school_name')}"</if>>
+							<img class="schoolInputSearch" src="/public/img/detail/searchSchool.png"/>
+						</div>
+					</div>
+					<div class="type commerciaty_school_size">
+						<span class='placeHead'>学校规模:</span>
+						<div class="typeDetail">
+							<span name="0">不限</span>
+							<foreach name="schoolSize" item="school">
+								<span name="{$school.id}" <if condition="I('get.school_size') eq $school['id']">class=" getActive"</if>>{$school.size}</span>
+							</foreach>
+						</div>
+					</div>
+					<div class="type activity_type">
+						<span class='placeHead'>活动类型:</span>
+						<div class="typeDetail">
+							<span name="0">不限</span>
+							<foreach name="activityType" item="activity">
+								<span name="{$activity.id}" <if condition="I('get.activity_id') eq $activity['id']">class=" getActive"</if>>{$activity.activity_name}</span>
+							</foreach>
+						</div>
+					</div>
+					<div class="type advertise_type">
+						<span class='placeHead'>赞助方式:</span>
+						<div class="typeDetail">
+							<span name="0">不限</span>
+							<foreach name="advertise" item="ad">
+								<span name="{$ad.id}"  <if condition="I('get.advertise_id') eq $ad['id']">class=" getActive"</if>>{$ad.advertise_name}</span>
+							</foreach>
+						</div>
+					</div>
+					<div class="amount budget_money">
+						<span class='placeHead'>预算金额:</span>
+						<div class="typeDetail">
+							<foreach name="money" item="mon">
+								<span name="{$mon.id}" <if condition="I('get.money_type') eq $mon['id']">class=" getActive"</if>>{$mon.money_min}-{$mon.money_max}</span>
+							</foreach>
+							<div class="userDefineBox">
+								<div class="userDefineBoxHead">自定义金额：</div>
+								<input placeholder="￥" class="userDefineMFrom userDefineInput" type="text" <if condition="I('get.money_min')"> value="{:I('get.money_min')}"</if>>
+								<div class="userDefineShow">-</div>
+								<input placeholder="￥" class="userDefineMTo userDefineInput" type="text" <if condition="I('get.money_max')"> value="{:I('get.money_max')}"</if>>
+								<input class="userDefineButton" type="button" value="确定">
+							</div>
+						</div>
+
+					</div>
+				</div>
+				<div class="contentDetail">
+					<div class="aciveName l">活动名称</div>
+					<div class="activeType l">类型</div>
+					<div class="activePlace l">地区</div>
+					<div class="activeSchool l">学校</div>
+					<div class="activeTime l">活动时间</div>
+					<div class="activeMoney l">金额</div>
+					<div class="activeCompany l">发布企业</div>
+				</div>
+				<div class="detailList">
+					<div class="listContainer">
+						<foreach name='resultData' item="val">
+							<a href="{:U('groupDetails',array('id'=>$val['id']))}" style="color:black;">
+								<div class="example">
+									<div class="exampleName l">{$val.name}</div>
+									<div class="exampleType l">{$val.activity_name}</div>
+									<div class="examplePlace l">{$val.area_name}</div>
+									<div class="exampleSchool l">{$val.school_name}</div>
+									<div class="exampleTime l">{$val.activity_start_time|date="Y.m.d",###}-{$val.activity_end_time|date="Y.m.d",###}</div>
+									<div class="exampleMoney l">￥{$val.money}</div>
+									<div class="exampleCompany l">{$val.company_name}</div>
+								</div>
+							</a>
+						</foreach>
+					</div>
+					<div class="swipePage">
+						<div class="pageBox">
+							{$pageRes}
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="buttom">
+			<!--<div class="first"></div>-->
+			<!--<div class="second"></div>-->
+		</div>
+</block>

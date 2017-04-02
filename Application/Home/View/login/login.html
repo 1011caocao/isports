@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>登录</title>
+		<link rel="shortcut icon" href="/public/logo.ico"/>
+		<link rel="bookmark" href="/public/logo.ico"/>
+	</head>
+	<link rel="stylesheet" href="/public/css/login/login.css" />
+	
+	<script type="text/javascript" src="/public/js/require/require.js" async="true" defer data-main="/public/js/login/login.js"></script>
+	<!--[if lt IE 9]>
+	<script src="http://cdn.bootcss.com/html5shiv/r29/html5.js"></script>
+  
+  	
+ <![endif]-->
+	<body>
+		<nav>
+			<div class="w">
+				<div class="logo l"><img class="upToIndex" src="/public/img/common/sport.png" /></div>
+				<h1 class='l'>用户登录</h1>
+				<div class="toolBox r">
+					<div class="tool">
+						<a href='/index/index.html'>返回主页</a>
+					</div>
+				</div>
+			</div>
+		</nav>
+		<div class="header"></div>
+		<div class="content">
+			<div class="w">
+				<div class="loginBox">
+					<h3>账号登录</h3>
+					<div class="mainCOntent">
+						<input type="text" class='phone' placeholder="输入手机号" />
+						<input type="password" class='upwn' placeholder="输入密码" />
+						<div class="nextBox">
+							<div class="nextLogin l"><input class='automate l' type="checkbox" /><span class='l nextAuto'>下次自动登录</span></div>
+							<a href='../findUpwn/phone.html' class='forget'>忘记密码</a>
+						</div>
+						<input type="button" id='login' value='登录' />
+						<div class="new">
+							<a href='enroll.html' class='r'>注册新账号</a>
+						</div>
+					</div>
+					<div class="reminder">你输入的账号或密码不正确,请重新输入！</div>
+				</div>
+			</div>
+		</div>
+	</body>
+<script>
+	//var url = '{$Think.cookie.redirect_url}';
+	var scope = new Object;
+	scope.index='/index/index';
+</script>
+</html>

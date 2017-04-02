@@ -1,0 +1,520 @@
+<extend name="Layout:index_base"/>
+<block name="css">
+    <link rel="stylesheet" href="/public/css/authentication/authentication.css">
+</block>
+<block name="js">
+    <script src="/public/js/require/require.js" defer async="true"  data-main='/public/js/authentication/authentication.js'></script>
+</block>
+<block name="main">
+<div class="header"></div>
+<div class="content">
+    <div class="w">
+        <include file="nav" />
+        <div class="right">
+            <div class="personalHomeTab tab">
+                <div class="personalExample pMeadiaCompany" <if condition="$Think.session.USER.role eq 2">style="display:block" </if>>
+                <div class="contentBox">
+                        <div class="registerMessage">注册人信息</div>
+                        <div class="personalMessageBox">
+                            <div class="identityCardid">
+                                <span class="addStrongShow">身份证已实名认证</span>
+                                <img src="/public/img/commercialActivity/id%20card.png"/>
+                            </div>
+                            <div class="personalDetail personalDetailFirst">
+                                <span class="personalCity">
+                                    所在城市:
+                                    <span class="Pcity">{$row.city_name}</span>
+                                </span>
+                                <span class="personalName">
+                                    真实姓名:
+                                    <span class="Pname">{$row.real_name}</span>
+                                </span>
+                                <!--<span class="personalPosition">
+                                    职位:
+                                    <span class="personalPname">市场部总监</span>
+                                </span>-->
+                            </div>
+                            <div class="personalDetail">
+                                <span class="personalCorpTimes">
+                                    合作次数:
+                                    <span class="pCorTimes">{$row.cooperation_count}</span>
+                                </span>
+                                <span class="personalStarLevelBox">
+                                    <span class="personalStarHead">个人星级:</span>
+                                    <span class="personalStarBox">
+                                        <img src="/public/img/commercialActivity/score2.png">
+                                         <img src="/public/img/commercialActivity/score2.png">
+                                        <img src="/public/img/commercialActivity/score2.png">
+                                         <img src="/public/img/commercialActivity/score1.png">
+                                         <img src="/public/img/commercialActivity/score1.png">
+                                    </span>
+                                    <span class="persoanlCommentTimes">{$row.comment_count}人已评论</span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="personalShow"></div>
+                    <div class="exampleCompanyMessage">单位信息</div>
+                    <div class="examComDetaillMeBox">
+                        <div class="enterpriseIdentity addStrongShow">
+                            企业营业执照平台已认证
+                            <img class="enterPriseIdenImg" src="/public/img/commercialActivity/business%20license.png">
+                        </div>
+                        <div class="exampleStyleD companyCity">
+                            <span class="companyCityHead">所在城市:</span>
+                            <span class="exampleStyleDSpan companyCityName">{$row.province_name}{$row.city_name}</span>
+                        </div>
+                        <div class="exampleStyleD companydetailAddress">
+                            <span class="companyCityHead">详细地址:</span>
+                            <span class="exampleStyleDSpan companydetailAddressSpan">
+                                {$row.address}
+                            </span>
+                        </div>
+                        <div class="exampleStyleD companyNameBox">
+                            <span class="companyCityHead">企业名称:</span>
+                            <span class="exampleStyleDSpan companyName">{$row.company_name}</span>
+                        </div>
+                       <!-- <div class="exampleStyleD companySection">
+                            <span class="companyCityHead">部门名称:</span>
+                            <span class="exampleStyleDSpan companySectionName">
+                                市场部
+                            </span>
+                        </div>-->
+                        <div class="companyIntroduceBox">
+                            <div class="comapnyIntroduceHead">企业简介:</div>
+                            <div class="comapnyIntroduceDetail">
+                               {$row.description}
+                            </div>
+                        </div>
+                        <!--<div class="companyElegantBox">-->
+                            <!--<span class="companyEHead">企业风采:</span>-->
+                            <!--<div class="comapnyIBox">-->
+                                <!--<foreach name="companyImgs" item="companyImg">-->
+                                    <!--<div class="companyIP">-->
+                                        <!--<img src="{$companyImg.img_path}" alt="">-->
+                                    <!--</div>-->
+                                <!--</foreach>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <div class="comapnyWorksShowBoxs">
+                            <div class="comapnyWorksShow">
+                                <span class="companyWSHead">案列展示:</span>
+                                <foreach name="caseShows"  item="caseShow">
+                                <div class="companyWorksBox">
+                                    <div class="companyWorksE companyWorksTimeBox">
+                                        <span class="comapnyWorksHead">
+                                            案例时间:
+                                        </span>
+                                        <span class="companyWorksC companyWorksTime">
+                                            {$caseShow.case_time}
+                                        </span>
+                                    </div>
+                                    <div class="companyWorksE companyWorksC companyWorksNBox">
+                                        <span class="comapnyWorksHead">
+                                            案例名称:
+                                        </span>
+                                        <span class="companyWorksC companyWorksName">
+                                            {$caseShow.case_name}
+                                        </span>
+                                    </div>
+                                    <div class="companyWorksIntroduce">
+                                        <span class="comapnyWorksIHead">案例简介:</span>
+                                        <div class="comapnyWorksIContent">
+                                            {$caseShow.case_desc}
+                                        </div>
+                                    </div>
+                                    <div class="comapnyWorksShowBox">
+                                        <span class="companyWorksSHead">
+                                            案例照片:
+                                        </span>
+                                        <div class="companyWorksSPicture">
+                                            <foreach name="caseShow.caseShowImgs" item="caseShowImg">
+                                            <div class="companyWorksSPImg">
+                                                <img src="{$caseShowImg}" alt="">
+                                            </div>
+                                            </foreach>
+                                        </div>
+                                    </div>
+                                </div>
+                                </foreach>
+                            </div>
+                        </div>
+                        <div class="distanceBottom"></div>
+                    </div>
+                </div>
+                <!--------------------------个人主页传媒公司信息end--------------------------->
+                <div  class="personalExample pCownerCompany" <if condition="$Think.session.USER.role eq 1">style="display:block" </if>>
+                    <div class="contentBox">
+                        <div class="registerMessage">注册人信息</div>
+                        <div class="personalMessageBox">
+                            <div class="identityCardid">
+                                <span class="addStrongShow">身份证已实名认证</span>
+                                <img src="/public/img/commercialActivity/id%20card.png"/>
+                            </div>
+                            <div class="personalDetail personalDetailFirst">
+                                <span class="personalCity">
+                                    所在城市:
+                                    <span class="Pcity">{$row.city_name}</span>
+                                </span>
+                                <span class="personalName">
+                                    真实姓名:
+                                    <span class="Pname">{$row.real_name}</span>
+                                </span>
+                                <span class="personalPosition">
+                                    职位:
+                                    <span class="personalPname">{$row.company_job}</span>
+                                </span>
+                            </div>
+                            <div class="personalDetail">
+                                <span class="personalCorpTimes">
+                                    合作次数:
+                                    <span class="pCorTimes">{$row.cooperation_count}</span>
+                                </span>
+                                <span class="personalStarLevelBox">
+                                    <span class="personalStarHead">个人星级:</span>
+                                    <span class="personalStarBox">
+                                        <img src="/public/img/commercialActivity/score2.png">
+                                         <img src="/public/img/commercialActivity/score2.png">
+                                        <img src="/public/img/commercialActivity/score2.png">
+                                         <img src="/public/img/commercialActivity/score1.png">
+                                         <img src="/public/img/commercialActivity/score1.png">
+                                    </span>
+                                    <span class="persoanlCommentTimes">{$row.comment_count}人已评论</span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="personalShow"></div>
+                    <div class="exampleCompanyMessage">单位信息</div>
+                    <div class="examComDetaillMeBox">
+                        <div class="enterpriseIdentity addStrongShow">
+                            企业营业执照平台已认证
+                            <img class="enterPriseIdenImg" src="/public/img/commercialActivity/business%20license.png">
+                        </div>
+                        <div class="exampleStyleD companyCity">
+                            <span class="companyCityHead">所在城市:</span>
+                            <span class="exampleStyleDSpan companyCityName">{$row.province_name}{$row.city_name}</span>
+                        </div>
+                        <div class="exampleStyleD companydetailAddress">
+                            <span class="companyCityHead">详细地址:</span>
+                            <span class="exampleStyleDSpan companydetailAddressSpan">
+                                {$row.address}
+                            </span>
+                        </div>
+                        <div class="exampleStyleD companyNameBox">
+                            <span class="companyCityHead">企业名称:</span>
+                            <span class="exampleStyleDSpan companyName">{$row.company_name}</span>
+                        </div>
+                        <div class="exampleStyleD companySection">
+                            <span class="companyCityHead">部门名称:</span>
+                            <span class="exampleStyleDSpan companySectionName">
+                                {$row.company_dept}
+                            </span>
+                        </div>
+                        <div class="companyIntroduceBox">
+                            <div class="comapnyIntroduceHead">企业简介:</div>
+                            <div class="comapnyIntroduceDetail">
+                                {$row.description}
+                            </div>
+                        </div>
+                        <div class="companyElegantBox">
+                            <span class="companyEHead">企业风采:</span>
+                            <div class="comapnyIBox">
+                                <foreach name="companyImgs" item="companyImg">
+                                    <div class="companyIP">
+                                        <img src="{$companyImg.img_path}" alt="">
+                                    </div>
+                                </foreach>
+                            </div>
+                        </div>
+                        <!--<div class="comapnyWorksShowBoxs">
+                            <div class="comapnyWorksShow">
+                                <span class="companyWSHead">案列展示:</span>
+                                <div class="companyWorksBox">
+                                    <div class="companyWorksE companyWorksTimeBox">
+                                        <span class="comapnyWorksHead">
+                                            案例时间:
+                                        </span>
+                                        <span class="companyWorksC companyWorksTime">
+                                            2016年10月20日
+                                        </span>
+                                    </div>
+                                    <div class="companyWorksE companyWorksC companyWorksNBox">
+                                        <span class="comapnyWorksHead">
+                                            案例名称:
+                                        </span>
+                                        <span class="companyWorksC companyWorksName">
+                                            城市歌手大赛
+                                        </span>
+                                    </div>
+                                    <div class="companyWorksIntroduce">
+                                        <span class="comapnyWorksIHead">案例简介:</span>
+                                        <div class="comapnyWorksIContent">
+                                            简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介
+                                        </div>
+                                    </div>
+                                    <div class="comapnyWorksShowBox">
+                                        <span class="companyWorksSHead">
+                                            案例照片:
+                                        </span>
+                                        <div class="companyWorksSPicture">
+                                            <div class="companyWorksSPImg">
+                                                <img src="" alt="">
+                                            </div>
+                                            <div class="companyWorksSPImg">
+                                                <img src="" alt="">
+                                            </div><div class="companyWorksSPImg">
+                                            <img src="" alt="">
+                                        </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>-->
+                        <div class="distanceBottom"></div>
+                    </div>
+                </div>
+                <!---------------------------个人中心甲方企业end------------------------------->
+                <div class="personalExample persoanlOrganization" <if condition="$Think.session.USER.role eq 3">style="display:block" </if>>
+                    <div class="contentBox">
+                        <div class="registerMessage">注册人信息</div>
+                        <div class="personalMessageBox">
+                            <div class="identityCardid">
+                                <span class="addStrongShow">身份证已实名认证</span>
+                                <img src="/public/img/commercialActivity/id%20card.png"/>
+                                <span class="identityCardStudent">
+                                        学生证已实名认证
+                                    </span>
+                                <img src="/public/img/commercialActivity/id%20card.png"/>
+                            </div>
+                            <div class="personalDetail personalDetailFirst">
+                                <span class="personalCity">
+                                    所在城市:
+                                    <span class="Pcity">{$row.city_name}</span>
+                                </span>
+                                <span class="personalName">
+                                    真实姓名:
+                                    <span class="Pname">{$row.real_name}</span>
+                                </span>
+                                <!--<span class="personalPosition">
+                                    职位:
+                                    <span class="personalPname">书香协会会长</span>
+                                </span>-->
+                            </div>
+                            <div class="personalDetail">
+                                <span class="personalCorpTimes">
+                                    合作次数:
+                                    <span class="pCorTimes">{$row.cooperation_count}</span>
+                                </span>
+                                <span class="personalStarLevelBox">
+                                    <span class="personalStarHead">综合星级:</span>
+                                    <span class="personalStarBox">
+                                        <img src="/public/img/commercialActivity/score2.png">
+                                         <img src="/public/img/commercialActivity/score2.png">
+                                        <img src="/public/img/commercialActivity/score2.png">
+                                         <img src="/public/img/commercialActivity/score1.png">
+                                         <img src="/public/img/commercialActivity/score1.png">
+                                    </span>
+                                    <span class="persoanlCommentTimes">{$row.comment_count}人已评论</span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="personalShow"></div>
+                    <div class="exampleCompanyMessage">单位信息</div>
+                    <div class="examComDetaillMeBox">
+                        <div class="enterpriseIdentity addStrongShow">
+                            <img class="schoolIdentityLogo" src="/public/img/schoolActivity/Campus-Activities_03.png" alt="">
+                            已通过校园组织官方认证,具备申请和发布10000元以上的活动资质
+                            <img class="schoolIdentityQuestion" src="/public/img/schoolActivity/Event%20Details-help.png" alt="">
+
+                        </div>
+                        <div class="exampleStyleD companyCity">
+                            <span class="companyCityHead">所在城市:</span>
+                            <span class="exampleStyleDSpan companyCityName">{$row.province_name}{$row.city_name}</span>
+                        </div>
+                        <div class="exampleStyleD companydetailAddress">
+                            <span class="companyCityHead">详细地址:</span>
+                            <span class="exampleStyleDSpan companydetailAddressSpan">
+                                    {$row.address}
+                            </span>
+                        </div>
+                        <div class="exampleStyleD companyNameBox">
+                            <span class="companyCityHead">学校名称:</span>
+                            <span class="exampleStyleDSpan companyName">{$row.company_name}</span>
+                        </div>
+                        <div class="exampleStyleD companySection">
+                            <span class="companyCityHead">组织名称:</span>
+                            <span class="exampleStyleDSpan companySectionName">
+                                    {$row.company_dept}
+                                </span>
+                        </div>
+                        <div class="exampleStyleD companySection">
+                            <span class="companyCityHead">组织规模:</span>
+                            <span class="exampleStyleDSpan companySectionName">
+                                    {$row.company_size_name}
+                                </span>
+                        </div>
+                        <div class="companyIntroduceBox">
+                            <div class="comapnyIntroduceHead">组织简介:</div>
+                            <div class="comapnyIntroduceDetail">
+                                {$row.description}
+                            </div>
+                        </div>
+                        <div class="companyElegantBox">
+                            <span class="companyEHead">企业风采:</span>
+                            <div class="comapnyIBox">
+                                <foreach name="companyImgs" item="companyImg">
+                                    <div class="companyIP">
+                                        <img src="{$companyImg.img_path}" alt="">
+                                    </div>
+                                </foreach>
+                            </div>
+                        </div>
+                        <div class="comapnyWorksShowBoxs">
+                            <foreach name="caseShows"  item="caseShow">
+                            <div class="comapnyWorksShow">
+                                <span class="companyWSHead">案列展示:</span>
+                                    <div class="companyWorksBox">
+                                        <div class="companyWorksE companyWorksTimeBox">
+                                        <span class="comapnyWorksHead">
+                                            案例时间:
+                                        </span>
+                                            <span class="companyWorksC companyWorksTime">
+                                            {$caseShow.case_time}
+                                        </span>
+                                        </div>
+                                        <div class="companyWorksE companyWorksC companyWorksNBox">
+                                        <span class="comapnyWorksHead">
+                                            案例名称:
+                                        </span>
+                                            <span class="companyWorksC companyWorksName">
+                                            {$caseShow.case_name}
+                                        </span>
+                                        </div>
+                                        <div class="companyWorksIntroduce">
+                                            <span class="comapnyWorksIHead">案例简介:</span>
+                                            <div class="comapnyWorksIContent">
+                                                {$caseShow.case_desc}
+                                            </div>
+                                        </div>
+                                        <div class="comapnyWorksShowBox">
+                                        <span class="companyWorksSHead">
+                                            案例照片:
+                                        </span>
+                                            <div class="companyWorksSPicture">
+                                                <foreach name="caseShow.caseShowImgs" item="caseShowImg">
+                                                    <div class="companyWorksSPImg">
+                                                        <img src="{$caseShowImg}" alt="">
+                                                    </div>
+                                                </foreach>
+                                            </div>
+                                        </div>
+                                    </div>
+                            </div>
+                                </foreach>
+                        </div>
+                        <div class="distanceBottom"></div>
+                    </div>
+                </div>
+                <!--------------------------个人中心校园社团end------------------------------------>
+                <div class="personalExample personalEntertainer" <if condition="$Think.session.USER.role eq 4">style="display:block" </if>>
+                    <div class="contentBox">
+                        <div class="registerMessage">注册人信息</div>
+                        <div class="personalMessageBox">
+                            <div class="identityCardid">
+                                <span class="addStrongShow">身份证已实名认证</span>
+                                <img src="/public/img/commercialActivity/id%20card.png"/>
+                            </div>
+                            <div class="personalDetail personalDetailFirst">
+                                <span class="personalCity">
+                                    所在城市:
+                                    <span class="Pcity">{$row.city_name}</span>
+                                </span>
+                                <span class="personalName">
+                                    真实姓名:
+                                    <span class="Pname">{$row.real_name}</span>
+                                </span>
+                                <span class="personalPosition">
+                                    身高:
+                                    <span class="personalPname">{$row.height}</span>
+                                </span>
+                                <span class="personalSex">
+                                    性别:
+                                    <span class="personalHead"><if condition="$row.gender eq '1'">男<else />女</if></span>
+                                </span>
+                            </div>
+                            <div class="personalDetail">
+                                <span class="personalCorpTimes">
+                                    合作次数:
+                                    <span class="pCorTimes">{$row.cooperation_count}</span>
+                                </span>
+                                <span class="personalStarLevelBox">
+                                    <span class="personalStarHead">综合星级:</span>
+                                    <span class="personalStarBox">
+                                        <img src="/public/img/commercialActivity/score2.png">
+                                         <img src="/public/img/commercialActivity/score2.png">
+                                        <img src="/public/img/commercialActivity/score2.png">
+                                         <img src="/public/img/commercialActivity/score1.png">
+                                         <img src="/public/img/commercialActivity/score1.png">
+                                    </span>
+                                    <span class="persoanlCommentTimes">{$row.comment_count}人已评论</span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="personalShow"></div>
+                    <div class="exampleCompanyMessage">才艺信息</div>
+                    <div class="talentShowContent">
+                        <div class="talentShowPictureExample">
+                            <div class="talentExampleHead">形象才艺展示:</div>
+                            <div class="talentExamplePictureBox">
+                                <foreach name="companyImgs" item="companyImg">
+                                <div class="imgBox"><img src="{$companyImg.img_path}" alt=""></div>
+                                </foreach>
+                            </div>
+                        </div>
+                        <div class="talentShowPictureExample">
+                            <div class="talentExampleHead talentExampleSecond">相关证书:</div>
+                            <div class="talentExamplePictureBox">
+                                <foreach name="artLicences" item="artLicence">
+                                <div class="imgBox"><img src="{$artLicence.path}" alt=""></div>
+                                </foreach>
+                            </div>
+                        </div>
+                        <div class="talentShowPictureExample">
+                            <div class="talentExampleHead talentExampleSecond">才艺视频:</div>
+                            <div class="talentExamplePictureBox">
+                                <div class="artLink"><a class="linkAddress" href="{$row.url}">{$row.url}</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--------------------------个人中心演艺人才end-------------------------------------->
+            </div>
+        </div>
+    </div>
+</div>
+</block>
+<div id="nav">
+    <div class="planar lastBox">
+        <div class='online'>在线服务</div>
+        <img class='planarP' src='/public/img/common/services.png' />
+    </div>
+    <div class="contact1 lastBox">
+        <img class='contactP' src="/public/img/common/QRsmall.png"  />
+    </div>
+    <div class="up lastBox">
+        <div class='return'>返回顶部</div>
+        <img class='upP' src="/public/img/common/returnTop.png" alt="" />
+    </div>
+    <div class="slightlyQR">
+        <img src="/public/img/common/QRcode.png" />
+
+    </div>
+    <div class="triangle"></div>
+</div>
+
+</body>
+
+</html>

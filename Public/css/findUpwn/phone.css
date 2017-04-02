@@ -1,0 +1,81 @@
+.content{
+	width:100%;
+	height:950px;
+	background:#f3f3f3;
+	
+}
+.content .w{
+	width:1024px;
+	height:950px;
+	
+	margin:0 auto;
+	overflow: hidden;
+}
+.content .w .findBox{
+	width:480px;
+	height:251px;
+	margin:116px auto;
+	
+}
+.content .w .findBox .inputNumber{
+	width:476px;
+	display:block;
+	height:46px;
+	outline:none;
+	border:2px solid #e6e6e6;
+	border-radius:6px;
+	font-size:20px;
+	text-indent:10px;
+	line-height:46px;
+}
+.content .w .findBox .authCode{
+	width:100%;
+	height:50px;
+	margin-top:34px;
+}
+.content .w .findBox .authCode input{
+	display:block;
+	float:left;
+	width:307px;
+	height:46px;
+	border:2px solid #e6e6e6;
+	border-radius:6px;
+	font-size:20px;
+	text-indent:10px;
+	outline: none;
+	line-height:46px;
+}
+.content .w .findBox .authCode button{
+	float:right;
+	width:156px;
+	height:100%;
+	border-radius:6px;
+	background:#ff9700;
+	font-size:20px;
+	color:#fff;
+	cursor:pointer;
+	outline: none;
+	letter-spacing: 2px;
+	padding-left:2px;
+	
+}
+.content .w .findBox .authCode button:hover{
+	background:#f58a00;
+}
+.content .w .findBox .next{
+	width:100%;
+	height:50px;
+	margin-top:67px;
+	font-size:28px;
+	color:#fff;
+	background:#ff9700;
+	border-radius:6px;
+	cursor:pointer;
+	outline: none;
+	letter-spacing: 4px;
+	padding-left:4px;
+	
+}
+.content .w .findBox .next:hover{
+	background:#f58a00;
+}

@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="shortcut icon" href="../../logo.ico"/>
+		<link rel="bookmark" href="../../logo.ico"/>
+	<script src="../../js/require/require.js" defer async="true" data-main='../../js/businessActivity/businessActivity'></script>	
+	</head>
+	<link rel="stylesheet" href="../../css/common/header.css" />
+	<link rel="stylesheet" href="../../css/common/footer.css" />
+	<link rel="stylesheet" href="../../css/detail/detail.css" />
+	<!--[if lt IE 9]>
+		<script src="http://cdn.bootcss.com/html5shiv/r29/html5.js"></script>
+	   	<link rel="stylesheet" href="../../css/common/commonIE8.css" />
+ <![endif]-->
+	<body>
+		<header>
+			
+			<div class="w_top">
+				<div class='top'>
+					<div class="login l">
+						<div class='address l'><span class='addressCity'>成都</span></div>
+						<div class="help l"><a href='#' class="helpBox">帮助</a></div>
+						<div class="help l"><a href='#' class="helpBox">反馈</a></div>
+						<div class="help l"><a href='#' class="helpBox helpLast">维权</a></div>
+					</div>
+					<div class="loginBox">
+						<div class="newsFind">
+							<a href="" class='news'>消息</a>
+							<a href="" class='find'>发现</a>
+						</div>
+						<div class="loginEnroll">
+							<div class="replaceBox"><img class='personalLogo' src="../../img/index/home-Personal2_03.png" alt="" />
+								<a href="../login/login.html" class='Login'>登录</a>
+								<a href="../login/enroll.html" class='Enroll'>注册</a>
+							</div>
+							<div class="personalTriangle"></div>
+							<ul class="personalCenter">
+								<li><a href="#" class='personal'>个人中心</a></li>
+								<li><a href="#">我的发布</a></li>
+								<li><a href="#">我的申请</a></li>
+								<li><a href="#">我的资源</a></li>
+								<li><a href="#">我的演绎</a></li>
+								<li><a href="#">草稿箱</a></li>
+								<li><a href="#" class='exit'>退出</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>	
+			</div>
+			<div class='w_nav'>
+				
+				<div class="nav l">
+					<div class="logo"></div>
+					<ul class="headNav">
+						<li class='mainFirst' ><a class='borderActive' href="../../index.html">
+							主页
+							
+						</a>
+							
+						</li>
+						<li class="mainSecond"><a class='mainSecondBorder' href="../businessActivity/businessActivity.html" >商业活动</a>
+							
+						</li>
+						<li ><a class='borderActive' href="../schoolActivity/schoolActivity.html" >校园活动</a>
+							
+						</li>
+						<li ><a class='borderActive' href="../mediaSources/mediaSources.html" >传媒资源</a>
+							
+						</li>
+						<li class='pullBox'> <a href="../entertainmentTalents/entertainment.html" class='borderActive'> 演艺人才</a>
+						</li>
+						<li class='loveBei'><a class='borderActive ' href="" class='loveBeike' >爱贝壳</a>
+							
+						</li>
+					</ul>
+				</div>
+				<div class='send_commend r'>
+					<a href='../authentication/authentication.html' class='send'>发布</a>
+				</div>
+			</div>
+		</header>
+		<div class="header"></div>
+		<nav>
+			
+		<div class="banner" id="b04">
+		    <ul>
+		        <li><img src="../../img/common/newBanner.png" alt=""  ></li>
+		        <li><img src="../../img/common/newBanner.png" alt=""  ></li>
+		        <li><img src="../../img/common/newBanner.png" alt="" ></li>
+		       
+		    </ul>
+		    <!--<a href="javascript:void(0);" class="unslider-arrow04 prev"><img class="arrow" id="al" src="arrowl.png" alt="prev" width="20" height="35"></a>
+		    <a href="javascript:void(0);" class="unslider-arrow04 next"><img class="arrow" id="ar" src="arrowr.png" alt="next" width="20" height="37"></a>-->
+		</div>
+		</nav>
+		<div class="content">
+			<div class="w">
+				<div class="screeningCondition">
+					<h3>筛选条件</h3>
+					<div class="place">
+						<span class='placeHead'>所在地区:</span>
+						<div id="city">
+							<select  class='prov selec'></select>
+							<select  class='city selec' disabled="disabled"></select>
+							<select  class='dist selec' disabled="disabled"></select>
+							<div class="schoolActivitySearchBox">
+								<input placeholder="请输入学校名称" class="sASInput" type="text">
+								<img class="schoolInputSearch" src="../../img/detail/searchSchool.png"/>
+
+							</div>
+						</div>
+					</div>
+					<div class="type commerciaty_school_size">
+						<span class='placeHead'>学校规模:</span>
+						<div class="typeDetail">
+							<span name="0">不限</span>
+							<span name="1">5000人</span>
+							<span name="2">5000-10000人</span>
+							<span name="3">10000-20000人</span>
+							<span name="4">20000人以上</span>
+							
+						</div>
+					</div>
+					<div class="type activity_type">
+						<span class='placeHead'>活动类型:</span>
+						<div class="typeDetail">
+							<span name="0">不限</span>
+							<span name="1">场外摆点</span>
+							<span name="2">传单派送</span>
+							<span name="3">晚会典礼</span>
+							<span name="4">竞技比赛</span>
+							<span name="5">讲座论坛</span>
+							<span name="6">营销策划</span>
+							<span name="7">其他</span>
+						</div>
+					</div>
+					<div class="amount budget_money">
+						<span class='placeHead'>预算金额:</span>
+						<div class="typeDetail">
+							<span name="1">0-1000</span>
+							<span name="2">1000-5000</span>
+							<span name="3">5000-8000</span>
+							<span name="4">8000-10000</span>
+							<span name="5">10000以上</span>
+							<div class="userDefineBox">
+								<div class="userDefineBoxHead">自定义金额：</div>
+								<input placeholder="￥" class="userDefineMFrom userDefineInput" type="text">
+								<div class="userDefineShow">-</div>
+								<input placeholder="￥" class="userDefineMTo userDefineInput" type="text">
+								<input class="userDefineButton" type="button" value="确定">
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="contentDetail">
+					<div class="aciveName l">活动名称</div>
+					<div class="activeType l">类型</div>
+					<div class="activePlace l">地区</div>
+					<div class="activeSchool l">学校</div>
+					<div class="activeTime l">活动时间</div>
+					<div class="activeMoney l">金额</div>
+					<div class="activeCompany l">发布企业</div>
+				</div>
+				<div class="detailList">
+					<div class="listContainer">
+						<div class="example">
+							<div class="exampleName l">可口可乐春季校园行</div>
+							<div class="exampleType l">场外摆点</div>
+							<div class="examplePlace l">成都</div>
+							<div class="exampleSchool l">成都理工大学</div>
+							<div class="exampleTime l">2016.9.1-2016.10.31</div>
+							<div class="exampleMoney l">￥3000</div>
+							<div class="exampleCompany l">可口可乐</div>
+						</div>
+						<div class="example">
+							<div class="exampleName l">可口可乐春季校园行</div>
+							<div class="exampleType l">场外摆点</div>
+							<div class="examplePlace l">成都</div>
+							<div class="exampleSchool l">成都理工大学</div>
+							<div class="exampleTime l">2016.9.1-2016.10.31</div>
+							<div class="exampleMoney l">￥3000</div>
+							<div class="exampleCompany l">可口可乐</div>
+						</div>
+						<div class="example">
+							<div class="exampleName l">可口可乐春季校园行</div>
+							<div class="exampleType l">场外摆点</div>
+							<div class="examplePlace l">成都</div>
+							<div class="exampleSchool l">成都理工大学</div>
+							<div class="exampleTime l">2016.9.1-2016.10.31</div>
+							<div class="exampleMoney l">￥3000</div>
+							<div class="exampleCompany l">可口可乐</div>
+						</div>
+						<div class="example">
+							<div class="exampleName l">可口可乐春季校园行</div>
+							<div class="exampleType l">场外摆点</div>
+							<div class="examplePlace l">成都</div>
+							<div class="exampleSchool l">成都理工大学</div>
+							<div class="exampleTime l">2016.9.1-2016.10.31</div>
+							<div class="exampleMoney l">￥3000</div>
+							<div class="exampleCompany l">可口可乐</div>
+						</div>
+						<div class="example">
+							<div class="exampleName l">可口可乐春季校园行</div>
+							<div class="exampleType l">场外摆点</div>
+							<div class="examplePlace l">成都</div>
+							<div class="exampleSchool l">成都理工大学</div>
+							<div class="exampleTime l">2016.9.1-2016.10.31</div>
+							<div class="exampleMoney l">￥3000</div>
+							<div class="exampleCompany l">可口可乐</div>
+						</div>
+						<div class="example">
+							<div class="exampleName l">可口可乐春季校园行</div>
+							<div class="exampleType l">场外摆点</div>
+							<div class="examplePlace l">成都</div>
+							<div class="exampleSchool l">成都理工大学</div>
+							<div class="exampleTime l">2016.9.1-2016.10.31</div>
+							<div class="exampleMoney l">￥3000</div>
+							<div class="exampleCompany l">可口可乐</div>
+						</div>
+						<div class="example">
+							<div class="exampleName l">可口可乐春季校园行</div>
+							<div class="exampleType l">场外摆点</div>
+							<div class="examplePlace l">成都</div>
+							<div class="exampleSchool l">成都理工大学</div>
+							<div class="exampleTime l">2016.9.1-2016.10.31</div>
+							<div class="exampleMoney l">￥3000</div>
+							<div class="exampleCompany l">可口可乐</div>
+						</div>
+						<div class="example">
+							<div class="exampleName l">可口可乐春季校园行</div>
+							<div class="exampleType l">场外摆点</div>
+							<div class="examplePlace l">成都</div>
+							<div class="exampleSchool l">成都理工大学</div>
+							<div class="exampleTime l">2016.9.1-2016.10.31</div>
+							<div class="exampleMoney l">￥3000</div>
+							<div class="exampleCompany l">可口可乐</div>
+						</div>
+						<div class="example">
+							<div class="exampleName l">可口可乐春季校园行</div>
+							<div class="exampleType l">场外摆点</div>
+							<div class="examplePlace l">成都</div>
+							<div class="exampleSchool l">成都理工大学</div>
+							<div class="exampleTime l">2016.9.1-2016.10.31</div>
+							<div class="exampleMoney l">￥3000</div>
+							<div class="exampleCompany l">可口可乐</div>
+						</div>
+						<div class="example">
+							<div class="exampleName l">可口可乐春季校园行</div>
+							<div class="exampleType l">场外摆点</div>
+							<div class="examplePlace l">成都</div>
+							<div class="exampleSchool l">成都理工大学</div>
+							<div class="exampleTime l">2016.9.1-2016.10.31</div>
+							<div class="exampleMoney l">￥3000</div>
+							<div class="exampleCompany l">可口可乐</div>
+						</div>
+					</div>
+					<div class="swipePage">
+						<div class="pageBox">
+							<div class="swipeBox">
+								<div class="choose l">
+									<span>1</span>
+									<span>2</span>
+									<span>3</span>
+									<span>4</span>
+									<span>5</span>
+									<span>6</span>
+									<span>7</span>
+									<span>8</span>
+									<span>9......100</span>
+									<span class='pictures'><img src='../../img/detail/business -Next page.png' /></span>
+								</div>
+								<div class="inputNumber r">
+									<span class='l goOn'>跳转到</span>
+									<input class='l input1' type="text" />
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="buttom">
+			<div class="first"></div>
+			<div class="second"></div>
+		</div>
+		<footer>
+			<div class="footer">
+			<div class="footerNav">
+				<ul class='footerNav1'>
+					<li><a href="">商业活动</a></li>
+					<li><a href="">校园活动</a></li>
+					<li><a href="">传媒资源</a></li>
+					<li><a href="">演艺人才</a></li>
+					<li><a href="">关于我们</a></li>
+				</ul>
+				<div class="aboutBox">
+				<ul class="about">
+					<li>贝壳网www.icowry.com</li>
+					<li>蜀ICP备16034784号-2</li>
+					<li>成都山楂树科技有限公司</li>
+				</ul>
+				</div>
+				<div class="companyAddress">
+					<div class="AddressBox">
+						<div class="l detailaddress">地址:成都市高新区天府三街219号腾讯大厦B座7-12</div>
+						<div class="l contact">联系方式:13808140654</div>
+					</div>
+				</div>
+				<!--<div id="nav">
+					<div class="planar lastBox">
+						<div class='online'>在线服务</div>
+						<img class='planarP' src='img/common/services.png' />
+					</div>
+					<div class="contact lastBox">
+						<img class='contactP' src="img/common/QRsmall.png"  />
+					</div>
+					<div class="up lastBox">
+						<div class='return'>返回顶部</div>
+						<img class='upP' src="img/common/returnTop.png" alt="" />
+					</div>
+					
+				</div>-->
+				<div class="slightly">
+					<img src="../../img/common/QRcode.png" />
+				
+				</div>
+				<!--<div class="triangle"></div>-->
+				
+				
+					
+				
+				
+			</div>
+			</div>	
+		</footer>
+		<div id="nav">
+					<div class="planar lastBox">
+						<div class='online'>在线服务</div>
+						<img class='planarP' src='../../img/common/services.png' />
+					</div>
+					<div class="contact1 lastBox">
+						<img class='contactP' src="../../img/common/QRsmall.png"  />
+					</div>
+					<div class="up lastBox">
+						<div class='return'>返回顶部</div>
+						<img class='upP' src="../../img/common/returnTop.png" alt="" />
+					</div>
+					<div class="slightlyQR">
+						<img src="../../img/common/QRcode.png" />
+				
+					</div>
+					<div class="triangle"></div>
+		</div>
+		
+
+
+	</body>
+</html>

@@ -1,0 +1,236 @@
+<extend name="Layout:index_base"/>
+<block name="css">
+	<link rel="stylesheet" href="/public/css/mediaSources/mediaSourcesAdvertApply.css" />
+</block>
+<block name="js">
+	<script src="/public/js/require/require.js" defer async="true" data-main='/public/js/commercialActivity/commercialActivity'></script>
+</block>
+<block name="main">
+<div class="header"></div>
+<div class="content">
+    <div class="w">
+        <div class="left">
+            <h2>{$row.name}</h2>
+            <div class="activityAbout">
+                <span class='l actDate'>
+                    <span>发布时间:</span>
+                    <span class="actDateNew">{$row.add_time}</span>
+                </span>
+                <span class='l actTime'>浏览次数:<span class='actNumber'>{$row.read_total}次</span></span>
+
+                <span class='r actCompany'><a href='../commercialActivity/companyMessage.html'>{$row.company_name}</a></span>
+            </div>
+            <!---------------广场资源------------------->
+            <if condition="$row['resource_aid'] eq 1">
+            <div class="groundDetailBox">
+                <div class="activityDetail">
+                    <div class="type">
+                        <span class="actType l">活动类型:<span class="actTypeInput">{$row.resource_aname}</span></span>
+                        <span class="deadLine l paddingLeft">
+                                    日人流量:
+                                    <span class="typeLeft">{$row.people}人</span>
+                                </span>
+                    </div>
+                    <div class="type">
+                        <span class="actType l">
+                            资源价格:
+                            <span class="advertiseMentPrice">{$row.money}</span>
+                        </span>
+                        <span class="deadLine l paddingLeft">
+                                    预付比例:
+                                    <span class="typeLeft">{$row.prepay_ratio}%</span>
+                                </span>
+                    </div>
+                    <div class="type">
+                        <span class="actType MSbelongSchool l">
+                            所在院校:
+                            <span class="belongToSchool">{$row.school_name}</span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            </if>
+            <!---------------广场资源end---------------->
+            <!---------------场馆资源------------------->
+            <if condition="$row['resource_aid'] eq 2">
+            <div class="VenueDetailBox">
+                <div class="activityDetail">
+                    <div class="type">
+                        <span class="actType l">活动类型：<span>{$row.resource_aname}-{$row.resource_bname}</span></span>
+                        <span class="deadLine l">场馆面积：<span>{$row.area}㎡</span></span>
+                        <span>容纳人数：<span>{$row.people}人</span></span>
+                    </div>
+                    <div class="type">
+                        <span class="actType l">资源价格：{$row.money}{$row.unit}</span>
+                        <span class="deadLine l">预付比例：<span>{$row.prepay_ratio}%</span></span>
+                        <span class="detailSchoolShow">所在院校：{$row.school_name}</span>
+                    </div>
+
+                </div>
+            </div>
+            </if>
+            <!---------------场馆资源end---------------->
+            <!---------------媒体资源------------------->
+            <if condition="$row['resource_aid'] eq 3">
+            <div class="mediaDetailBox">
+                <div class="activityDetail">
+                    <div class="type">
+                        <span class="actType l">活动类型:<span class="actTypeInput">{$row.resource_aname}-{$row.resource_bname}</span></span>
+                        <span class="deadLine l paddingLeft">
+                                    粉丝数量:
+                                    <span class="typeLeft">{$people}人</span>
+                                </span>
+                    </div>
+                    <div class="type">
+                        <span class="actType l">
+                            资源价格:
+                            <span class="advertiseMentPrice">{$row.money}{$row.unit}</span>
+                        </span>
+                        <span class="deadLine l paddingLeft">
+                                    预付比例:
+                                    <span class="typeLeft">{$row.prepay_ratio}%</span>
+                                </span>
+                    </div>
+                    <div class="type">
+                        <span class="actType MSbelongSchool l">
+                            所在院校:
+                            <span class="belongToSchool">{$row.school_name}</span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            </if>
+            <!---------------媒体资源end---------------->
+			<!----------------广告位资源------------------>
+			<if condition="$row['resource_aid'] eq 4">
+            <div class="advertiseBox">
+                <div class="activityDetail">
+                    <div class="type">
+                        <span class="actType l">活动类型:<span class="actTypeInput">{$row.resource_aname}</span></span>
+                        <span class="deadLine l paddingLeft">
+								日受众人数:
+								<span class="typeLeft">{$people}人</span>
+							</span>
+                    </div>
+                    <div class="type">
+                        <span class="actType l">
+                            资源价格:
+                            <span class="advertiseMentPrice">{$row.money}{$row.unit}</span>
+                        </span>
+                            <span class="deadLine l paddingLeft">
+                                    预付比例:
+                                    <span class="typeLeft">{$row.prepay_ratio}%</span>
+                                </span>
+                        </div>
+                    <div class="type">
+                        <span class="actType MSbelongSchool l">
+                            所在院校:<span class="belongToSchool">{$row.school_name}</span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            </if>
+            <!---------------广告位资源end-------------->
+            <!---------------others--------------------->
+            <if condition="$row['resource_aid'] eq 13">
+            <div class="othersDetailBox VenueDetailBox">
+                <div class="activityDetail">
+                    <div class="type">
+                        <span class="actType l">活动类型：<span>{$row.resource_aname}</span></span>
+                        <span class="deadLine l">资源价格：<span>{$row.money}{$row.unit}</span></span>
+                        <span>预付比例：<span>30%</span></span>
+                    </div>
+                    <div class="type">
+                        <span class="actType l">所在院校：<span>{$row.school_name}</span></span>
+                    </div>
+                </div>
+            </div>
+            </if>
+            <!---------------end------------------------>
+            <div class="contentDetail">
+                <div class="actDetail">
+                    <p class='first'>
+                        <span class="firstHead">校园规模:</span>
+                        <span class="MSSchoolStyle">{$row.school_size}</span>
+                    </p>
+                    <p class="MSSourcesDescribeBox">
+                        <span class="MSSourceHead">资源描述:</span>
+                        <span class="MSSourcesDescribeI">
+                            {$row.resource_desc}
+                        </span>
+                    </p>
+                    <div class="MSSourcesPictureBox">
+                        <span class="MSSourcesPictureHead">
+                            资源照片:
+                        </span>
+                        <div class="MSPBox">
+                        <volist name="row['img']" id="url">
+                            <div class="MSPBoxPic">
+                                <img class="showBigPicture" src="{$url.resource_path}" alt="">
+                            </div>
+                        </volist>
+                        </div>
+                    </div>
+                    <p class="MSSchoolCandA">
+                        <span class="MSSchoolCandAHead">验收方式:</span>
+                        <span class="MSSchoolCandAWay">{$row.check_type}</span>
+                    </p>
+                    <p class="MSSchoolCooperationTime">
+                        <span class="MSSctHead">已合作次数:</span>
+                        <span class="MSSctTime">{$row.cooperation_count}</span>
+                    </p>
+                    <p class="leaveMessage">留言申请：</p>
+                </div>
+
+                <textarea class='extraMessage' placeholder="可输入20-100字。请仔细阅读活动详情，并且查看发布人信息及合作历史后留言申请。根据活动要求突出本社团团队优势，以及相关精彩案例。对方同意申请后将收到回执以及联系方式，未通过也将收到回执。
+"></textarea>
+                <p class='attention'>注：所有活动只能申请一次，请仔细检查留言内容哦！本次申请需消耗1颗珍珠</p>
+            </div>
+            <div class="ApplyBox">
+                <button id='Apply' value="{$row.id}">确认申请</button>
+                <div class="pearlBox">
+                    <span class="pearlBoxHead">贝壳币余额:</span>
+                    <span class="pearlBoxNumber">{$row.icowry_coin}</span>
+                    <a href="#" class="pearlBoxHelp" ></a>
+                </div>
+            </div>
+            <div class="bottomDistance"></div>
+        </div>
+        <div class="right">
+            <div class="publisherMessageBox">
+                <div class="publisherMessageLgo">
+                    <div class="pMLogoImg">
+                        <img src="{$row.portrait}" alt="">
+                    </div>
+                    <p class="pMCompanyName">{$row.company_name}</p>
+                </div>
+                <a href="#" class="checkOutPublisherMessage">
+                    <span class="ckPMHead">查看发布人信息</span>
+                    <img class="ckPMImg" src="/public/img/commercialActivity/Next%20page2.png" alt="">
+                </a>
+            </div>
+        </div>
+        <div class="scalePictureBox">
+            <img class="bigPicture" src="" alt="资源照片图片大图"/>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+	scope.url = '/resource/resourceApplyAjax';
+</script>
+</block>
+<div class="popBox">
+
+</div>
+<div id="popUp">
+    <h2>抱歉</h2>
+    <p class='firstOne'>你当前没有认证传媒公司或校园社团身份，无法进行申请</p>
+    <p class='secondOne'>请选择一种身份后前去认证！</p>
+    <div class="buttonBxo">
+        <input class='l mediaCompany' type="button" value='传媒公司' />
+        <input class='r schoolClub' type="button" value='校园社团'/>
+    </div>
+    <div class="close"></div>
+</div>
+</body>
+</html>

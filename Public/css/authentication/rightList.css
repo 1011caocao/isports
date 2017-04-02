@@ -1,0 +1,182 @@
+.myApplyTab{width:740px;height:1000px;margin-left:23px}
+.myApplyTab .myPubActDetailBox{width:740px;height:48px;line-height:48px}
+.myApplyTab .myPubActDetailBox .myPubActDetailBHead{width:190px;height:46px;line-height:46px;display:block;float:left;font-size:24px}
+.myPubActDetailTitleHead{width:740px;height:40px;line-height:40;border-top-left-radius:5px;border-top-right-radius:5px;border:1px solid #ff9700;background:#ff9700}
+.myPubActDetailTitleHead p{line-height:40px;float:left;font-size:18px;color:#fff;text-align:center}
+.myPubActDetailTitleHead p.rightListHeader{width:302px}
+.myPubActDetailTitleHead p.listOfApplicants{width:136px}
+.myPubActDetailTitleHead p.listDeadline{width:166px}
+.myPubActDetailTitleHead p.listStatus{width:136px}
+.rightList{width:740px;height:761px;border:1px solid #e8e8e8;border-bottom-right-radius:5px;border-bottom-left-radius:5px}
+.rightList p{text-align:center;float:left}
+.rightList sup{color:red}
+.rightList .cooperationIn{height:38px;line-height:38px}
+.rightList .cooperationIn:hover{background:#fff1dc}
+.rightListHeaders{width:302px}
+.listOfApplicantss{width:136px;height:30px;line-height:30px}
+.listDeadlines{width:166px}
+.listStatuss{width:136px}
+.cooperationIno{height:38px;line-height:38px;position:relative;z-index:0;color:#838383}
+.chen{width:740px;height:38px;background:rgba(255,241,220,.9);display:none;position:absolute;left:0;top:0}
+.chen img{margin-left:350px;margin-top:5px}
+.cooperationIno:hover .chen{display:block}
+.listPage{width:740px;height:150px}
+.listPage .floatingPage{width:234px;height:36px;float:right;margin-top:22px;background:red}
+.mySourcesTab{width:740px;height:1000px;margin-left:23px}
+.mySourcesTab .myPubActDetailBox{width:740px;height:48px;line-height:48px}
+.mySourcesTab .myPubActDetailBox .myPubActDetailBHead{width:190px;height:46px;line-height:46px;display:block;float:left;font-size:24px}
+.mySourcesTab .myPubActDetailTitleHead{width:740px;height:40px;line-height:40;border-top-left-radius:5px;border-top-right-radius:5px;border:1px solid #ff9700;background:#ff9700}
+.mySourcesTab .myPubActDetailTitleHead p{line-height:40px;float:left;font-size:18px;color:#fff;text-align:center}
+.mySourcesTab .myPubActDetailTitleHead p.rightListHeader{width:272px}
+.mySourcesTab .myPubActDetailTitleHead P.resourcePrice{width:70px}
+.mySourcesTab .myPubActDetailTitleHead p.listOfApplicants{width:168px}
+.mySourcesTab .myPubActDetailTitleHead p.listDeadline{width:100px}
+.mySourcesTab .myPubActDetailTitleHead p.listStatus{width:130px}
+.mySourcesTab .rightLista{width:740px;height:761px;border:1px solid #e8e8e8;border-bottom-right-radius:5px;border-bottom-left-radius:5px}
+.mySourcesTab .rightLista p{text-align:center;float:left}
+.mySourcesTab .rightLista sup{color:red}
+.mySourcesTab .rightLista .cooperationIna{height:38px;line-height:38px}
+.mySourcesTab .rightLista .cooperationIna .rightListHeadersa{width:272px}
+.mySourcesTab .rightLista .cooperationIna .resourcePricesa{width:70px}
+.mySourcesTab .rightLista .cooperationIna .listOfApplicantssa{width:168px;height:30px;line-height:30px}
+.mySourcesTab .rightLista .cooperationIna .listDeadlinesa{width:100px}
+.mySourcesTab .rightLista .cooperationIna .listStatussa{width:130px}
+.mySourcesTab .rightLista .cooperationIna:hover{background:#fff1dc}
+.mySourcesTab .rightLista .cooperationInoo{height:38px;line-height:38px;position:relative;z-index:0;color:#838383}
+.rightListHeadersa{width:272px}
+.resourcePricesa{width:70px}
+.listOfApplicantssa{width:168px;height:38px;line-height:38px}
+.listDeadlinesa{width:100px}
+.listStatussa{width:130px}
+.mySourcesTab .rightLista .cooperationInoo .chen1{width:740px;height:38px;background:rgba(255,241,220,.9);display:none;position:absolute;left:0;top:0}
+.mySourcesTab .rightLista .cooperationInoo .chen1 img{margin-left:365px;margin-top:5px}
+.mySourcesTab .rightLista .cooperationInoo:hover .chen1{display:block}
+.draftsTab{width:740px;height:1000px;margin-left:23px}
+.draftsTab .myPubActDetailBox{width:740px;height:48px;line-height:48px}
+.draftsTab .myPubActDetailBox .myPubActDetailBHead{width:190px;height:46px;line-height:46px;display:block;float:left;font-size:24px}
+.draftsTab .myPubActDetailTitleHead .rightListHeader{width:330px}
+.draftsTab .myPubActDetailTitleHead .listOfApplicants{width:118px}
+.draftsTab .myPubActDetailTitleHead .listDeadline{width:112px}
+.draftsTab .myPubActDetailTitleHead .listStatus{width:180px}
+.draftsTab .cooperationIn .rightListHeaders{width:330px;color:#838383}
+.draftsTab .cooperationIn .listOfApplicantss{width:118px;color:#838383}
+.draftsTab .cooperationIn .listDeadlines{width:112px;color:#838383}
+.draftsTab .cooperationIn .listStatuss{width:180px}
+.activityMessageTab{width:740px;height:1000px;margin-left:23px}
+.personalNews{height:126px;border:1px solid #dcdcdc;border-radius:5px;margin-bottom:10px}
+.personalNews .personalPictures{width:85px;height:85px;border-radius:85px;background:#cfcfcf;float:left;margin-top:20px;margin-left:23px}
+.personalNews .personalRightBox{width:600px;float:left;margin-left:20px}
+.personalNews .personalRightBox .first{margin-top:20px}
+.personalNews .personalRightBox .first .personalCenterTitle{font-size:16px;padding-right:22px;font-weight:700}
+.personalNews .personalRightBox .first .personalCenterDate{font-size:10px;padding-right:16px}
+.personalNews .personalRightBox .first .personalCenterTime{font-size:10px}
+.personalNews .personalRightBox .Second{color:#8c8c8c;font-size:13px;margin-top:16px}
+.personalNews .personalRightBox .Third{color:#8c8c8c;margin-top:6px;font-size:13px}
+.personalNews .personalRightBox .Third span{padding-right:10px}
+.personalNews:hover{border:#ff9700;box-shadow:0 0 12px rgba(255,151,0,.4);color:#ff9700}
+.personalNews:hover .Second{color:#ff9700}
+.personalNews:hover .Third{color:#ff9700}
+.systemMessageTab{width:740px;height:1000px;margin-left:23px}
+.dj:hover{cursor:pointer}
+.chen img:hover{cursor:pointer}
+.chen1 img:hover{cursor:pointer}
+.right .pearlWalletTab{display:block;height:1314px;padding-left:47px}
+.right .pearlWalletTab .pearWlletServiceRegulations{width:700px;height:49px;line-height:49px;padding-left:17px;font-size:24px;letter-spacing:1px;font-weight:700}
+.right .pearlWalletTab .personalShowLogo{width:50px;height:8px;background:#ff9700;margin-left:17px}
+.right .pearlWalletTab .peralExplain{height:23px;line-height:23px;font-size:14px;padding-left:17px;letter-spacing:2px}
+.right .pearlWalletTab .peralExplainF{margin-top:14px}
+.right .pearlWalletTab .pearlWalletRegulations{width:747px;height:232px;padding-left:17px;overflow:hidden}
+.right .pearlWalletTab .pearlWalletRegulations .pearlWalletRFirst{width:100%;height:162px;margin-top:11px}
+.right .pearlWalletTab .pearlWalletRegulations .pearlWalletRFirst .pearlWalletRFirstHead{width:73px;height:145px;float:left;line-height:24px;font-size:14px;font-weight:700;letter-spacing:1px}
+.right .pearlWalletTab .pearlWalletRegulations .pearlWalletRFirst .pearlWalletRFirstContent{width:674px;height:145px;float:left}
+.right .pearlWalletTab .pearlWalletRegulations .pearlWalletRFirst .pearlWalletRFirstContent p{line-height:24px;font-size:14px;letter-spacing:1px}
+.right .pearlWalletTab .pearlWalletRegulations .pearlWalletRFirst .pearlWalletRFirstContent .pIndent{text-indent:12px}
+.right .pearlWalletTab .pearlWalletRegulations .pearlWalletRSecond{width:100%;height:67px;margin-top:8px}
+.right .pearlWalletTab .pearlWalletRegulations .pearlWalletRSecond .pearlWalletRSecondHead{width:73px;float:left;height:67px;font-size:14px;line-height:24px;font-weight:700}
+.right .pearlWalletTab .pearlWalletRegulations .pearlWalletRSecond .pearlWalletRSecondContent{width:674px;height:67px;float:left}
+.right .pearlWalletTab .pearlWalletRegulations .pearlWalletRSecond .pearlWalletRSecondContent p{line-height:24px;font-size:14px}
+.right .pearlWalletTab .activityHistoryDetail{width:747px;font-weight:700;letter-spacing:1px;padding-left:14px;height:59px;line-height:69px;font-size:24px;border-top:1px solid #dcdcdc}
+.right .pearlWalletTab .activityHistoryTitle{width:100%;height:40px;background:#ff9700;border-top-left-radius:6px;border-top-right-radius:6px}
+.right .pearlWalletTab .activityHistoryTitle span{display:block;float:left;height:40px;line-height:40px;font-size:18px;color:#fff;text-align:center}
+.right .pearlWalletTab .activityHistoryTitle .actHistoryOperation{width:140px}
+.right .pearlWalletTab .activityHistoryTitle .actHistoryNumber{width:158px}
+.right .pearlWalletTab .activityHistoryTitle .actHistoryTime{width:206px}
+.right .pearlWalletTab .activityHistoryTitle .actHistoryEvents{width:254px;padding-left:5px}
+.right .pearlWalletTab .activityHistoryBox{width:762px;height:460px;border:1px solid #dcdcdc;border-top:0}
+.right .pearlWalletTab .activityHistoryBox .historyExample{width:762px;height:38px}
+.right .pearlWalletTab .activityHistoryBox .historyExample span{display:block;height:38px;line-height:38px;text-align:center;font-size:14px;float:left}
+.right .pearlWalletTab .activityHistoryBox .historyExample .exampleOperation{width:140px}
+.right .pearlWalletTab .activityHistoryBox .historyExample .exampleNumber{width:158px}
+.right .pearlWalletTab .activityHistoryBox .historyExample .exampleTime{width:206px}
+.right .pearlWalletTab .activityHistoryBox .historyExample .exampleEvents{width:254px}
+.right .pearlWalletTab .pagePreAndNext{width:100%;height:85px;line-height:85px;text-align:center}
+.pearlWalletTab .pearWalletRe{width:100%;height:65px;border-bottom:1px solid #dcdcdc;margin-top:5px}
+.pearlWalletTab .pearWalletRe .pearWalletReHead{display:block;float:left;padding:0 18px;font-size:24px;color:#ff9700;line-height:65px;height:65px}
+.pearlWalletTab .pearWalletRe .pearWalletReLinkBox{float:right;display:block;width:397px;height:16px;margin-top:27px}
+.pearlWalletTab .pearWalletRe .pearWalletReLinkBox a{display:block;width:97px;height:16px;line-height:16px;color:#2f2f2f;text-align:center;font-size:16px;text-decoration:none;float:left;cursor:pointer;border-right:1px solid #dcdcdc;border-left:1px solid #dcdcdc}
+.pearlWalletTab .pearWalletRe .pearWalletReLinkBox a.buyVIP{border-left:0}
+.pearlWalletTab .pearWalletRe .pearWalletReLinkBox a.exchangeWelfare{border-right:0}
+.applySafeguardTab,.connectBackTab{width:764px}
+.applySafeguardTab .apply_safeguard,.connectBackTab .apply_safeguard{width:747px;height:977px;padding:21px 0 0 17px}
+.applySafeguardTab .apply_safeguard .apply_safeguardTBox,.connectBackTab .apply_safeguard .apply_safeguardTBox{width:264px;height:48px;color:#000}
+.applySafeguardTab .apply_safeguard .apply_safeguardTBox span,.connectBackTab .apply_safeguard .apply_safeguardTBox span{display:block;float:left;height:48px;line-height:48px;width:130px;font-size:20px;text-align:center}
+.applySafeguardTab .apply_safeguard .apply_safeguardTBox span.select,.connectBackTab .apply_safeguard .apply_safeguardTBox span.select{background:#ff9700}
+.applySafeguardTab .apply_safeguard .apply_safeguardTBox .tl,.connectBackTab .apply_safeguard .apply_safeguardTBox .tl{border-top-left-radius:5px;color:#fff}
+.applySafeguardTab .apply_safeguard .apply_safeguardTBox .tr1,.connectBackTab .apply_safeguard .apply_safeguardTBox .tr1{color:#000;border-top-right-radius:5px;border-top:1px solid #ddd;border-right:1px solid #ddd}
+.applySafeguardTab .apply_safeguard .submitFeedbackUnderline,.connectBackTab .apply_safeguard .submitFeedbackUnderline{width:100%;height:2px;background:#ff9700}
+.applySafeguardTab .apply_safeguard #com,.applySafeguardTab .apply_safeguard #com1,.connectBackTab .apply_safeguard #com,.connectBackTab .apply_safeguard #com1{width:100%;height:500px}
+.applySafeguardTab .apply_safeguard #com .commonLi,.applySafeguardTab .apply_safeguard #com1 .commonLi,.connectBackTab .apply_safeguard #com .commonLi,.connectBackTab .apply_safeguard #com1 .commonLi{display:none;height:456px}
+.applySafeguardTab .apply_safeguard #com .show,.applySafeguardTab .apply_safeguard #com1 .show,.connectBackTab .apply_safeguard #com .show,.connectBackTab .apply_safeguard #com1 .show{display:block}
+.applySafeguardTab .apply_safeguard #com .show form,.applySafeguardTab .apply_safeguard #com1 .show form,.connectBackTab .apply_safeguard #com .show form,.connectBackTab .apply_safeguard #com1 .show form{width:100%;height:100%}
+.applySafeguardTab .apply_safeguard #com .show form input,.applySafeguardTab .apply_safeguard #com1 .show form input,.connectBackTab .apply_safeguard #com .show form input,.connectBackTab .apply_safeguard #com1 .show form input{width:415px;height:38px;border-radius:5px;outline:0;border:1px solid #c9c9c9;text-indent:1em}
+.applySafeguardTab .apply_safeguard #com .show form .respondentPerson,.applySafeguardTab .apply_safeguard #com1 .show form .respondentPerson,.connectBackTab .apply_safeguard #com .show form .respondentPerson,.connectBackTab .apply_safeguard #com1 .show form .respondentPerson{padding-top:28px}
+.applySafeguardTab .apply_safeguard #com .show form .cooperationContent,.applySafeguardTab .apply_safeguard #com1 .show form .cooperationContent,.connectBackTab .apply_safeguard #com .show form .cooperationContent,.connectBackTab .apply_safeguard #com1 .show form .cooperationContent{margin-top:20px}
+.applySafeguardTab .apply_safeguard #com .show form .complaintContent,.applySafeguardTab .apply_safeguard #com1 .show form .complaintContent,.connectBackTab .apply_safeguard #com .show form .complaintContent,.connectBackTab .apply_safeguard #com1 .show form .complaintContent{height:140px;margin-top:20px;margin-bottom:22px}
+.applySafeguardTab .apply_safeguard #com .show form .complaintContent span,.applySafeguardTab .apply_safeguard #com1 .show form .complaintContent span,.connectBackTab .apply_safeguard #com .show form .complaintContent span,.connectBackTab .apply_safeguard #com1 .show form .complaintContent span{float:left}
+.applySafeguardTab .apply_safeguard #com .show form .complaintContent textarea,.applySafeguardTab .apply_safeguard #com1 .show form .complaintContent textarea,.connectBackTab .apply_safeguard #com .show form .complaintContent textarea,.connectBackTab .apply_safeguard #com1 .show form .complaintContent textarea{outline:0;padding:16px 12px;border-radius:5px;resize:none}
+.applySafeguardTab .apply_safeguard #com .show form .addPhotos,.applySafeguardTab .apply_safeguard #com1 .show form .addPhotos,.connectBackTab .apply_safeguard #com .show form .addPhotos,.connectBackTab .apply_safeguard #com1 .show form .addPhotos{width:450px;height:64px;margin-bottom:38px}
+.applySafeguardTab .apply_safeguard #com .show form .addPhotos .addPhotosl,.applySafeguardTab .apply_safeguard #com1 .show form .addPhotos .addPhotosl,.connectBackTab .apply_safeguard #com .show form .addPhotos .addPhotosl,.connectBackTab .apply_safeguard #com1 .show form .addPhotos .addPhotosl{width:80px;height:64px;display:block;float:left}
+.applySafeguardTab .apply_safeguard #com .show form .addPhotos .addPhotosr,.applySafeguardTab .apply_safeguard #com1 .show form .addPhotos .addPhotosr,.connectBackTab .apply_safeguard #com .show form .addPhotos .addPhotosr,.connectBackTab .apply_safeguard #com1 .show form .addPhotos .addPhotosr{width:370px;height:64px;float:left}
+.applySafeguardTab .apply_safeguard #com .show form .addPhotos .addPhotosr span,.applySafeguardTab .apply_safeguard #com1 .show form .addPhotos .addPhotosr span,.connectBackTab .apply_safeguard #com .show form .addPhotos .addPhotosr span,.connectBackTab .apply_safeguard #com1 .show form .addPhotos .addPhotosr span{font-size:12px}
+.applySafeguardTab .apply_safeguard #com .show form .submita,.applySafeguardTab .apply_safeguard #com1 .show form .submita,.connectBackTab .apply_safeguard #com .show form .submita,.connectBackTab .apply_safeguard #com1 .show form .submita{width:280px;height:47px;line-height:47px;background:#ff9700;margin-left:50px;text-align:center;border-radius:5px;color:#fff;font-size:22px;display:block;}
+.applySafeguardTab .apply_safeguard #com .feedbackHistory,.applySafeguardTab .apply_safeguard #com1 .feedbackHistory,.connectBackTab .apply_safeguard #com .feedbackHistory,.connectBackTab .apply_safeguard #com1 .feedbackHistory{width:747px;height:354px}
+.applySafeguardTab .apply_safeguard #com .feedbackHistory .feedbackHistorytop,.applySafeguardTab .apply_safeguard #com1 .feedbackHistory .feedbackHistorytop,.connectBackTab .apply_safeguard #com .feedbackHistory .feedbackHistorytop,.connectBackTab .apply_safeguard #com1 .feedbackHistory .feedbackHistorytop{height:40px;background:#ff9700;border-top-left-radius:5px;border-top-right-radius:5px;margin-top:10px;color:#fff}
+.applySafeguardTab .apply_safeguard #com .feedbackHistory .feedbackHistorytop p,.applySafeguardTab .apply_safeguard #com1 .feedbackHistory .feedbackHistorytop p,.connectBackTab .apply_safeguard #com .feedbackHistory .feedbackHistorytop p,.connectBackTab .apply_safeguard #com1 .feedbackHistory .feedbackHistorytop p{float:left;height:40px;line-height:40px}
+.applySafeguardTab .apply_safeguard #com .feedbackHistory .feedbackHistorytop .feedbackHistoryTitle,.applySafeguardTab .apply_safeguard #com1 .feedbackHistory .feedbackHistorytop .feedbackHistoryTitle,.connectBackTab .apply_safeguard #com .feedbackHistory .feedbackHistorytop .feedbackHistoryTitle,.connectBackTab .apply_safeguard #com1 .feedbackHistory .feedbackHistorytop .feedbackHistoryTitle{width:273px;text-indent:5em}
+.applySafeguardTab .apply_safeguard #com .feedbackHistory .feedbackHistorytop .feedbackHistoryTime,.applySafeguardTab .apply_safeguard #com1 .feedbackHistory .feedbackHistorytop .feedbackHistoryTime,.connectBackTab .apply_safeguard #com .feedbackHistory .feedbackHistorytop .feedbackHistoryTime,.connectBackTab .apply_safeguard #com1 .feedbackHistory .feedbackHistorytop .feedbackHistoryTime{width:254px;text-align:center}
+.applySafeguardTab .apply_safeguard #com .feedbackHistory .feedbackHistorytop .feedbackHistoryResults,.applySafeguardTab .apply_safeguard #com1 .feedbackHistory .feedbackHistorytop .feedbackHistoryResults,.connectBackTab .apply_safeguard #com .feedbackHistory .feedbackHistorytop .feedbackHistoryResults,.connectBackTab .apply_safeguard #com1 .feedbackHistory .feedbackHistorytop .feedbackHistoryResults{width:206px;text-align:center}
+.applySafeguardTab .apply_safeguard #com .feedbackHistory .feedbackHistorybottom,.applySafeguardTab .apply_safeguard #com1 .feedbackHistory .feedbackHistorybottom,.connectBackTab .apply_safeguard #com .feedbackHistory .feedbackHistorybottom,.connectBackTab .apply_safeguard #com1 .feedbackHistory .feedbackHistorybottom{height:312px;border:1px solid #dcdcdc;border-bottom-left-radius:5px;border-bottom-right-radius:5px;font-size:14px}
+.applySafeguardTab .apply_safeguard #com .feedbackHistory .feedbackHistorybottom p,.applySafeguardTab .apply_safeguard #com1 .feedbackHistory .feedbackHistorybottom p,.connectBackTab .apply_safeguard #com .feedbackHistory .feedbackHistorybottom p,.connectBackTab .apply_safeguard #com1 .feedbackHistory .feedbackHistorybottom p{float:left;height:37px;line-height:37px}
+.applySafeguardTab .apply_safeguard #com .feedbackHistory .feedbackHistorybottom .feedbackHistoryTitles,.applySafeguardTab .apply_safeguard #com1 .feedbackHistory .feedbackHistorybottom .feedbackHistoryTitles,.connectBackTab .apply_safeguard #com .feedbackHistory .feedbackHistorybottom .feedbackHistoryTitles,.connectBackTab .apply_safeguard #com1 .feedbackHistory .feedbackHistorybottom .feedbackHistoryTitles{width:273px;text-indent:2em}
+.applySafeguardTab .apply_safeguard #com .feedbackHistory .feedbackHistorybottom .feedbackHistoryTimes,.applySafeguardTab .apply_safeguard #com1 .feedbackHistory .feedbackHistorybottom .feedbackHistoryTimes,.connectBackTab .apply_safeguard #com .feedbackHistory .feedbackHistorybottom .feedbackHistoryTimes,.connectBackTab .apply_safeguard #com1 .feedbackHistory .feedbackHistorybottom .feedbackHistoryTimes{width:254px;text-align:center}
+.applySafeguardTab .apply_safeguard #com .feedbackHistory .feedbackHistorybottom .feedbackHistoryTimes span,.applySafeguardTab .apply_safeguard #com1 .feedbackHistory .feedbackHistorybottom .feedbackHistoryTimes span,.connectBackTab .apply_safeguard #com .feedbackHistory .feedbackHistorybottom .feedbackHistoryTimes span,.connectBackTab .apply_safeguard #com1 .feedbackHistory .feedbackHistorybottom .feedbackHistoryTimes span{margin:0 5px}
+.applySafeguardTab .apply_safeguard #com .feedbackHistory .feedbackHistorybottom .feedbackHistoryResultss,.applySafeguardTab .apply_safeguard #com1 .feedbackHistory .feedbackHistorybottom .feedbackHistoryResultss,.connectBackTab .apply_safeguard #com .feedbackHistory .feedbackHistorybottom .feedbackHistoryResultss,.connectBackTab .apply_safeguard #com1 .feedbackHistory .feedbackHistorybottom .feedbackHistoryResultss{width:206px;text-align:center}
+/**后期部分样式修改**/
+#com .show form input,textarea{
+    font-family:'Microsoft Yahei','Arial','Helvetica','sans-self';
+}
+#com1 .show form input,textarea{
+    font-family:'Microsoft Yahei','Arial','Helvetica','sans-self';
+}
+/*
+***申请维权样式修改
+*/
+.applySafeguardTab #com .show form .addPhotos .addPhotosr img{
+    display:block;
+    width:39px;
+    height:39px;
+}
+.listPage nav{
+    width:766px;
+    height:80px;
+}
+.listPage nav .pagination{
+    width:270px;
+}
+/*
+***申请活动列表a标签样式
+*/
+.rightList a{
+    color:black;
+    text-decoration:none;
+}

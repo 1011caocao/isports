@@ -1,0 +1,772 @@
+//我的申请
+.myApplyTab{
+    width:740px;
+    height:1000px;
+    margin-left:23px;
+    .myPubActDetailBox{
+        width:740px;
+        height: 48px;
+        line-height:48px;     
+         .myPubActDetailBHead{
+            width: 190px;
+            height: 46px;
+            line-height: 46px;
+            display: block;
+            float: left;
+            font-size: 24px;          
+        }
+    } 
+}
+//我的发布，我的申请公用
+.myPubActDetailTitleHead{
+    width:740px;
+    height:40px;
+    line-height:40;
+    border-top-left-radius:5px;
+    border-top-right-radius:5px;
+	border: 1px solid #ff9700;
+	background:#ff9700;
+	p{
+        line-height:40px;
+        float: left;
+        font-size: 18px;
+        color: white;
+        text-align:center;
+    }
+    p.rightListHeader{
+        width:302px;
+    }
+    p.listOfApplicants{
+    width:136px;
+    }
+    p.listDeadline{
+    width:166px;
+    }
+    p.listStatus{
+    width:136px;
+    }
+}
+
+.rightList{
+	width:740px;
+	height:761px;
+	border: 1px solid #e8e8e8;
+	border-bottom-right-radius:5px;
+	border-bottom-left-radius:5px;
+	font-size:14px;
+	p{
+        text-align: center;
+        float: left;
+    }
+    sup{
+        color: red;
+    }
+    .cooperationIn{
+        height:38px;
+        line-height:38px;
+    }  
+    .cooperationIn:hover{
+        background:#fff1dc;
+    }
+}
+.rightListHeaders{
+  width:302px;
+ 
+}
+.listOfApplicantss{
+    width:136px;
+    height:30px;
+    line-height: 30px;
+}
+.listDeadlines{
+    width:166px;
+}
+.listStatuss{
+   width:136px;
+}
+.cooperationIno{
+    height:38px;
+    line-height: 38px;
+    position: relative;
+    z-index: 0;
+    color:#838383;;
+}
+.chen{
+      width:740px;
+      height: 38px;
+      background:rgba(255,241,220,0.9); 
+      display: none;
+      position:absolute;left:0;top:0;
+}
+.chen img{
+        margin-left:350px;
+        margin-top:5px;
+    }
+.cooperationIno:hover .chen{
+    display: block;
+}
+.listPage{
+     width:740px;
+     height:150px;
+     .floatingPage{
+         width:234px;
+         height:36px;
+         float: right;
+         margin-top: 22px;
+         background: red;
+     }
+}
+//我的资源
+.mySourcesTab{
+    width:740px;
+    height:1000px;
+    margin-left:23px;
+    .myPubActDetailBox{
+        width:740px;
+        height: 48px;
+        line-height:48px;      
+         .myPubActDetailBHead{
+            width: 190px;
+            height: 46px;
+            line-height: 46px;
+            display: block;
+            float: left;
+            font-size: 24px;          
+        }
+    } 
+    .myPubActDetailTitleHead{
+        width:740px;
+        height:40px;
+        line-height:40;
+        border-top-left-radius:5px;
+        border-top-right-radius:5px;
+        border: 1px solid #ff9700;
+        background:#ff9700;
+        p{
+            line-height:40px;
+            float: left;
+            font-size: 18px;
+            color: white;
+            text-align:center;
+        }
+        p.rightListHeader{
+            width:272px;
+        }
+        P.resourcePrice{
+            width:70px;
+        }
+        p.listOfApplicants{
+            width:168px;
+        }
+        p.listDeadline{
+            width:100px;
+        }
+        p.listStatus{
+            width:130px;
+        }
+    }
+    .rightLista{
+        width:740px;
+        height:761px;
+        border: 1px solid #e8e8e8;
+        border-bottom-right-radius:5px;
+        border-bottom-left-radius:5px;
+        font-size:14px;
+        p{
+            text-align: center;
+            float: left;
+        }
+        sup{
+            color: red;
+        }
+        .cooperationIna{
+            height:38px;
+            line-height:38px;
+            .rightListHeadersa{
+                 width:272px; 
+            }
+            .resourcePricesa{
+                width:70px;
+            }
+            .listOfApplicantssa{
+                width:168px;
+                height:30px;
+                line-height:30px;
+            }
+            .listDeadlinesa{
+                width:100px;
+            }
+            .listStatussa{
+                width:130px;
+            }  
+        }
+        .cooperationIna:hover{
+           background:#fff1dc;
+        }
+        .cooperationInoo{
+            height:38px;
+            line-height:38px;
+            position: relative;
+            z-index: 0;
+            color:#838383;
+            .rightListHeaderso{
+                width:272px; 
+            }
+            .resourcePriceso{
+                width:70px;
+            }
+            .listOfApplicantsso{
+                width:168px;
+                height:38px;
+                line-height:38px;
+            }
+            .listDeadlineso{
+                width:100px;
+            }
+            .listStatusso{
+                width:130px;
+            }
+            .chen1{
+                width:740px;
+                height: 38px;
+                background:rgba(255,241,220,0.9); 
+                display: none;
+                position:absolute;left:0;top:0;
+                img{
+                    margin-left:365px;
+                    margin-top:5px;
+                }
+            }
+        }
+        .cooperationInoo:hover .chen1{
+            display: block;
+        }
+    }
+}
+//草稿箱
+.draftsTab{
+    width:740px;
+    height:1000px;
+    margin-left:23px;
+    .myPubActDetailBox{
+        width:740px;
+        height: 48px;
+        line-height:48px;     
+         .myPubActDetailBHead{
+            width: 190px;
+            height: 46px;
+            line-height: 46px;
+            display: block;
+            float: left;
+            font-size: 24px;          
+        }
+    }
+    .myPubActDetailTitleHead{
+        .rightListHeader{
+           width:330px; 
+        }
+        .listOfApplicants{
+            width:118px;
+        }
+        .listDeadline{
+            width:112px;
+        }
+        .listStatus{
+            width:180px;
+        }
+    } 
+     .cooperationIn{
+        .rightListHeaders{
+           width:330px; 
+           color:#838383;
+        }
+        .listOfApplicantss{
+            width:118px;
+            color:#838383;
+        }
+        .listDeadlines{
+            width:112px;
+            color:#838383;
+        }
+        .listStatuss{
+            width:180px;
+            
+        }
+    } 
+}
+//系统消息
+.activityMessageTab{
+    width:740px;
+    height:1000px;
+    margin-left:23px;
+}
+.personalNews{
+    height:126px;
+    border:1px solid #dcdcdc;
+    border-radius:5px;
+    margin-bottom:10px;
+
+    .personalPictures{
+        width:85px;
+        height:85px;
+        border-radius:85px;
+        background:#cfcfcf;
+        float:left;
+        margin-top:20px;
+        margin-left:23px;
+       
+    }
+    .personalRightBox{
+        width:600px;
+        float:left;
+       
+        margin-left:20px;
+        .first{
+            margin-top:20px;
+            .personalCenterTitle{
+                font-size:16px;
+                padding-right:22px;
+                font-weight:bold;
+            }
+            .personalCenterDate{
+                font-size:10px;
+                padding-right:16px;
+            }
+            .personalCenterTime{
+                font-size:10px;
+            }
+        }
+        .Second{
+            color:#8c8c8c;
+            font-size:13px;
+            margin-top:16px;
+        }
+        .Third{
+             color:#8c8c8c;
+            margin-top:6px;
+            font-size:13px;
+            span{
+                padding-right:10px;
+            }
+        }
+        
+        
+    }
+}
+.personalNews:hover{
+    border:#ff9700;
+    box-shadow: 0 0 12px rgba(255,151,0,0.4);
+    color:#ff9700;
+}
+.personalNews:hover .Second{
+     color:#ff9700;
+}
+.personalNews:hover .Third{
+     color:#ff9700;
+}
+.systemMessageTab{
+    width:740px;
+    height:1000px;
+    margin-left:23px;
+}
+.dj:hover{
+     cursor:pointer; 
+}
+.chen img:hover{
+     cursor:pointer; 
+}
+.chen1 img:hover{
+     cursor:pointer; 
+}
+
+
+//贝壳珍珠管理页面样式
+$commonColr:#ff9700;
+.right .pearlWalletTab{
+	display:none;
+	height:1314px;
+	padding-left:47px;
+	.pearWlletServiceRegulations{
+		width:700px;
+		height:49px;
+		line-height:49px;
+		padding-left:17px;
+		font-size:24px;
+		letter-spacing: 1px;
+		font-weight:bold;
+	}
+	.personalShowLogo{
+		width:50px;
+		height:8px;
+		background:$commonColr;
+		margin-left:17px;
+	}
+	.peralExplain{
+		height:23px;
+		line-height:23px;
+		font-size:14px;
+		padding-left:17px;
+		letter-spacing:2px;
+	}
+	.peralExplainF{
+		margin-top:14px;
+	}
+	.pearlWalletRegulations{
+		width:747px;
+		height:232px;
+		padding-left:17px;
+		overflow: hidden;
+		.pearlWalletRFirst{
+			width:100%;
+			height:145px;
+			margin-top:11px;
+			.pearlWalletRFirstHead{
+				width:73px;
+				height:145px;
+				float:left;
+				line-height:24px;
+				font-size:14px;
+				font-weight:bold;
+				letter-spacing: 1px;
+			}
+			.pearlWalletRFirstContent{
+				width:674px;
+				height:145px;
+				float:left;
+				p{
+					line-height:24px;
+					font-size:14px;
+					letter-spacing: 1px;
+				}
+				.pIndent{
+					text-indent:12px;
+				}
+			}
+		}
+		.pearlWalletRSecond{
+			width:100%;
+			height:67px;
+			margin-top:8px;
+			.pearlWalletRSecondHead{
+				width:73px;
+				float:left;
+				height:67px;
+				font-size:14px;
+				line-height:24px;
+				font-weight:bold;
+			}
+			.pearlWalletRSecondContent{
+				width:674px;
+				height:67px;
+				float:left;
+				p{
+					line-height:24px;
+					font-size:14px;
+				}
+			}
+		}
+	}
+	.activityHistoryDetail{
+		width:747px;
+		font-weight:bold;
+		letter-spacing: 1px;
+		padding-left:14px;
+		height:59px;
+		line-height:69px;
+		font-size:24px;
+		border-top:1px solid #dcdcdc;
+	}
+	.activityHistoryTitle{
+		width:100%;
+		height:40px;
+		background:$commonColr;
+		border-top-left-radius:6px;
+		border-top-right-radius:6px;
+		span{
+			display:block;
+			float:left;
+			height:40px;
+			line-height:40px;
+			font-size:18px;
+			color:#fff;
+			text-align:center;
+		}
+		.actHistoryOperation{
+			width:140px;
+		}
+		.actHistoryNumber{
+			width:158px;
+		}
+		.actHistoryTime{
+			width:206px;
+		}
+		.actHistoryEvents{
+			width:254px;
+			padding-left:5px;
+		}
+	}
+	.activityHistoryBox{
+		width:762px;
+		height:460px;
+		border:1px solid #dcdcdc;
+		border-top:0;
+		
+		.historyExample{
+			width:762px;
+			height:38px;
+			span{
+				display:block;
+				height:38px;
+				line-height:38px;
+				text-align:center;
+				font-size:14px;
+				float:left;
+			}
+			.exampleOperation{
+				width:140px;
+			}
+			.exampleNumber{
+				width:158px;
+			}
+			.exampleTime{
+				width:206px;
+			}
+			.exampleEvents{
+				width:254px;
+			}
+		}
+	}
+	.pagePreAndNext{
+		width:100%;
+		height:85px;
+		line-height:85px;
+		text-align:center;
+	}
+}
+.pearlWalletTab .pearWalletRe{
+	width:100%;
+	height:65px;
+	border-bottom:1px solid #dcdcdc;
+	margin-top:5px;
+}
+.pearlWalletTab .pearWalletRe .pearWalletReHead{
+	display:block;
+	float:left;
+	padding:0 18px;
+	font-size:24px;
+	color:#ff9700;
+	line-height:65px;
+	height:65px;
+}
+.pearlWalletTab .pearWalletRe .pearWalletReLinkBox{
+	float:right;
+	display:block;
+	width:397px;
+	height:16px;
+	margin-top:27px;
+}
+.pearlWalletTab .pearWalletRe .pearWalletReLinkBox a{
+	display:block;
+	width:97px;
+	height:16px;
+	line-height:16px;
+	color:#2f2f2f;
+	text-align:center;
+	font-size:16px;
+	text-decoration: none;
+	float:left;
+	cursor:pointer;
+	border-right:1px solid #dcdcdc;
+	border-left:1px solid #dcdcdc;
+}
+.pearlWalletTab .pearWalletRe .pearWalletReLinkBox a.buyVIP{
+	border-left:0;
+}
+.pearlWalletTab .pearWalletRe .pearWalletReLinkBox a.exchangeWelfare{
+	border-right:0;
+}
+//申请维权样式
+.applySafeguardTab,.connectBackTab{
+    width:764px;
+    .apply_safeguard{
+        width:747px;
+        height:977px;
+       
+        padding:21px 0 0 17px;
+        .apply_safeguardTBox{
+            width:264px;
+            height:48px;
+            color:black;
+            span{
+                display: block;
+                float: left; 
+                height:48px;
+                line-height: 48px; 
+                width: 130px; 
+                font-size: 20px; 
+                text-align: center; 
+               
+                          
+            }
+            span.select{
+                background:#ff9700;
+                
+            }
+            .tl{
+                border-top-left-radius:5px;
+                color:white;
+                font-weight:900;
+                cursor:pointer;
+            } 
+            .tr1{
+                color:black;
+                border-top-right-radius:5px;
+                border-top:1px solid #dddddd;
+                border-right:1px solid #dddddd;
+                font-weight:900;
+                cursor:pointer;
+            }   
+        }
+        .submitFeedbackUnderline{
+            width:100%;
+            height:2px;
+            background:#ff9700;
+        }
+        #com,#com1{
+            width:100%;
+            height:500px;
+            li{
+                display: none;
+                height: 456px; 
+                
+            }
+            li.show{
+                display: block;
+                form{
+                    width:100%;
+                    height:100%;
+                    input{                        
+                        width:415px;
+                        height:38px;
+                        border-radius:5px;
+                        outline:none;
+                        border:1px solid #c9c9c9;
+                        text-indent:1em
+                    }
+                    .respondentPerson{
+                        padding-top:28px;                        
+                    }
+                    .cooperationContent{
+                        margin-top:20px;
+                    }
+                    .complaintContent{
+                        height:140px;
+                        margin-top:20px;
+                        margin-bottom:22px;
+                        span{
+                            float:left;
+                        }
+                        textarea{
+                           outline:none;
+                           padding:16px 12px;
+                           border-radius:5px;
+                           resize:none;
+                        }
+                    }
+                    .addPhotos{
+                        width:450px;
+                        height:64px;
+                        margin-bottom:38px;                       
+                        .addPhotosl{
+                            width:80px;
+                            height:64px;  
+                            display:block;
+                            float:left;
+                        }
+                        .addPhotosr{
+                            width:370px;
+                            height:64px;
+                            float:left;
+                            span{
+                                font-size:12px;
+                            }
+                        }
+                       
+                    }
+                    .submita{
+                        width:280px;
+                        height:47px;
+                        line-height:47px;
+                        background:#ff9700;
+                        margin-left:50px;
+                        text-align:center;
+                        border-radius:5px;
+                        color:white;
+                        font-size:22px;
+                    }
+                } 
+            }
+            .feedbackHistory{
+                width:747px;
+                height:354px;
+                
+                .feedbackHistorytop{
+                    height:40px;
+                    background:#ff9700;
+                    border-top-left-radius:5px;
+                    border-top-right-radius:5px;
+                    margin-top:10px;
+                    color:white;
+                    p{
+                        float:left;                         
+                        height:40px;
+                        line-height:40px;  
+                                               
+                    }
+                    .feedbackHistoryTitle{
+                        width:273px;
+                        text-indent:5em; 
+                                             
+                    }
+                    .feedbackHistoryTime{
+                        width:254px;   
+                        text-align:center;                         
+                    }
+                    .feedbackHistoryResults{
+                        width:206px; 
+                        text-align:center;                            
+                    }
+                }
+                .feedbackHistorybottom{
+                    height:312px;
+                    border:1px solid #dcdcdc;
+                    border-bottom-left-radius:5px;
+                    border-bottom-right-radius:5px;
+                    font-size:14px;
+                    p{
+                        float:left;                         
+                        height:37px;
+                        line-height:37px;
+                    }
+                    .feedbackHistoryTitles{
+                        width:273px;
+                        text-indent:2em;
+                    }
+                    .feedbackHistoryTimes{
+                        width:254px;   
+                        text-align:center;
+                        span{
+                            margin:0 5px;
+                        }
+                    }
+                    .feedbackHistoryResultss{
+                        width:206px; 
+                        text-align:center;
+                    }
+                }
+            }           
+        }
+        
+         
+    }
+}

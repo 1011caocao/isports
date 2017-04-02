@@ -1,0 +1,78 @@
+.container .row .col-md-4{
+	font-size:16px;
+	height:40px;
+	line-height:40px;
+}
+.container h3{
+	margin-top:0;
+}
+.page-header {
+	margin-top:20px;
+}
+.containerBox{
+	padding:0 15px;
+}
+.container{
+	padding:0;
+	width:100%;
+	padding-bottom:50px;
+}
+.container .row{
+	padding:10px 15px;
+}
+.container .companyIntroduce{
+	height:auto;
+	line-height:40px;
+	font-size:16px;
+	padding-left:30px;
+}
+.container .case{
+	margin-top:10px;
+}
+.container .IDCard{
+	margin-top:15px;
+}
+.container .downToUp{
+	margin-top:15px;
+}
+.container .media{
+	margin-top:0;
+}
+.container .distanceTop{
+	margin-top:10px;
+}
+.container .media{
+	 display:none;
+ }
+.container .school{
+	display:none;
+}
+.container .personalShow{
+	display:none;
+}
+.container .owner{
+	display:none;
+}
+.certifiction{
+	weight:auto;
+}
+/*相关证书和形象才艺展示添加标题描述*/
+.container .personalCertificateBox{
+	width:300px;
+	height:220px;
+	margin-left:110px;
+}
+.container .personalCertificateBox h5{
+	height:20px;
+	line-height:20px;
+	text-align:center;
+}
+
+.container .personalCertificateBox img.personalImg:nth-of-type(1){
+	margin-left:0;
+}
+.col-sm-6 .thumbnail img{
+	width:300px;
+	display:block;
+	height:180px;
+}

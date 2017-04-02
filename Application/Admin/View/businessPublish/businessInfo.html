@@ -1,0 +1,108 @@
+<include file="Index/header" />
+<body>
+
+<div id="wrapper">
+
+    <include file="Index/nav"/>
+
+
+    <div id="page-wrapper">
+
+        <div class="container-fluid" >
+
+            <!-- Page Heading -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <ol class="breadcrumb">
+                        <li>
+                            <i class="fa fa-dashboard"></i>  <a href="/admin/businessPublish">商业活动发布管理</a>
+                        </li>
+                        <li class="active">
+                            <i class="fa fa-table"></i>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+            <!-- /.row -->
+            <div class="row">
+                <form action="/admin/menu/index" method="get">
+                </form>
+            </div>
+            <div>
+                <button id="button-add" type="button" class="btn btn-primary dropdown-toggle" date-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>添加 </button>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="page-header">
+                        <h1 class="text-center">{$businessInfo.name}</h1>
+                    </div>
+                    <!--商业活动和校园活动公用部分html结构-->
+                    <div class="container-fluid panel panel-default">
+                        <div class="row panel-default">
+                            <h5 class="panel-heading detailHeading">详细信息</h5>
+                            <!--common part-->
+                            <div class="row">
+                                <div class="col-md-4">活动类型:&nbsp;&nbsp;{$businessInfo.activity_name}</div>
+                                <div class="col-md-4">预付比例:&nbsp;&nbsp;{$businessInfo.prepay_ratio}%</div>
+                                <div class="col-md-4">申请期限:&nbsp;&nbsp;{$businessInfo.apply_start_time|date="Y-m-d",###}<span>&nbsp;&nbsp;至&nbsp;&nbsp;</span>{$businessInfo.apply_end_time|date="Y-m-d",###}</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4">所在城市:&nbsp;&nbsp;{$businessInfo.province_name}{$businessInfo.city_name}{$businessInfo.county_name}</div>
+                                <div class="col-md-4">人气指数:&nbsp;&nbsp;{$businessInfo.popular}人</div>
+                                <div class="col-md-4">活动时间:&nbsp;&nbsp;{$businessInfo.activity_start_time|date="Y-m-d",###}<span>&nbsp;&nbsp;至&nbsp;&nbsp;</span>{$businessInfo.activity_end_time|date="Y-m-d",###}</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4">活动验收方式:&nbsp;&nbsp;
+                                    <span class="activityCheck">{$businessInfo.check_name}</span>
+                                </div>
+                            </div>
+                            <!------------->
+                            <!--commercial activity-->
+                            <div class="commerciaty">
+                                <div class="row">
+                                    <div class="col-md-4">经费预算:&nbsp;&nbsp;{$businessInfo.money}</div>
+                                    <div class="col-md-4">校园规模:&nbsp;&nbsp;{$businessInfo.size}人</div>
+                                    <div class="col-md-4">所在院校:&nbsp;&nbsp;{$businessInfo.school_name}</div>
+                                </div>
+                                <div class="row panel-default">
+                                    <h5 class="panel-heading detailHeading panelExtra">活动宣传方式</h5>
+                                    <div class="row  extraPadding">
+                                        <div class="col-md-4">
+                                            <span class="check">{$businessInfo.campaign_name}</span>
+                                        </div>
+                                    </div>
+                                    <div class="row activityPublcity  extraPadding">
+                                        {$businessInfo.other}
+                                    </div>
+                                </div>
+                            </div>
+                            <!----------------------->
+                        </div>
+                    </div>
+                    <!--商业活动和校园活动公用部分html结构-->
+                    <!--传媒资源-->
+                </div>
+            </div>
+            <!-- /.row -->
+            <button type="button" id= "check-business" class="btn btn-primary btn-lg btn-block" attr-id="{$businessInfo.id}" style="width: 50%;margin: 5% auto;">审核通过</button>
+        </div>
+        <!-- /.container-fluid -->
+
+    </div>
+    <!-- /#page-wrapper -->
+
+</div>
+<!-- /#wrapper -->
+<!-- Morris Charts JavaScript -->
+<script>
+    var SCOPE = {
+        'jump_url': '/admin/BusinessPublish/index', //跳转URL
+        'check_business_url': '/admin/BusinessPublish/checkBusiness', //审核url
+    }
+</script>
+<include file="Index/footer" />
+
+
+
+
+

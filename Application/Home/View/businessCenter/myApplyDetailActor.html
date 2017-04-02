@@ -1,0 +1,186 @@
+<extend name="Layout:index_base"/>
+<block name="css">
+    <link rel="stylesheet" href="/public/css/entertainmentTalents/entertainmentApplyDetail.css">
+    <link rel="stylesheet" href="/public/css/entertainmentTalents/myActing.css">
+</block>
+<block name="js">
+    <script src="/public/js/require/require.js" defer async="true" data-main='/public/js/entertainmentTalents/entertainmentApplyDetail.js'></script>
+    <script src="/public/js/require/require.js" defer async="true" data-main='/public/js/entertainmentTalents/myActing.js'></script>
+    <script>
+        var scope={
+
+        }
+
+    </script>
+</block>
+<block name="main">
+<div class="header"></div>
+<div class="personalIntroduceBox">
+   <div class="personalIntroduceW">
+       <div class="personalPictureBox">
+           <div class="personalLogo">
+               <img class="personalLogoPicture" src="{$artList.portrait}" alt="">
+           </div>
+           <div class="personalName">{$artList.real_name}</div>
+           <div class="personalAddress">
+               <span class="address">{$artList.city_name}</span>
+           </div>
+       </div>
+       <div class="personalContent">
+           <div class="personalPrice personalI"><span class="personalIhead">价格:</span><span class="money">{$artList.price}/场</span></div>
+           <div class="personalType personalI"><span class="personalIhead">类型:</span><span class="type">{$artList.name}</span></div>
+           <div class="personalHeight personalI"><span class="personalIhead">身高:</span><span class="height">{$artList.height}cm</span></div>
+           <div class="personalIntroduceDescribe">
+               <span class="personalIntroDesH">自我简介:</span>
+               <div class="personalIntrDetail">{$artList.description}</div>
+           </div>
+       </div>
+   </div>
+</div>
+<div class="personalShowTabChangeBox">
+    <div class="personalTabsBox">
+        <div class="personalHeadBox">
+            <input class="personalTabButton waitFiltrate changeTabColor" type="button" value="申请详情">
+        </div>
+        <div class="waitFiltrateBox">
+            <!--处理中状态-->
+            <div <if condition="$artApplyDetail.status eq 1">style="display:block"</if>class="waitFiltrateContentBox  dealComentBefore">
+                <div class="waitFiltrateExample">
+                    <div class="waitFiltrateHead">
+                        <span class="headLogo">
+                            <img class="headLogoI" src="{$Think.session.USER.portrait}"/>
+                        </span>
+                        <span class="waitFiltrateCh">{$Think.session.USER.real_name}</span>
+                        <span class="waitFiltrateDate">{$artApplyDetail.add_time|date="Y-m-d",###}</span>
+                        <span class="waitFiltrateTime">{$artApplyDetail.add_time|date="h:i:s",###}</span>
+                    </div>
+                    <div class="waitFiltrateContent">
+                        {$artApplyDetail.content}
+                    </div>
+                    <div class="commentJudgeBox">
+                        <button class="commentJudgeB">处理中</button>
+
+                    </div>
+                </div>
+            </div>
+            <!--评论状态-->
+            <div <if condition="($artApplyDetail.status eq 2) AND ($artApplyDetail.apply_comment eq '')">style="display:block"</if> class="waitCommentContentBox1  dealingComment">
+                <div class="waitCommentExample">
+                    <div class="waitCommentEHBox">
+                            <span class="waitCommImg">
+                                <img class="headLogoI" src="{$Think.session.USER.portrait}"/>
+                            </span>
+                        <span class="waitCommH">{$Think.session.USER.real_name}</span>
+                        <span class="waitCommDate">{$artApplyDetail.add_time|date="Y-m-d",###}</span>
+                        <span class="waitCommTime">{$artApplyDetail.add_time|date="h:i:s",###}</span>
+                        <input class="clickComment" type="button" value="评论">
+                    </div>
+                    <div class="waitCommentContentBox">
+                        <div class="waitCommentStar">
+                            <div class="waitCommentStarImgB"></div>
+                            <span class="waitCommentStarExample">本次合作十分顺利，效果极佳!</span>
+                        </div>
+                        <div class="waitCommentInputBox">
+                            <textarea class="waitCommentInputText" placeholder="可输入0~100字符，请确保输入内容健康合法!"></textarea>
+                            <div class="waitCommentInputTab">
+                                <button class="tabButton">执行力强</button>
+                                <Button class="tabButton">信誉好</Button>
+                                <button class="tabButton">团队nice</button>
+                                <button class="tabButton">组织到位</button>
+                                <button class="tabButton">活动十分圆满</button>
+                                <button class="tabButton">非常棒的一次合作</button>
+                                <button class="tabButton">组织到位</button>
+                                <button class="tabButton">非常棒的一次合作</button>
+                                <button class="tabButton">执行力强</button>
+                                <button class="tabButton">信誉好</button>
+
+                            </div>
+                        </div>
+                        <div class="waitCommentCancelConfirm">
+                            <input class="waitCommentCancel waitCommentB" type="button" value="取消">
+                            <input class="waitCommentConfirm waitCommentB"  type="button" value="确认">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--处理后状态-->
+            <div class="waitFiltrateContentBox  dealCommentAfter" <if condition="$artApplyDetail.status eq -1">style="display:block"</if>>
+                <div class="waitFiltrateExample">
+                    <div class="waitFiltrateHead">
+                        <span class="headLogo">
+                            <img class="headLogoI" src="{$Think.session.USER.portrait}"/>
+                        </span>
+                        <span class="waitFiltrateCh">{$Think.session.USER.real_name}</span>
+                        <span class="waitFiltrateDate">{$artApplyDetail.add_time|date="Y-m-d",###}</span>
+                        <span class="waitFiltrateTime">{$artApplyDetail.add_time|date="h:i:s",###}</span>
+                    </div>
+                    <div class="waitFiltrateContent">
+                        {$artApplyDetail.reason}
+                    </div>
+                    <div class="commentJudgeBox">
+                        <button class="commentJudgeB passNo">未通过</button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+</div>
+    <div class="personalShowTabChange talentShowVideoTab">
+        <div class="personalLinkBox">
+            <div class="personalImgLink">
+                <div class="clickExamine">
+                    <div class="clickExamineHead">点击查看</div>
+                </div>
+                <div class="personalExplain">优酷视频个人主页</div>
+            </div>
+        </div>
+        <div class="leaveMessageApply">
+            <span class="leaveMessageHead">留言申请：</span>
+            <textarea name="" id="talentVideoInputLeaveMessage" placeholder="可输入20-100字。请仔细阅读活动详情，并且查看发布人信息及合作历史后留言申请。根据活动要求突出本社团团队优势，以及相关精彩案例。对方同意申请后将受到回执以及联系方式，未通过也将收到回执。"></textarea>
+        </div>
+        <p class="personalAttention">注: 所有活动只能申请一次。请仔细检查填写内容！本次申请需要消耗1颗珍珠</p>
+        <div class="confirmButton">
+            <input type="button" class="confirmApply" value="确认申请">
+            <div class="pearlRemain">
+                <span class="pearlHead">珍珠余额:</span>
+                <span class="pearlNumber">0</span>
+                <img class="personalHelp" src="/public/img/commercialActivity/Event%20Details-help.png" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="personalShowTabChange relativeCertificateTab">
+        <div class="talentShowPictureBox">
+            <dl class="talentShowP">
+                <dt class="talentShowImg"><img src="" alt=""></dt>
+                <dd class="talentShowHead">标题标题标题标题</dd>
+            </dl>
+            <dl class="talentShowP">
+                <dt class="talentShowImg"><img src="" alt=""></dt>
+                <dd class="talentShowHead">标题标题标题标题</dd>
+            </dl>
+            <dl class="talentShowP talentShowLast">
+                <dt class="talentShowImg"><img src="" alt=""></dt>
+                <dd class="talentShowHead">标题标题标题标题</dd>
+            </dl>
+        </div>
+        <div class="leaveMessageApply">
+            <span class="leaveMessageHead">留言申请：</span>
+            <textarea name="" id="talentInputLeaveMessage" placeholder="可输入20-100字。请仔细阅读活动详情，并且查看发布人信息及合作历史后留言申请。根据活动要求突出本社团团队优势，以及相关精彩案例。对方同意申请后将受到回执以及联系方式，未通过也将收到回执。"></textarea>
+        </div>
+        <p class="personalAttention">注: 所有活动只能申请一次。请仔细检查填写内容！本次申请需要消耗1颗珍珠</p>
+        <div class="confirmButton">
+            <input type="button" class="confirmApply" value="确认申请">
+            <div class="pearlRemain">
+                <span class="pearlHead">珍珠余额:</span>
+                <span class="pearlNumber">0</span>
+                <img class="personalHelp" src="/public/img/commercialActivity/Event%20Details-help.png" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+</block>
+
+
+
+</body>
+</html>

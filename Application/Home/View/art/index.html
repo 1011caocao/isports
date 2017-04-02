@@ -1,0 +1,94 @@
+<extend name="Layout:index_base"/>
+<block name="css">
+    <link rel="stylesheet" href="/public/css/entertainmentTalents/entertainmentTalents.css" />
+</block>
+<block name="js">
+<script>
+var page={$page};
+</script>
+    <script src="/public/js/require/require.js" defer async="true" data-main='/public/js/entertainmentTalents/entertainmentTalents.js'></script>
+
+</block>
+<block name="main">
+    <div class="header"></div>
+<nav>
+
+    <div class="banner" id="b04">
+        <ul>
+            <li><img src="/public/img/common/newBanner.png" alt=""  ></li>
+            <li><img src="/public/img/common/newBanner.png" alt=""  ></li>
+            <li><img src="/public/img/common/newBanner.png" alt="" ></li>
+
+        </ul>
+    </div>
+</nav>
+<div class="content">
+    <div class="w">
+        <div class="h2" id="F">筛选条件</div>
+        <div class="entertainmentAddress">
+            <span class="entertainmentAHead">地区:</span>
+            <div id="entertainmentCity">
+                <select  id='province' class='prov selec'>
+                    <option value="0">不限</option>
+                    <foreach name="provinces" item="province">
+                        <option value="{$province.area_id}" <if condition="I('get.province_id') eq $province['area_id']">selected</if>>{$province.area_name}</option>
+                    </foreach>
+                </select>
+                <select  id='cities' class='city selec'>
+                    <option value="0">不限</option>
+                    <foreach name="cities" item="city">
+                        <option value="{$city.area_id}" <if condition="I('get.city_id') eq $city['area_id']">selected</if>>{$city.area_name}</option>
+                    </foreach>
+                </select>
+                <select  id='area' class='dist selec'>
+                    <option value="0">不限</option>
+                    <foreach name="areas" item="area">
+                        <option value="{$area.area_id}" <if condition="I('get.county_id') eq $area['area_id']">selected</if>>{$area.area_name}</option>
+                    </foreach>
+                </select>
+            </div>
+        </div>
+        <div class="entertainmentType">
+            <span class="entertainmentTypeHead">类型:</span>
+            <div class="entertainmentTypeChoose artType">
+                <foreach name="artTypes" item="artType">
+                <span name="{$artType.id}" <if condition="I('get.art_type') eq $artType['id']">class=" getActive"</if>>{$artType.name}</span>
+                    </foreach>
+            </div>
+        </div>
+        <div class="entertainmentFiter">
+            <button class="enterButton enterPrice <eq name='type' value='1'>enterActive</eq>" name="1">价格</button>
+            <button class="enterButton enterHeat <eq name='type' value='2'>enterActive</eq>" name="2">热度</button>
+            <button class="enterButton enterStar <eq name='type' value='3'>enterActive</eq>" name="3">星级</button>
+        </div>
+        <div class="entertainmentTalentsBox">
+            <foreach name="resultData" item="result">
+                <dl class="entertainmentExample">
+                    <a href="{:U('artDetails',array('id'=>$result['uid']))}" style="color:black;text-decoration: none;">
+                    <dt>
+                        <img src="{$result.portrait}">
+                    </dt>
+                    <dd>
+                        <div class="enterNumberName">
+                            <span class="enterTainmentPrice">{$result.price}/场</span>
+                            <span class="enterType">{$result.name}</span>
+                        </div>
+                        <p class="entertainmentName">{$result.real_name}</p>
+                        <p class="entertainmentHeight">{$result.height}cm</p>
+                        <div class="entertainAddress">
+                            <img src="/public/img/index/position-down.png" alt="">
+                            <span class="enterAddress">{$result.city_name}</span>
+                        </div>
+                    </dd>
+                    </a>
+                </dl>
+            </foreach>
+        </div>
+        <div class="enterPrePagesNextPages pageBox">{$pageRes}</div>
+    </div>
+</div>
+<div class="buttom">
+    <div class="first"></div>
+    <div class="second"></div>
+</div>
+</block>

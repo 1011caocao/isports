@@ -1,0 +1,547 @@
+
+/*---------------------header--------------------------------*/
+header,nav,footer,div,h1,h2,h3,h4,h5,a,p,span,img,button,body,div,ul,li,img,dt,dd,dl,a,p,h1,h2,h3,h4,h5,h6,input,span{
+	padding:0;margin:0;border:0;list-style:none;
+}
+article,aside,dialog,footer,header,section,footer,nav,figure,menu{display:block}
+
+.l{float:left}
+.r{
+	float:right;
+}
+
+/*@font-face {
+  font-family: 'FontAwesome';
+  src: url('../font/fontawesome-webfont.eot?v=3.2.1');
+  src: url('../font/fontawesome-webfont.eot?#iefix&v=3.2.1') format('embedded-opentype'), url('../font/fontawesome-webfont.woff?v=3.2.1') format('woff'), url('../font/fontawesome-webfont.ttf?v=3.2.1') format('truetype'), url('../font/fontawesome-webfont.svg#fontawesomeregular?v=3.2.1') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}*/
+
+
+
+/*@font-face {
+	font-family: 'Conv_SourceSansPro-Regular';
+	src: url('../font/SourceSansPro-Bold.otf');
+	src: local('☺'), url('../font/SourceSansPro-Bold.woff') format('woff'), url('../font/SourceSansPro-Bold.ttf') format('truetype'), url('../font/SourceSansPro-Bold.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}*/
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('../font/fontawesome-webfont.eot?v=3.2.1');
+  src: url('../font/fontawesome-webfont.eot?#iefix&v=3.2.1') format('embedded-opentype'), url('../font/fontawesome-webfont.woff?v=3.2.1') format('woff'), url('../font/fontawesome-webfont.ttf?v=3.2.1') format('truetype'), url('../font/fontawesome-webfont.svg#fontawesomeregular?v=3.2.1') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/*---------------------header--------------------------------*/
+body{
+	
+	
+	/*font-family:'微软雅黑','FontAwesome','”Helvetica Neue“,”Hiragino Sans GB”,Simsun,sans-self';*/
+	font-family:'Microsoft Yahei','Arial','Helvetica','sans-self';
+	}
+header{
+	
+	width:100%;
+	background:#fff;
+	 
+	height:130px;
+	position: relative;
+	position:fixed;
+	z-index: 1;
+	box-shadow:0 0 18px rgba(51,51,51,0.1); /*底边阴影*/ 
+}
+header .logo{
+	position:absolute;
+	width:160px;
+	height:100px;
+	top:0px;
+	left:0;
+	z-index:11;
+	background:url(../../img/common/homelogo.png) no-repeat;
+	background-position:100% 100% ;
+}
+header .top{
+	width:1024px;
+	height:30px;
+	margin:0 auto;
+}
+header .w_top{
+	width:100%;
+	height:30px;
+	background:#ff9700;
+	
+	}
+header .w_top .login{
+	height:30px;
+	font-size: 14px;
+	color:#fff;
+	line-height:30px;
+	
+	
+}
+
+
+.dataUser{
+	width:109px;
+	height:13px;
+	line-height:13px;
+	margin-top:8px;
+	/*text-overflow:ellipsis;
+	white-space: nowrap;
+	overflow: hidden;*/
+	display:block;
+	float:left;
+	text-decoration: none;
+	color:#fff;
+	text-indent:8px;
+	}	
+.exit{
+	
+	width:30px;
+	display:block;
+	float:left;
+	height:30px;
+	text-align: center;
+}	
+	
+header .w_top .loginBox {
+	
+	height:30px;
+	float:right;
+	
+	
+}
+
+header .w_top .loginBox .newsFind{
+	width:108px;
+	height:30px;
+	float:left;
+	
+}
+header .w_top .loginBox .newsFind a{
+	display:block;
+	width:52px;
+	height:13px;
+	line-height:13px;
+	font-size:14px;
+	margin-top:8px;
+	float:left;
+	text-align:center;
+	text-decoration:none;
+	color:#fff;
+	border-right:2px solid #fff;
+	letter-spacing: 2px;
+}
+
+header .w_top .loginBox .loginEnroll{
+	
+	height:30px;
+	float:right;
+	position:relative;
+	padding-left:12px;
+}
+header .w_top .loginBox .loginEnroll .personalLogo{
+	width:20px;
+	height:20px;
+	display:block;
+	float:left;
+	margin-top:4px;
+
+}
+header .w_top .loginBox .loginEnroll a.Login,a.Enroll{
+	display:block;
+	width:34px;
+	height:13px;
+	float:left;
+	font-size:14px;
+	line-height:13px;
+	margin-top:8px;
+	text-decoration: none;
+	color:#fff;
+	padding-left:5px;
+	letter-spacing:2px;
+}
+header .w_top .loginBox .loginEnroll a.Login{
+	border-right:1px solid #fffeff;
+	padding-right:5px;
+}
+header .w_top .loginBox .loginEnroll .personalCenter{
+	display:none;
+	width:122px;
+	height:222px;
+	border-radius:6px;
+	position:absolute;
+	top:30px;
+	right:0px;
+	background:#fff;
+	z-index:500;
+	box-shadow:-10px 0 10px rgba(0,0,0,0.03), /*左边阴影*/  
+    10px 0 10px rgba(0,0,0,0.03), /*右边阴影*/  
+    0 -10px 10px rgba(0,0,0,0.03), /*顶部阴影*/  
+    0 10px 10px rgba(0,0,0,0.03); /*底边阴影*/  
+}
+header .w_top .loginBox .loginEnroll .personalCenter .personal{
+	border-top-left-radius: 6px;
+	border-top-right-radius: 6px;
+}
+header .w_top .loginBox .loginEnroll .personalCenter .exit{
+	border-bottom-left-radius: 6px;
+	border-bottom-right-radius: 6px;
+}
+header .w_top .loginBox .loginEnroll .personalTriangle{
+	width:0px;
+	height:0px;
+	display:none;
+	border-left:4px solid transparent;
+	border-right:4px solid transparent;
+	border-top:4px solid transparent;
+	border-bottom:4px solid #fff;
+	position:absolute;
+	right:58px;
+	top:22px;
+	z-index:501;
+}
+header .w_top .loginBox .loginEnroll .personalCenter li{
+	width:100%;
+	height:32px;
+}
+header .w_top .loginBox .loginEnroll .personalCenter li a{
+	display:block;
+	width:100%;
+	height:32px;
+	line-height:32px;
+	text-align: center;
+	color:#2f2f2f;
+	font-size:14px;
+	text-decoration:none;
+}
+header .w_top .loginBox .loginEnroll .personalCenter li a:hover{
+	background:#ffe2ba;
+	color:#ff9700;
+}
+.Login{
+	text-align:left;
+}
+.Enroll{
+	text-align:right;
+	border-left:1px solid #fff;
+}
+header .w_top .login .address{
+	height:30px;
+	letter-spacing:2px;
+	text-align:center;
+	padding-left:15px;
+	cursor:pointer;
+	background:url(../../img/common/business-Positioning.png) no-repeat left;
+	
+}
+header .w_top .login .address .addressCity{
+	display:block;
+	padding:0 10px;
+	height:12px;
+	margin-top:9px;
+	line-height:12px;
+	font-size:14px;
+	border-right:2px solid #ffffff;
+}
+header .w_top .login .help{
+	width:55px;
+	height:30px;
+	
+}
+header .w_top .login .help .helpBox{
+	display:block;
+	width:53px;
+	height:12px;
+	font-size:14px;
+	line-height:12px;
+	margin-top:9px;
+	text-align:center;
+	text-decoration: none;
+	color:#fff;
+	border-right:2px solid #fff;
+	letter-spacing: 2px;
+}
+header .w_top .login .help .helpLast{
+	border-right:0;
+}	
+header .w_top .login .loginBox a{
+	color:#fff;
+	text-decoration: none;
+	
+	
+}
+header .w_top .emailBox{
+	width:164px;
+	height:30px;
+	color:#fff;
+	
+}
+header .w_top .emailBox a{
+	display:block;
+	cursor: pointer;
+	text-decoration: none;
+	color:#fff;
+}
+header .w_top .emailBox a.feedback{
+	width:50px;
+	height:13px;
+	border-right:1px solid #e6e4e9;
+	
+	margin-top:8.5px;
+	text-align: center;
+	line-height:13px;
+}
+
+header .w_top .emailBox a.rights{
+	width:50px;
+	height:13px;
+	border-left:1px solid #e6e4e9;
+	
+	margin-top:8.5px;
+	text-align: center;
+	line-height:13px;
+}
+header .w_top .emailBox a.question{
+	 width:30px;
+	 height:30px;
+	
+}
+header .w_top .emailBox a.question img{
+	margin-top:4px;
+}
+header .w_top .emailBox a.email{
+	width:24px;
+	height:30px;
+	background:url(../../img/common/email.png) no-repeat center;
+	
+}
+header .w_nav{
+	width:1024px;
+	height:100px;
+	position:relative;
+	margin:0 auto;
+	
+}
+header .w_nav .nav{
+	/*width:622px;*/
+	width:700px;
+	height:100%;
+	
+	margin-left:175px;
+}
+header .w_nav .nav .headNav{
+	width:100%; 
+	height:32px;
+	
+	margin-top:33px;
+}
+header .w_nav .nav .headNav li{
+	float:left;
+	font-size:18px;
+	height:100%;
+	/*margin-right:19px;*/
+	
+}
+header .w_nav .nav .headNav .mainFirst {
+	margin-left:27px;
+}
+header .w_nav .nav .headNav li{
+	text-decoration:none;
+	font-size:18px;
+	color:#303030;
+	display:block;
+	padding:0 9px;
+	height:100%;
+	line-height:32px;
+	text-align:center;
+	margin-right:27px;
+	border:2px solid #fff;
+	position:relative;
+	
+	
+}
+header .w_nav .nav .headNav li.loveBei{
+	margin-right:0;
+	margin-left:27px;
+}
+header .w_nav .nav .headNav a.borderActive {
+	text-decoration: none;
+	color:#303030;
+	letter-spacing: 1px;
+	display:block;
+	width:100%;
+	height:100%;
+	z-index: 10;
+}
+header .w_nav .nav .headNav .borderActive:hover{
+	color:#fe9805;
+
+}
+header .w_nav .nav .headNav li .borderActive:before{
+	 content:""; 
+	 display:block;
+	 position:absolute;
+	 left:50%;
+	 bottom:-20px; 
+	 transform:translate(-50%,-50%);
+	 -webkit-transform:translate(-50%,-50%);
+	 width:0;
+	 height:1px;
+	 border:0 #303030 solid; 
+	 border-radius:20px;
+	 transition:all 0.2s; 
+	 -webkit-transition:all 0.2s; 
+	 opacity:0;
+}
+header .w_nav .headNav li .borderActive:hover:before{
+	border:2px #ff9702 solid;
+	height:100%; 
+	padding:0 60%;
+	opacity:1;
+	color:#ff9702;
+}
+
+header .w_nav .nav .headNav li.pullBox{
+	text-decoration: none;
+	color:#303030;
+	position:relative;
+	margin:0;
+}
+header .w_nav .nav .headNav .pullBox .talents{
+	
+	 display:block;
+	 position:absolute;
+	 left:50%;
+	 bottom:-19px; 
+	 transform:translate(-50%,-50%);
+	 width:0;
+	 height:1px;
+	 border:0 #ff9800 solid; 
+	 border-radius:20px;
+	 transition:all 0.2s; 
+	 opacity:0;
+}
+header .w_nav .nav .headNav .pullBox .talent{
+	color:#ff9700;
+	font-weight:bold;
+	letter-spacing:1px;
+}
+header .w_nav .nav .headNav li.pullBox .talent{
+	text-decoration: none;
+
+}
+header .w_nav .nav .headNav li .pullBox:hover{
+	color:#0094ff;
+}
+
+
+header .w_nav .send_commend{
+	width:114px;
+	height:100%;
+	
+}
+header .w_nav .send_commend a.send{
+	display:block;
+	width:100%;
+	height:48px;
+	background:#ff9700;
+	line-height:48px;
+	text-align: center;
+	text-decoration:none;
+	font-size:24px;
+	color:#fff;
+	border-radius:10px;
+	margin-top:26px;
+	
+	
+	
+}
+/*-------------------navbanner图------------------------------*/
+.header{
+	width:100%;
+	height:130px;
+	
+}
+
+nav{
+	width:100%;
+	height:548px;
+	text-align: center;
+	
+	z-index:-1;
+}
+.banner { 
+	
+	position: relative;
+	
+	 width:100%;
+	 height:100%;
+}
+.banner ul{
+	width:100%;
+	height:548px;
+	background:orange;
+	overflow: hidden;
+	}
+.banner ul li{
+	float:left;
+	width:100%;
+	height:100%;
+	}
+.banner ul li img{
+	width:100%;
+	height:100%;
+}
+#b04 { width: 100%;}
+#b04 .dots { position: absolute; left: 0; right: 0; bottom: 20px;}
+#b04 .dots li 
+{ 
+    display: inline-block; 
+    width: 10px; 
+    height: 10px; 
+    margin: 0 4px; 
+    text-indent: -999em; 
+    border: 2px solid #fff; 
+    border-radius: 6px; 
+    cursor: pointer; 
+    opacity: .4; 
+    -webkit-transition: background .5s, opacity .5s; 
+    -moz-transition: background .5s, opacity .5s; 
+    transition: background .5s, opacity .5s;
+}
+#b04 .dots li.active 
+{
+    background: #fff;
+    opacity: 1;
+}
+#b04 .arrow { position: absolute; top: 200px;}
+#b04 #al { left: 15px;}
+#b04 #ar { right: 15px;}
+
+/*bootstrap分页样式*/
+.pagination{display:inline-block;padding-left:0;margin:20px 0;border-radius:4px}.pagination>li{display:inline}.pagination>li>a,.pagination>li>span{position:relative;float:left;padding:6px 12px;margin-left:-1px;line-height:1.42857143;color:#2f2f2f;text-decoration:none;background-color:#fff;border:1px solid #ddd}.pagination>li:first-child>a,.pagination>li:first-child>span{margin-left:0;border-top-left-radius:4px;border-bottom-left-radius:4px}.pagination>li:last-child>a,.pagination>li:last-child>span{border-top-right-radius:4px;border-bottom-right-radius:4px}.pagination>li>a:focus,.pagination>li>a:hover,.pagination>li>span:focus,.pagination>li>span:hover{color:#f97000;background-color:#eee;border-color:#ddd}.pagination>.active>a,.pagination>.active>a:focus,.pagination>.active>a:hover,.pagination>.active>span,.pagination>.active>span:focus,.pagination>.active>span:hover{z-index:2;color:#fff;cursor:default;background-color:#f97000;border-color:#f97000}.pagination>.disabled>a,.pagination>.disabled>a:focus,.pagination>.disabled>a:hover,.pagination>.disabled>span,.pagination>.disabled>span:focus,.pagination>.disabled>span:hover{color:#777;cursor:not-allowed;background-color:#fff;border-color:#ddd}
+.glyphicon-chevron-left:before{content:"\e079"}.glyphicon-chevron-right:before{content:"\e080"}
+.glyphicon{position:relative;top:1px;display:inline-block;font-family:'Glyphicons Halflings';font-style:normal;font-weight:400;line-height:1;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.glyphicon-asterisk:before{content:"\2a"}.glyphicon-plus:before{content:"\2b"}
+@font-face{font-family:'Glyphicons Halflings';src:url(../fonts/glyphicons-halflings-regular.eot);src:url(../fonts/glyphicons-halflings-regular.eot?#iefix) format('embedded-opentype'),url(../fonts/glyphicons-halflings-regular.woff2) format('woff2'),url(../fonts/glyphicons-halflings-regular.woff) format('woff'),url(../fonts/glyphicons-halflings-regular.ttf) format('truetype'),url(../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular) format('svg')}
+
+/*nav .container .banner{width: 100%;height: 100%;position: relative;overflow: hidden;}
+nav .container .img{position: absolute;top: 0;left: 0;}
+nav .container .img li{float: left;height: 430px;width:1024px;}
+nav .container .img li a{width: 100%;height:100%;}
+nav .container .img li a img{height: 430px;width:100%;}
+nav .container .num{position: absolute;bottom: 10px;width: 100%;text-align: center;font-size: 0;}
+nav .container .num li{width: 10px;height: 10px;background:rgba(0,0,0,0.5);display: block;border-radius: 100%;display: inline-block;margin: 0 5px;cursor: pointer;}
+nav .container .btn{display: none;}
+nav .container .btn span{display: block;width: 50px;height: 100px;/*background: rgba(0,0,0,0.6);color: #fff;font-size: 40px;line-height: 100px;text-align: center;cursor:pointer;}*/
+/*nav .container .btn .prev{position: absolute;left: 0;top: 50%;margin-top: -50px;}
+nav .container .btn .next{position: absolute;right: 0;top: 50%;margin-top: -50px;}
+nav .container .num .active{background-color: #fff;}
+*/
+
+
+/*轮播*/
+
+/*弹窗盒子*/

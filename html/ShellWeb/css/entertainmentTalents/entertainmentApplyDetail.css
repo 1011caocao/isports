@@ -1,0 +1,55 @@
+#nav{display:block}
+.personalIntroduceBox{width:100%;height:296px;background:url(../../img/entertainmentTalents/background.jpg) no-repeat center;background-size:100% 100%}
+.personalIntroduceBox .personalIntroduceW{width:1024px;height:296px;margin:0 auto}
+.personalIntroduceBox .personalIntroduceW .personalPictureBox{width:180px;height:296px;float:left}
+.personalIntroduceBox .personalIntroduceW .personalPictureBox .personalLogo{width:180px;height:180px;background:#9acd32;border-radius:90px;margin-top:17px}
+.personalIntroduceBox .personalIntroduceW .personalPictureBox .personalName{width:100%;height:45px;line-height:45px;text-align:center;font-size:30px;color:#fff;margin-top:4px}
+.personalIntroduceBox .personalIntroduceW .personalPictureBox .personalAddress{width:100%;height:30px}
+.personalIntroduceBox .personalIntroduceW .personalPictureBox .personalAddress .address{display:block;float:left;margin-left:68px;padding-left:17px;background:url(../../img/common/business-Positioning.png) no-repeat;background-position:0 5px;height:30px;font-size:14px;line-height:30px;color:#fff}
+.personalIntroduceBox .personalIntroduceW .personalContent{height:274px;width:807px;margin-top:23px;float:left;padding-left:37px}
+.personalIntroduceBox .personalIntroduceW .personalContent .personalI{width:100%;heigth:42px;line-height:42px;color:#fff;font-size:20px}
+.personalIntroduceBox .personalIntroduceW .personalContent .personalI .personalIhead{display:block;width:72px;height:41px;float:left}
+.personalIntroduceBox .personalIntroduceW .personalContent .personalIntroduceDescribe{width:500px;margin-top:15px;position:relative;color:#fff}
+.personalIntroduceBox .personalIntroduceW .personalContent .personalIntroduceDescribe .personalIntroDesH{display:block;width:90px;font-size:18px;line-height:24px;height:24px;position:absolute;top:0;left:0}
+.personalIntroduceBox .personalIntroduceW .personalContent .personalIntroduceDescribe .personalIntrDetail{width:400px;line-height:24px;font-size:14px;margin-left:90px}
+.personalShowTabBox{width:100%;height:52px;background:#fff1dc}
+.personalShowTabBox .w{width:1024px;height:52px;margin:0 auto}
+.personalShowTabBox .w .personalShowTab{display:block;width:330px;height:48px;line-height:48px;text-align:center;font-size:18px;letter-spacing:2px;cursor:pointer;float:left;border-bottom:4px solid #fff1dc}
+.personalShowTabBox .w .relativeCertificate{margin-left:17px}
+.personalShowTabBox .w .talentShowVideo{margin-left:17px}
+.personalShowTabBox .w .personalShowActive{border-bottom:3px solid #ff9700;color:#ff9700}
+.personalShowTabChangeBox{width:1024px;height:567px;margin:0 auto;overflow:hidden}
+.personalShowTabChangeBox .personalShowTabChange{width:1024px;height:567px}
+.personalShowTabChangeBox .visualTalentShowTab{margin-top:19px}
+.personalShowTabChangeBox .visualTalentShowTab .visualTalentPictureShow{width:1024px;height:329px}
+.personalShowTabChangeBox .visualTalentShowTab .visualTalentPictureShow .visualTalentPictureBox{width:330px;height:329px;float:left;margin-right:17px}
+.personalShowTabChangeBox .visualTalentShowTab .visualTalentPictureShow .visualTalentPictureBox .PictureBox{width:330px;height:200px;background:#ff9700}
+.personalShowTabChangeBox .visualTalentShowTab .visualTalentPictureShow .visualTalentPictureBox .personalDescribeBox{width:314px;height:129px;padding:0 8px}
+.personalShowTabChangeBox .visualTalentShowTab .visualTalentPictureShow .visualTalentPictureBox .personalDescribeBox h4{width:100%;height:34px;line-height:34px;font-size:18px;letter-spacing:1px}
+.personalShowTabChangeBox .visualTalentShowTab .visualTalentPictureShow .visualTalentPictureBox .personalDescribeBox .personalShowLogo{width:36px;height:4px;background:#ff9700;margin-top:1px}
+.personalShowTabChangeBox .visualTalentShowTab .visualTalentPictureShow .visualTalentPictureBox .personalDescribeBox .personalDescribe{width:100%;line-height:24px;font-size:14px;margin-top:6px;letter-spacing:1px}
+.personalShowTabChangeBox .visualTalentShowTab .visualTalentPictureShow .visualTalentLast{margin-right:0}
+.personalShowTabChangeBox .talentShowVideoTab{display:none}
+.personalShowTabChangeBox .talentShowVideoTab .personalLinkBox{width:100%;height:280px}
+.personalShowTabChangeBox .talentShowVideoTab .personalLinkBox .personalImgLink{width:213px;height:280px;overflow:hidden}
+.personalShowTabChangeBox .talentShowVideoTab .personalLinkBox .personalImgLink .clickExamine{width:174px;height:174px;margin-top:28px;margin-left:19px;overflow:hidden;background:#363531}
+.personalShowTabChangeBox .talentShowVideoTab .personalLinkBox .personalImgLink .clickExamine .clickExamineHead{width:100%;height:32px;line-height:32px;text-align:center;color:#fff;font-size:18px;cursor:pointer;letter-spacing:1px;margin-top:106px}
+.personalShowTabChangeBox .talentShowVideoTab .personalLinkBox .personalExplain{width:100%;height:34px;line-height:34px;text-align:center;font-size:14px;color:#303030;letter-spacing:1px}
+.personalShowTabChangeBox .relativeCertificateTab{display:none;height:548px;padding-top:19px}
+.personalShowTabChangeBox .relativeCertificateTab .talentShowPictureBox{width:1024px;height:286px}
+.personalShowTabChangeBox .relativeCertificateTab .talentShowPictureBox .talentShowP{width:330px;height:286px;float:left;margin-right:17px}
+.personalShowTabChangeBox .relativeCertificateTab .talentShowPictureBox .talentShowP .talentShowImg{width:100%;height:200px;background:#ff9700}
+.personalShowTabChangeBox .relativeCertificateTab .talentShowPictureBox .talentShowP .talentShowHead{width:323px;height:86px;line-height:34px;padding-left:7px;font-size:18px;font-weight:700;letter-spacing:1px}
+.personalShowTabChangeBox .relativeCertificateTab .talentShowPictureBox .talentShowLast{margin-right:0}
+.leaveMessageApply{width:1016px;height:82px;padding-left:8px}
+.leaveMessageApply .leaveMessageHead{width:82px;height:82px;font-size:14px;line-height:14px;float:left}
+.leaveMessageApply #inputLeaveMessage{display:block;float:left;width:607px;height:48px;border-radius:6px;outline:0;padding:14px 20px;line-height:20px;font-family:'Microsoft Yahei',Arial,Helvetica,sans-self;resize:none}
+.leaveMessageApply #talentInputLeaveMessage{display:block;float:left;width:607px;height:48px;border-radius:6px;outline:0;padding:14px 20px;line-height:20px;font-family:'Microsoft Yahei',Arial,Helvetica,sans-self;resize:none}
+.leaveMessageApply #talentVideoInputLeaveMessage{display:block;float:left;width:607px;height:48px;border-radius:6px;outline:0;padding:14px 20px;line-height:20px;font-family:'Microsoft Yahei',Arial,Helvetica,sans-self;resize:none}
+.personalAttention{height:38px;line-height:38px;padding-left:11px;font-size:14px;color:#ff9700;letter-spacing:1px}
+.confirmButton{width:1011px;height:66px;padding-left:13px}
+.confirmButton .confirmApply{display:block;float:left;width:280px;height:66px;background:#ff9700;border-radius:6px;font-size:30px;color:#fff;font-family:'Microsoft Yahei',Arial,Helvetica,sans-self;outline:0;cursor:pointer}
+.confirmButton .pearlRemain{float:left;padding:0 15px;height:16px;margin-top:48px}
+.confirmButton .pearlRemain .pearlHead{width:67px;display:block;float:left;height:16px;font-size:14px;line-height:20px}
+.confirmButton .pearlRemain .pearlNumber{display:block;float:left;padding:0 8px;line-height:20px;text-align:center;font-size:14px;color:#ff9700}
+.confirmButton .pearlRemain .personalHelp{display:block;float:left;width:16px;height:16px}

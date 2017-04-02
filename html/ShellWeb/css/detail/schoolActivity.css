@@ -1,0 +1,430 @@
+header,nav,footer,div,h1,h2,h3,h4,h5,a,p,span,img,button,body,div,ul,li,img,select,dt,dd,dl,a,p,h1,h2,h3,h4,h5,h6,input,span{
+    padding:0;margin:0;border:0;list-style:none;
+}
+article,aside,dialog,footer,header,section,footer,nav,figure,menu{display:block}
+
+.l{float:left}
+.r{
+    float:right;
+}
+/************************header*****************************/
+header .w_nav .headNav li.mainThird{
+
+    border-radius:20px;
+
+}
+header .w_nav .headNav li.mainThird a.mainThirdBorder{
+    color:#ff9700;
+    font-weight:bold;
+    letter-spacing:1px;
+    text-decoration: none;
+}
+/**********************************************************/
+/*---------------------------content部分----------------------------------------*/
+.content{
+    width:100%;
+    height:978px;
+    background:#ffffff;
+}
+.content .w{
+    width:1024px;
+    height:100%;
+
+    margin:0 auto;
+}
+.content .w .screeningCondition{
+    width:100%;
+    height:278px;
+    background:#fff;
+    overflow: hidden;
+}
+.content .w .screeningCondition h3{
+    width:100%;
+    height:24px;
+    font-size:24px;
+    line-height:30px;
+    margin-top:36px;
+    letter-spacing:1px;
+}
+.content .w .screeningCondition .place{
+    width:100%;
+    height:22px;
+    margin-top:18px;
+    letter-spacing:1px;
+}
+.content .w .screeningCondition .place .placeHead{
+    display:block;
+    float:left;
+    width:80px;
+    height:22px;
+    font-size:16px;
+    line-height:25px;
+    font-weight:bold;
+
+
+}
+#city .selec{
+    background:#e6e6e6;
+    border-radius:3px;
+    height:100%;
+    display:block;
+    float:left;
+    border:0;
+    font-size:14px;
+    text-indent:10px;
+    font-family:'微软雅黑';
+}
+.place .schoolActivitySearchBox{
+    width:300px;
+    height:34px;
+    float:right;
+    position:relative;
+}
+.place .schoolActivitySearchBox .sASInput{
+    display:block;
+    width:290px;
+    height:32px;
+    outline:none;
+    border-radius:6px;
+    border:1px solid #dcdcdc;
+    text-indent:28px;
+    font-size:14px;
+}
+.place .schoolActivitySearchBox .schoolInputSearch{
+    position:absolute;
+    top:11px;
+    left:8px;
+    cursor: pointer;
+}
+
+#city .prov{
+    width:129px;
+    margin-right:16px;
+}
+#city .city{
+    width:130px;
+    margin-right:16px;
+}
+#city .dist{
+    width:129px;
+
+}
+
+
+.content .w .screeningCondition .type{
+    width:100%;
+    height:16px;
+    margin-top:20px;
+    letter-spacing:1px;
+}
+.content .w .screeningCondition .type .placeHead{
+    display:block;
+    float:left;
+    width:80px;
+    height:16px;
+    font-size:16px;
+    line-height:16px;
+    font-weight:bold;
+}
+.content .w .screeningCondition .type .typeDetail{
+    width:90%;
+    float:left;
+    height:100%;
+    font-size:14px;
+}
+.content .w .screeningCondition .amount .typeDetail .userDefineBox{
+    float:left;
+    display:block;
+    width:246px;
+    height:20px;
+    margin-top:-2px;
+}
+.content .w .screeningCondition .amount .typeDetail .userDefineBox .userDefineBoxHead{
+    float:left;
+    width:88px;
+    height:20px;
+    line-height:20px;
+    text-align:center;
+    font-size:14px;
+}
+.content .w .screeningCondition .amount .typeDetail .userDefineBox .userDefineInput{
+    display:block;
+    float:left;
+    width:50px;
+    height:18px;
+    border:1px solid #b5b5b5;
+    outline:none;
+    border-radius:3px;
+    text-indent:2px;
+    font-family:'Microsoft Yahei','Arial','Helvetica','sans-self';
+}
+.content .w .screeningCondition .amount .typeDetail .userDefineBox .userDefineButton{
+    display:block;
+    float:left;
+    width:33px;
+    height:18px;
+    border:1px solid #b5b5b5;
+    outline:none;
+    margin-top:1px ;
+    margin-left:7px;
+    background:#fff;
+    color:#2e2e2e;
+    border-radius:3px;
+    line-height:16px;
+    cursor:pointer;
+    font-family:'Microsoft Yahei','Arial','Helvetica','sans-self';
+}
+.content .w .screeningCondition .amount .typeDetail .userDefineBox .userDefineShow{
+    float:left;
+    width:10px;
+    height:20px;
+    line-height:20px;
+    text-align: center;
+
+}
+.content .w .screeningCondition .type .typeDetail span{
+    padding:0 12px;
+    display:block;
+    float:left;
+    margin-right:20px;
+    height:100%;
+    font-size:14px;
+    line-height:16px;
+}
+
+
+.content .w .screeningCondition .amount{
+    width:100%;
+    height:16px;
+    margin-top:25px;
+}
+.content .w .screeningCondition .amount .placeHead{
+    display:block;
+    float:left;
+    width:80px;
+    height:100%;
+    font-size:16px;
+    line-height:16px;
+    font-weight:bold;
+
+}
+.content .w .screeningCondition .amount .typeDetail{
+    width:90%;
+    float:left;
+    height:100%;
+
+
+}
+.content .w .screeningCondition .amount .typeDetail span{
+    padding:0 12px;
+    display:block;
+    float:left;
+    margin-right:35px;
+    height:100%;
+
+    font-size:14px;
+    line-height:16px;
+}
+
+
+
+.content .w .contentDetail{
+    width:100%;
+    height:83px;
+    background:#44be51;
+    border-bottom:2px solid #cdcdcd;
+    font-size:20px;
+    font-weight:bold;
+    color:#fff;
+}
+.content .w .contentDetail .aciveName{
+    width:167px;
+    height:100%;
+    line-height:83px;
+    text-align:center;
+    letter-spacing:1px;
+}
+.content .w .contentDetail .activeType{
+    width:113px;
+    height:100%;
+    line-height:83px;
+    text-align:center;
+    letter-spacing:1px;
+}
+.content .w .contentDetail .activePlace{
+    width:81px;
+    height:100%;
+    line-height:83px;
+    text-align:center;
+    letter-spacing:1px;
+}
+.content .w .contentDetail .activeSchool{
+    width:160px;
+    height:100%;
+    line-height:83px;
+    text-align:center;
+    letter-spacing:1px;
+}
+.content .w .contentDetail .activeTime{
+    width:170px;
+    height:100%;
+    line-height:83px;
+    text-align:center;
+    letter-spacing:1px;
+}
+.content .w .contentDetail .activeMoney{
+    width:150px;
+    height:100%;
+    line-height:83px;
+    text-align:center;
+    letter-spacing:1px;
+}
+.content .w .contentDetail .activeCompany{
+    width:183px;
+    height:100%;
+    line-height:83px;
+    letter-spacing:1px;
+    text-align:center;
+}
+.content .w .detailList{
+    width:100%;
+    height:664px;
+
+}
+.content .w .detailList .example{
+    width:100%;
+    height:47px;
+    font-size:14px;
+}
+.content .w .detailList .example .exampleName{
+    width:167px;
+    height:100%;
+    line-height:47px;
+    text-align:center;
+    letter-spacing:1px;
+}
+.content .w .detailList .example .exampleType{
+    width:113px;
+    height:100%;
+    line-height:47px;
+    text-align:center;
+    letter-spacing:1px;
+}
+.content .w .detailList .example .examplePlace{
+    width:81px;
+    height:100%;
+    line-height:47px;
+    text-align:center;
+    letter-spacing:1px;
+}
+.content .w .detailList .example .exampleSchool{
+    width:160px;
+    height:100%;
+    line-height:47px;
+    text-align:center;
+    letter-spacing:1px;
+}
+.content .w .detailList .example .exampleTime{
+    width:170px;
+    height:100%;
+    line-height:47px;
+    text-align:center;
+    letter-spacing:1px;
+}
+.content .w .detailList .example .exampleMoney{
+    width:150px;
+    height:100%;
+    line-height:47px;
+    text-align:center;
+    letter-spacing:1px;
+}
+.content .w .detailList .example .exampleCompany{
+    width:183px;
+    height:100%;
+    line-height:47px;
+    letter-spacing:1px;
+    text-align:center;
+}
+.content .w .detailList .listContainer{
+    width:100%;
+    height:456px;
+
+}
+.content .w .detailList .swipePage{
+    width:100%;
+    height:144px;
+
+    overflow:hidden;
+}
+.content .w .detailList .swipePage .pageBox{
+    width:100%;
+    height:34px;
+    margin-top:60px;
+}
+.content .w .detailList .swipePage .pageBox .choose{
+    width:430px;
+    height:100%;
+    float:left;
+    margin-left:217px;
+
+}
+.content .w .detailList .swipePage .pageBox .choose span{
+    display:block;
+    padding:0 14px;
+    float:left;
+    height:34px;
+    line-height:34px;
+    cursor:pointer;
+}
+.content .w .detailList .swipePage .pageBox .choose span.pictures{
+    padding:0;
+}
+.content .w .detailList .swipePage .pageBox .inputNumber{
+    width:126px;
+    height:34px;
+    float:left;
+    margin-left:18px;
+
+}
+.content .w .detailList .swipePage .pageBox .inputNumber .input1{
+    width:46px;
+    height:26px;
+    display:block;
+    border:2px solid #606060;
+
+    margin-top:4px;
+    line-height:26px;
+    outline:none;
+}
+.content .w .detailList .swipePage .pageBox .inputNumber .goOn{
+    display:block;
+    padding:0 8px;
+    height:34px;
+    line-height:40px;
+    text-align:center;
+    font-size:18px;
+    cursor:pointer;
+    letter-spacing:1px;
+}
+/*----------------------------------------------------------------------------------*/
+.buttom{
+    width:100%;
+    height:270px;
+}
+.buttom .first{
+    width:100%;
+    height:146px;
+    background:#ff9700;
+}
+.buttom .second{
+    width:100%;
+    height:124px;
+    background:#ffffff;
+}
+#city{
+    float:left;
+    height:100%;
+    width:500px;
+    font-size:14px;
+}
+

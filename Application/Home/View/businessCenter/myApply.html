@@ -1,0 +1,74 @@
+<extend name="Layout:index_base"/>
+<block name="css">
+    <link rel="stylesheet" href="/public/css/authentication/authentication.css">
+    <link rel="stylesheet" href="/public/css/authentication/rightList.css">
+</block>
+<block name="js">
+    <script src="/public/js/require/require.js" defer async="true"  data-main='/public/js/authentication/authentication.js'></script>
+    <script>
+        var scope={
+
+        }
+
+    </script>
+</block>
+<block name="main">
+    <div class="header"></div>
+    <div class="content">
+        <div class="w">
+            <include file="user:nav" />
+            <div class="right">
+                <!------------------------------------------我的申请开始----------------------------------->
+                <div class="myApplyTab">
+                    <div class="myPubActDetailBox">
+                        <span class="myPubActDetailBHead">申请活动列表</span>
+                    </div>
+                    <div class="myPubActDetailTitleHead">
+                        <p class="rightListHeader">标题</p>
+
+                        <p class="listDeadline">截止时间</p>
+                        <p class="listStatus">状态</p>
+                    </div>
+                    <div class="rightList">
+                        <foreach name="applyLists" item="applyList">
+                        <a href="<if condition='($applyList.status eq 0) OR ($applyList.status eq -3) OR ($applyList.status eq -2)'>javascript:void(0)<else/>
+                       /BusinessCenter/myApplyDetail/id/{$applyList.id}/style/{$applyList.style}
+                        </if>">
+                            <div class="cooperationIn">
+                                <p class="rightListHeaders">{$applyList.real_name}</p>
+                                <p class="listDeadlines"><if condition="$applyList['apply_end_time']" >{$applyList.apply_end_time|date="Y.m.d",###}<else/>...................</if></p>
+                                <p class="listStatuss">{$applyList.type}</p>
+                            </div>
+                        </a>
+                        </foreach>
+                    </div>
+                    <div class="listPage">
+                            {$pageRes}
+                    </div>
+                </div>
+                <!------------------------------------------我的申请结尾----------------------------------->
+            </div>
+        </div>
+    </div>
+</block>
+<div id="nav">
+    <div class="planar lastBox">
+        <div class='online'>在线服务</div>
+        <img class='planarP' src='/public/img/common/services.png' />
+    </div>
+    <div class="contact1 lastBox">
+        <img class='contactP' src="/public/img/common/QRsmall.png"  />
+    </div>
+    <div class="up lastBox">
+        <div class='return'>返回顶部</div>
+        <img class='upP' src="/public/img/common/returnTop.png" alt="" />
+    </div>
+    <div class="slightlyQR">
+        <img src="/public/img/common/QRcode.png"/>
+
+    </div>
+    <div class="triangle"></div>
+</div>
+</body>
+
+</html>

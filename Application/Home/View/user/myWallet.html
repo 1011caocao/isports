@@ -1,0 +1,101 @@
+<extend name="Layout:index_base"/>
+<block name="css">
+    <link rel="stylesheet" href="/public/css/authentication/authentication.css">
+    <link rel="stylesheet" href="/public/css/authentication/rightList.css">
+</block>
+<block name="js">
+    <script src="/public/js/require/require.js" defer async="true"  data-main='/public/js/authentication/authentication.js'></script>
+</block>
+<block name="main">
+    <div class="header"></div>
+    <div class="content">
+        <div class="w">
+            <include file="user:nav" />
+            <div class="right">
+                <!---------------------贝壳币管理start-------------------------------------->
+                <div class="pearlWalletTab tab">
+                    <div class="pearWalletRe">
+                    <span class="pearWalletReHead">
+                        当前贝壳币余额:
+                        <span class="pearlRemainNum">0</span>
+                    </span>
+                    <span class="pearWalletReLinkBox">
+                        <a class="buyVIP" href="#">购买会员</a>
+                        <a href="#">贝壳币充值</a>
+                        <a href="#">申领贝壳币</a>
+                        <a class="exchangeWelfare" href="#">兑换福利</a>
+                    </span>
+                    </div>
+                    <div class="pearWlletServiceRegulations">贝壳币使用规则</div>
+                    <div class="personalShowLogo"></div>
+                    <p class="peralExplain peralExplainF">贝壳币是爱贝壳为维护用户利益与平台秩序而开发的虚拟货币与积分体系，用户在平台的一切操作都与贝</p>
+                    <p class="peralExplain">壳币密切相关，并且不定期有各种平台福利提供兑换。</p>
+                    <div class="pearlWalletRegulations">
+                        <div class="pearlWalletRFirst">
+                            <div class="pearlWalletRFirstHead">获取规则:</div>
+                            <div class="pearlWalletRFirstContent">
+                                <p>1.用户认证成功后可获得10颗贝壳币;</p>
+                                <p>2.在平台对接合作成功后七天内评论对方，发布方获得2颗，申请方获得3颗！(商业与校园活动为活</p>
+                                <p class="pIndent">动举办时间的七天内),七天后评论没有贝壳币;</p>
+                                <p>3.用户贝壳币余额不足时，若没有不良使用记录 ( 被投诉，未及时对合作方进行评论) ，可以进行贝壳币</p>
+                                <p class="pIndent">申领平台将根据情况进行补发;</p>
+                                <p>4.贝壳币充值,10人民币一颗，及时给予合作方真实的评论是可以自给自足哦;</p>
+                            </div>
+                        </div>
+                        <div class="pearlWalletRSecond">
+                            <div class="pearlWalletRSecondHead">耗用规则:</div>
+                            <div class="pearlWalletRSecondContent">
+                                <p>1.发布活动贝壳币的消耗数等于本活动的申请名额数，演艺和资源发布为消耗数量为1颗;</p>
+                                <p>2.所有的申请都需要1颗贝壳币;</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="activityHistoryDetail">活动操作历史详情</div>
+                    <div class="activityHistoryTitle">
+                        <span class="actHistoryOperation">操作</span>
+                        <span class="actHistoryNumber">数量</span>
+                        <span class="actHistoryTime">时间</span>
+                        <span class="actHistoryEvents">事件</span>
+                    </div>
+                    <div class="activityHistoryBox">
+                        <foreach name="resultData" item="result">
+                        <div class="historyExample">
+                            <span class="exampleOperation">{$result.coin_cost_name}</span>
+                            <span class="exampleNumber">{$result.coin_number}</span>
+                        <span class="exampleTime">
+                            {$result.add_time|date="y-m-d h:i:s",###}
+                        </span>
+                        <span class="exampleEvents">
+                            {$result.coin_event}
+                        </span>
+                        </div>
+                        </foreach>
+                    </div>
+                    <div class="pagePreAndNext">{$pageRes}</div>
+                </div>
+                <!----------------------贝壳币管理end--------------------------------->
+            </div>
+        </div>
+    </div>
+</block>
+<div id="nav">
+    <div class="planar lastBox">
+        <div class='online'>在线服务</div>
+        <img class='planarP' src='/public/img/common/services.png' />
+    </div>
+    <div class="contact1 lastBox">
+        <img class='contactP' src="/public/img/common/QRsmall.png"  />
+    </div>
+    <div class="up lastBox">
+        <div class='return'>返回顶部</div>
+        <img class='upP' src="/public/img/common/returnTop.png" alt="" />
+    </div>
+    <div class="slightlyQR">
+        <img src="/public/img/common/QRcode.png" />
+
+    </div>
+    <div class="triangle"></div>
+</div>
+</body>
+
+</html>

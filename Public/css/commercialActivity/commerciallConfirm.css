@@ -1,0 +1,265 @@
+.content{
+	width:100%;
+	height:930px;
+	
+}
+.content .w{
+	width:1024px;
+	height:930px;
+	
+	margin:0 auto;
+}
+.content .w .left{
+	width:100%;
+	height:930px;
+	
+}
+.content .w .left h2{
+	width:100%;
+	height:41px;
+	font-size:40px;
+	line-height:41px;
+	margin-top:34px;
+}
+.content .w .left .activityAbout{
+	width:452px;
+	height:14px;
+	margin-top:10px;
+	font-size:14px;
+	line-height:14px;
+}
+.content .w .left .activityAbout{
+	display:block;
+}
+.content .w .left .activityAbout .actDate{
+	width:84px;
+	height:14px;
+	text-align:center;
+	
+}
+.content .w .left .activityAbout .actTime{
+	width:183px;
+	height:14px;
+	text-align:center;
+	padding-left:4px;
+}
+.content .w .left .activityAbout .actCompany{
+	width:180px;
+	height:14px;
+	text-align: left;
+	
+}
+.content .w .left .activityDetail{
+	width:635px;
+	height:67px;
+	background:#fff4e6;
+	margin-top:24px;
+	padding:12px 0 11px 0;
+	border-radius:6px;
+}
+.content .w .left .activityDetail .type{
+	width:100%;
+	height:31px;
+	
+	line-height:31px;
+}
+.content .w .left .activityDetail .type .actType{
+	width:153px;
+	padding-left:20px;
+	padding-right:4px;
+}
+.content .w .left .activityDetail .type .deadLine{
+	width:224px;
+	height:31px;
+	padding-left:28px;
+	padding-right:6px;
+}
+.content .w .left .activityDetail .type .time{
+	padding-left:9px;
+}
+.content .w .left .contentDetail{
+	width:465px;
+	height:328px;
+	padding-right:171px;
+	
+	
+}
+.content .w .left .contentDetail .actDetail{
+	width:446px;
+	height:328px;
+	
+	overflow: hidden;
+	padding-left:20px;
+}
+.content .w .left .contentDetail .actDetail p{
+	width: 100%;
+	height:35px;
+	line-height:35px;
+}
+.content .w .left .contentDetail .actDetail p.first{
+	margin-top:8px;
+}
+.showStripe{
+	width:80px;
+	height:22px;
+	background:#ff9700;
+	
+	margin-left:1px;
+}
+#nav {
+	display:block;
+}
+.applyDetail{
+	width:100%;
+	height:64px;
+	line-height:64px;
+	font-size:30px;
+	font-weight:bold;
+	
+}
+.applyBox{
+	width:1010px;
+	height:94px;
+	background:#fff0d9;
+	margin-top:9px;
+	padding-left:14px;
+	overflow: hidden;
+}
+.schoolTitile{
+	width:100%;
+	height:20px;
+
+	margin-top:17px;
+}
+.schoolImg{
+	width:22px;
+	height:20px;
+	
+}
+.schoolImg img{
+	margin-left:1px;
+}
+.schoolName{
+	width:142px;
+	height:20px;
+	text-align: center;
+	font-size:16px;
+	line-height:20px;
+	font-weight:bold;
+}
+.schoolTitile .data{
+	width:103px;
+	height:20px;
+	font-size:10px;
+	line-height:20px;
+	text-align:center;
+	
+}
+.schoolTitile .time{
+	width:103px;
+	height:20px;
+	line-height:20px;
+	text-align: center;
+	font-size:10px;
+}
+.applyBox .schoolContent{
+	width:100%;
+	height:16px;
+	margin-top:14px;
+	font-size:16px;
+	line-height:16px;
+}
+.showStripe1{
+	width:80px;
+	height:22px;
+	background:#ff9700;
+	margin-top:26px;
+	margin-left:1px;
+}
+.commentDetail{
+	width:100%;
+	height:61px;
+	line-height:61px;
+	font-size:30px;
+	font-weight:bold;
+}
+.commentBox{
+	width:1024px;
+	height:290px;
+	
+}
+.commentBox .commentExample{
+	width:1024px;
+	height:92px;
+	background:#fff0d9;
+	margin-bottom: 5px;
+}
+.commentBox .commentExample .exampleDetail{
+	width:828px;
+	height:92px;
+	
+	padding-left:14px;
+} 
+.commentBox .commentExample .exampleDetail .starBox{
+	width:86px;
+	height:14px;
+	
+	margin-top:8px;
+}
+.commentBox .commentExample .exampleDetail .starBox img{
+	margin-right:3px;
+}
+.commentBox .commentExample .exampleDetail .exampleContent{
+	width:100%;
+	height:14px;
+	
+	margin-top:12px;
+	font-size:14px;
+	line-height:14px;
+}
+.commentBox .commentExample .exampleDetail .exampleData{
+	width:100%;
+	height:9px;
+	
+	margin-top:19px;
+}
+.commentBox .commentExample .exampleDetail .exampleData .data{
+	width:71px;
+	height:9px;
+	
+	line-height:9px;
+	font-size:10px;
+}
+.commentBox .commentExample .exampleDetail .exampleData .time{
+	width:47px;
+	height:9px;
+	margin-left:15px;
+	font-size:10px;
+	line-height:9px;
+	text-align: center;
+}
+.commentBox .commentExample .exampleSchool{
+	width:182px;
+	height:92px;
+	
+}
+.commentBox .commentExample .exampleSchool .schoolLogo{
+	width:30px;
+	height:37px;
+	margin-top:29px;
+}
+.commentBox .commentExample .exampleSchool .schoolLogo img{
+	margin-left:5px;
+	margin-top:8px;
+}
+.commentBox .commentExample .exampleSchool .schoolName{
+	width:131px;
+	height:37px;
+	margin-top:27px;
+	
+	font-size:16px;
+	text-align:justify;
+}
+.commentBox .commentExample .exampleSchool .schoolName1{
+	line-height:37px;
+}

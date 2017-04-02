@@ -1,0 +1,274 @@
+<include file="Index/header" />
+<body>
+<div id="wrapper">
+	<include file="Index/nav"/>
+
+	<div id="page-wrapper">
+
+		<div class="container-fluid">
+
+			<!-- Page Heading -->
+			<div class="row">
+				<div class="col-lg-12">
+
+					<ol class="breadcrumb">
+						<li>
+							<i class="fa fa-dashboard"></i>  <a href="/admin/user">菜单管理</a>
+						</li>
+						<li class="active">
+							<i class="fa fa-edit"></i> 修改
+						</li>
+					</ol>
+				</div>
+			</div>
+<div class="row containerBox">
+		<div class="page-header">
+		   <h1 class="text-center">
+		      <!--<small>子标题</small>-->
+			   <switch name="user.role">
+				   <case value="1">甲方企业认证</case>
+				   <case value="2">传媒公司认证</case>
+				   <case value="3">校园组织认证</case>
+				   <case value="4">演艺人认证</case>
+				   <default />未知角色</switch>
+		   </h1>
+		</div>
+		<div class="container panel panel-default">
+			<h3 class="panel-heading">基本信息</h3>
+			<div class="row">
+				<div class="col-md-4">真实姓名:{$user.real_name}</div>
+				<div class="col-md-4">性别:<if condition="$user.gender eq '1'">男<else />女</if></div>
+				<div class="col-md-4">身份证号:{$user.identity}</div>
+			</div>
+			<div class="row">
+				<div class="col-md-4">QQ:{$user.qq}</div>
+				<div class="col-md-4">电话:{$user.contact_number}</td></div>
+				<div class="col-md-4">邮箱:{$user.email}</div>
+			</div>
+			<div class="row">
+				<div class="col-md-4">所在城市:{$user.city_name}</div>
+				<div class="col-md-4">详细地址:{$user.address}</td></div>
+			</div>
+			<!--甲方企业信息-->
+			<div class="owner" <if condition="$user.role eq 1">style="display:block"</if>>
+				<div class="row">
+					<div class="col-md-4">企业名称:{$user.company_name}</div>
+					<div class="col-md-4">部门名称:{$user.company_dept}</div>
+					<div class="col-md-4">担任职位:{$user.company_job}</div>
+				</div>
+				<div class="row companyIntroduce">企业简介:{$user.description}</div>
+				<div class="downToUp panel-default">
+				<h3 class="panel-heading">企业风采展示</h3>
+				<div class="row pictureBox">
+					<foreach name="user.companyImgs" item="companyImgs">
+					<div class="col-sm-6 col-md-3">
+						<a href="" class="thumbnail">
+							<img  src="{$companyImgs.img_path}" class="img-rounded img-responsive">
+						</a>
+					</div>
+					</foreach>
+				</div>
+					<div class="license downToUp panel-default">
+						<h3 class="panel-heading">营业执照</h3>
+						<div class="row pictureBox">
+							<div class="col-sm-6 col-md-3">
+								<a href="" class="thumbnail">
+									<img  src="{$user.licence_path}" class="img-rounded img-responsive">
+								</a>
+							</div>
+						</div>
+					</div>
+			</div>
+			</div>
+			<!--甲方企业信息-->
+			<!--传媒公司-->
+			<div class="media" <if condition="$user.role eq 2">style="display:block"</if>>
+				<div class="row">
+					<div class="col-md-4">公司名称:{$user.company_name}</div>
+				</div>
+				<div class="row companyIntroduce">
+					公司简介:{$user.description}
+				</div>
+		<foreach name="user.caseShows" item="caseShow">
+				<div class="caseExampleBox panel-default">
+					<h3 class="case panel-heading">案例信息</h3>
+					<div class="row">
+						<div class="col-md-4">案例名字:{$caseShow.case_name}</div>
+						<div class="col-md-4">案例时间:{$caseShow.case_time}</div>
+					</div>
+					<div class="row companyIntroduce">案例简介:{$caseShow.case_desc}</div>
+					<!---->
+					<div class="caseBox panel-default">
+						<h3 class="panel-heading">案例照片</h3>
+						<div class="row pictureBox">
+							<foreach name="caseShow.caseShowImgs" item="caseShowImg">
+							<div class="col-sm-6 col-md-3">
+								<a href="" class="thumbnail">
+									<img  src="{$caseShowImg}" class="img-rounded img-responsive">
+								</a>
+							</div>
+							</foreach>
+						</div>
+					</div>
+				</div>
+		</foreach>
+		<div class="license downToUp panel-default">
+			<h3 class="panel-heading">营业执照</h3>
+			<div class="row pictureBox">
+				<div class="col-sm-6 col-md-3">
+					<a href="" class="thumbnail">
+						<img  src="{$user.licence_path}" class="img-rounded img-responsive">
+					</a>
+				</div>
+			</div>
+		</div>
+			</div>
+			<!--传媒公司-->
+			<!--校园组织-->	
+			<div class="school panel-default" <if condition="$user.role eq 3">style="display:block"</if>>
+				<div class="row">
+					<div class="col-md-4">组织名称:{$user.company_dept}</div>
+					<div class="col-md-4">所在学校:{$user.company_name}</div>
+				</div>
+				<div class="row companyIntroduce">
+					组织简介:{$user.description}
+				</div>
+		<foreach name="user.caseShows" item="caseShow">
+			<h3 class="case panel-heading">案例信息</h3>
+				<div class="caseBox">
+					<div class="row">
+						<div class="col-md-4">案例名字:{$caseShow.case_name}</div>
+						<div class="col-md-4">案例时间:{$caseShow.case_time}</div>
+					</div>
+					<div class="row companyIntroduce">案例简介:{$caseShow.case_desc}</div>
+					<!---->
+					<div class="caseBox panel-default">
+						<h3 class="panel-heading">案例照片</h3>
+						<div class="row pictureBox">
+							<foreach name="caseShow.caseShowImgs" item="caseShowImg">
+							<div class="col-sm-6 col-md-3">
+								<a href="" class="thumbnail">
+									<img  src="{$caseShowImg}" class="img-rounded img-responsive">
+								</a>
+							</div>
+							</foreach>
+						</div>
+					</div>
+				</div>
+		</foreach>
+				<div class="caseBox downToUp panel-default">
+					<h3 class="panel-heading">学生证照片照片</h3>
+					<div class="row pictureBox">
+						<div class="col-sm-6 col-md-3">
+							<a href="" class="thumbnail">
+								<img  src="{$user.licence_path}" class="img-rounded img-responsive">
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="downToUp panel-default">
+				<h3 class="panel-heading">组织风采展示</h3>
+				<div class="row pictureBox">
+					<foreach name="user.companyImgs" item="companyImgs">
+					<div class="col-sm-6 col-md-3">
+						<a href="" class="thumbnail">
+							<img  src="{$companyImgs.img_path}" class="img-rounded img-responsive">
+						</a>
+					</div>
+					</foreach>
+				</div>
+			</div>
+		<div class="license downToUp panel-default">
+			<h3 class="panel-heading">营业执照</h3>
+			<div class="row pictureBox">
+				<div class="col-sm-6 col-md-3">
+					<a href="" class="thumbnail">
+						<img  src="{$user.licence_path}" class="img-rounded img-responsive">
+					</a>
+				</div>
+			</div>
+		</div>
+			</div>
+			<!--校园组织-->
+			<!--演艺人-->
+			<div class="personalShow panel-default" <if condition="$user.role eq 4">style="display:block"</if>>
+				<div class="row">
+					<div class="col-md-4">演艺类型:{$user.artType}</div>
+					<div class="col-md-4">价格:{$user.price}</div>
+				</div>
+				<div class="row companyIntroduce">自我简介:{$user.description}</div>
+				<h3 class="panel-heading">才艺展示视频链接</h3>
+				<div class="row pictureBox">
+					<div class="col-md-4">{$user.url_name}</div>
+					<div class="col-md-4">{$user.url}</div>
+				</div>
+				<div class="relativeBox panel-default">
+					<h3 class="distanceTop panel-heading">相关证书</h3>
+					<div class="row pictureBox downToUp">
+					<foreach name="user.artLicences" item="artLicence">
+						<div class="col-sm-6 col-md-3">
+							<div class="thumbnail">
+								<img  src="{$artLicence.path}" class="img-rounded img-responsive personalImg">
+								<div class="caption">
+									<h5 class="text-center">{$artLicence.name}</h5>
+								</div>
+							</div>
+						</div>
+					</foreach>
+					</div>
+				</div>
+				<div class="artShow panel-default">
+					<h3 class="distanceTop panel-heading">形象才艺展示</h3>
+					<div class="row pictureBox downToUp">
+					<foreach name="user.companyImgs" item="companyImg">
+						<div class="col-sm-6 col-md-3">
+							<div class="thumbnail">
+								<img  src="{$companyImg.img_path}" class="img-rounded img-responsive personalImg">
+								<div class="caption">
+									<h5 class="text-center">{$companyImg.name}</h5>
+								</div>
+							</div>
+						</div>
+					</foreach>
+					</div>
+				</div>
+		</div>
+			<!---->
+			<!--公共部分---------------------->
+			<div class="IDCard panel-default">
+				<h3 class="panel-heading">身份证照片</h3>
+				<div class="row pictureBox">
+					<div class="col-sm-6 col-md-3">
+						<a href="" class="thumbnail">
+							<img  src="/Admin/Identity/IdentityImg/?url={$user.identityImg.identity_front_path}" class="img-rounded img-responsive">
+						</a>
+					</div>
+					<div class="col-sm-6 col-md-3">
+						<a href="" class="thumbnail">
+							<img  src="/Admin/Identity/IdentityImg/?url={$user.identityImg.identity_behind_path}" class="img-rounded img-responsive">
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="downToUp panel-default">
+				<h3 class="panel-heading">头像照片</h3>
+				<div class="row pictureBox">
+					<div class="col-sm-6 col-md-3">
+						<a href="" class="thumbnail">
+							<img  src="{$user.portrait}" class="img-rounded img-responsive">
+						</a>
+					</div>
+				</div>
+			</div>
+			<!---------------------------- -->
+			
+		</div>
+		<button type="button" id= "certification" class="btn btn-primary btn-lg btn-block" attr-id="{$user.uid}" style="width: 50%;margin: 5% auto;">认证</button>
+</div>
+	<script>
+		var SCOPE = {
+			'jump_url' : '/admin/user/index', //跳转URL
+			'certifiction_url' : '/admin/user/verify', //认证URL
+		};
+	</script>
+	<include file="Index/footer" />

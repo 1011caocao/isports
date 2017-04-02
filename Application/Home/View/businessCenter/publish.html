@@ -1,0 +1,497 @@
+<extend name="Layout:index_base"/>
+<block name="css">
+    <link rel="stylesheet" href="/public/css/authentication/authentication.css">
+    <link rel="stylesheet" href="/public/css/authentication/rightList.css">
+</block>
+<block name="js">
+    <script src="/public/js/require/require.js" defer async="true"  data-main='/public/js/authentication/publish.js'></script>
+    <script>
+        var scope={
+
+        }
+
+    </script>
+</block>
+<block name="main">
+    <div class="header"></div>
+    <div class="content">
+        <div class="w">
+            <include file="user:nav" />
+            <div class="right">
+                <!-------------------------发布板块开始--------------------------------------->
+                <div class="publishTab tab">
+                    <div class="publishSecondTabHead">
+                        <input type="button" class="pcTab pCommercial" value="商业活动" choose="t">
+                        <input type="button" class="pcTab pSchoolActivity" value="校园活动">
+                        <input type="button" class="pcTab pMediaSource" value="传媒资源">
+
+                    </div>
+                    <div class="publishSecondTabBox">
+                        <!----------------商业活动发布页面start----------------------->
+                        <div class="publishCommercialActivity publishT">
+                            <div class="activityName">
+                                <span class="activityTitle">活动名称:</span>
+                                <input type="text" class="activityInput ca_activity">
+                                <label class="publish_error">请输入活动名称</label>
+                            </div>
+                            <div class="activityType">
+                                <span class="activityTitle">活动类型:</span>
+                                <select name="type" class="activityAddress ca_type">
+                                    <foreach name="activities" item="activity">
+                                    <option value="{$activity.id}">{$activity.activity_name}</option>
+                                    </foreach>
+                                </select>
+                            </div>
+                            <div class="activityName activityPrice">
+                                <span class="activityTitle">经费预算:</span>
+                                <input type="text" class="activityInput ca_outlay">
+                                <label class="publish_error">请输入经费预算</label>
+                            </div>
+                            <div class="activityType payRate">
+                                <span class="activityTitle">预付比例:</span>
+                                <select name="type" class="activityAddress ca_advance">
+                                    <option value="10">10%</option>
+                                    <option value="20">20%</option>
+                                    <option value="30">30%</option>
+                                    <option value="40">40%</option>
+                                    <option value="50">50%</option>
+                                    <option value="60">60%</option>
+                                    <option value="70">70%</option>
+                                    <option value="80">80%</option>
+                                    <option value="90">90%</option>
+                                    <option value="100">100%</option>
+                                </select>
+                            </div>
+                            <div class="activityName activityDeadTime">
+                                <span class="activityTitle">申请期限:</span>
+                                <div class="deadTimeChooseBox">
+                                    <input  id="beginningTime" value="" type="text" class="beginningTime timeInput laydate-icon"/>
+                                    <span class="timeHowLogo">—</span>
+                                    <input id="endingTime" value="" type="text" class="endingTime timeInput laydate-icon" />
+                                </div>
+                            </div>
+                            <div class="activityName activityDeadTime activityTime">
+                                <span class="activityTitle">活动时间:</span>
+                                <div class="deadTimeChooseBox">
+                                    <input id="startActiveTime" type="text" class="beginningTime timeInput laydate-icon" />
+                                    <span class="timeHowLogo">—</span>
+                                    <input id="endActiveTime" type="text" class="endingTime timeInput laydate-icon" />
+                                </div>
+                            </div>
+                            <div class="cityPlace activityAddressChoose">
+                                <span class="headContent">所在城市:</span>
+                                <div id="city1" class="cityPlaugin">
+                                    <select name="province_id" id='province1' class='prov selec province1'>
+                                        <option value="0">不限</option>
+                                        <foreach name="provinces" item="province">
+                                            <option value="{$province.area_id}">{$province.area_name}</option>
+                                        </foreach>
+                                    </select>
+                                    <select  name="city_id" id='cities1' class='city selec cities1'>
+                                        <option value="0">不限</option>
+                                    </select>
+                                    <select name="county_id" id='area1' class='dist selec area1'>
+                                        <option value="0">不限</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="academyLocationBox">
+                                <span class="academyheadContent">所在院校:</span>
+                                <div class="academyLocationChoose">
+                                    <div id="commercial_act" placeholder="点击选择学校" class="academyChoose" disabled>点击选择学校</div>
+                                    <input type="text" school_list="0" class="school_list" style="display:none;">
+                                </div>
+                            </div>
+                            <div class="schoolScale">
+                                <span class="schoolScaleHead">校园规模:</span>
+                                <div class="schoolScaleIput">
+                                    <foreach name="school_sizes" item="school_size">
+                                <span class="scaleInputExample ca_schoolScale">
+                                    <input type='radio' name="commerChoose">
+                                    <span class="exampleSHow" name="{$school_size.id}">{$school_size.size}</span>
+                                </span>
+                                    </foreach>
+                                </div>
+                            </div>
+                            <div class="schoolPopularity">
+                                <span class="schoolPopularityHead">人气指数:</span>
+                                <input type="text" class="schoolPopularityInput ca_schoolPopularity">
+                                <span class="schoolPopularityAfter">人</span>
+                                <label class="publish_error">请输入人气指数</label>
+                            </div>
+                            <div class="schoolPopularity">
+                                <span class="schoolPopularityHead schoolActivityHead">活动需求名额:</span>
+                                <input type="text" class="schoolPopularityInput ca_activity_demand">
+                                <span class="schoolPopularityAfter">名</span>
+                                <label class="publish_error">请输入活动需求名额</label>
+                            </div>
+                            <div class="schoolActivityPublicityStyle">
+                                <div class="headContentOne">活动宣传方式:</div>
+                                <div class="schoolActivityWayChoose">
+                                    <foreach name="campaign_types" item="campaign_type">
+                                    <div class="choosePublicityWay" >
+                                        <input  class="PublicityWay ca_activity_advertise" name="{$campaign_type.id}"
+                                               type="checkbox">{$campaign_type.campaign_name}
+                                    </div>
+                                    </foreach>
+                                    <textarea class="choosePublicityInput ca_textarea" placeholder="请自主填写活动宣传方式不超过20字符"></textarea>
+
+                                </div>
+                            </div>
+                            <div class="schoolActivityStyle">
+                                <span class="schoolActivityStyleHead">活动验收方式:</span>
+                                <div class="schoolStyleWayBox">
+                                    <foreach name="check_types" item="check_type">
+                                    <input name="{$check_type.id}" class="schoolWay ca_activity_check" type="checkbox"><span class="locale">{$check_type.check_name}</span>
+                                    </foreach>
+                                </div>
+
+                            </div>
+                            <div class="reminder_cost_box reminder_pearl_top1">
+                                <div class="reminder_content">请仔细检查填写内容！本次发布需要消耗1颗贝壳币.</div>
+                                <div class="reminder_pearl">
+                                    <span class="pearl_remainder">贝壳币余额：<span class="pearl_number">0</span></span>
+                                    <img class="pearl_number_help" src="/public/img/authenticaton/Event%20Details-help.png" alt="">
+                                </div>
+                            </div>
+                            <input value="提交" type="button" class="schoolConfirmButton commercialApply">
+                        </div>
+                        <!----------------商业活动发布页面end------------------------------->
+                        <!-----------------校园发布页面start-------------------------------->
+                        <div class="publishSchoolActivity publishT">
+                            <div class="activityName">
+                                <span class="activityTitle">活动名称:</span>
+                                <input type="text" class="activityInput sa_activity">
+                                <label class="publish_error">请输入活动名称</label>
+                            </div>
+                            <div class="activityType">
+                                <span class="activityTitle">活动类型:</span>
+                                <select name="type" class="activityAddress sa_type">
+                                    <foreach name="activities" item="activity">
+                                        <option value="{$activity.id}">{$activity.activity_name}</option>
+                                    </foreach>
+                                </select>
+                            </div>
+                            <div class="activityName activityPrice">
+                                <span class="activityTitle">赞助金额:</span>
+                                <input type="text" class="activityInput sa_money">
+                                <label class="publish_error">请输入赞助金额</label>
+                            </div>
+                            <div class="activityType payRate">
+                                <span class="activityTitle">预付比例:</span>
+                                <select name="type" class="activityAddress sa_advance">
+                                    <option value="10">10%</option>
+                                    <option value="20">20%</option>
+                                    <option value="30">30%</option>
+                                    <option value="40">40%</option>
+                                    <option value="50">50%</option>
+                                    <option value="60">60%</option>
+                                    <option value="70">70%</option>
+                                    <option value="80">80%</option>
+                                    <option value="90">90%</option>
+                                    <option value="100">100%</option>
+                                </select>
+                            </div>
+                            <div class="activityName activityDeadTime">
+                                <span class="activityTitle">申请期限:</span>
+                                <div class="deadTimeChooseBox">
+                                    <input id="SABeginTime" type="text" class="beginningTime timeInput laydate-icon" />
+                                    <span class="timeHowLogo">—</span>
+                                    <input id="SAEndTime" type="text" class="endingTime timeInput laydate-icon" />
+                                </div>
+                            </div>
+                            <div class="activityName activityDeadTime activityTime">
+                                <span class="activityTitle">活动时间:</span>
+                                <div class="deadTimeChooseBox">
+                                    <input id="SAAtBTime" type="text" class="beginningTime timeInput laydate-icon" />
+                                    <span class="timeHowLogo">—</span>
+                                    <input id="SAAtETime" type="text" class="endingTime timeInput laydate-icon" />
+                                </div>
+                            </div>
+                            <div class="cityPlace activityAddressChoose common">
+                                <span class="headContent">所在城市:</span>
+                                <div id="city2" class="cityPlaugin">
+                                    <select name="province_id" id='province2' class='prov selec province'>
+                                        <option value="0">请选择</option>
+                                        <foreach name="provinces" item="province">
+                                            <option value="{$province.area_id}">{$province.area_name}</option>
+                                        </foreach>
+                                    </select>
+                                    <select  name="city_id" id='cities2' class='city selec cities'>
+                                        <option value="0">请选择</option>
+                                    </select>
+                                    <select name="county_id" id='area2' class='dist selec area'>
+                                        <option value="0">请选择</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="academyLocationBox common_school">
+                                <span class="academyheadContent">所在院校:</span>
+
+                                    <select id="school_activity" name="school_id" class="host_school">
+                                        <option value="">请选择</option>
+                                    </select>
+
+                            </div>
+                            <div class="schoolPopularity">
+                                <span class="schoolPopularityHead">人气指数:</span>
+                                <input type="text" class="schoolPopularityInput sa_schoolPopularity">
+                                <span class="schoolPopularityAfter">人</span>
+                                <label class="publish_error">请输入人气指数</label>
+                            </div>
+                            <div class="schoolScale">
+                                <span class="schoolScaleHead">校园规模:</span>
+                                <div class="schoolScaleIput">
+                                    <foreach name="school_sizes" item="school_size">
+                                <span class="scaleInputExample sa_schoolScale">
+                                    <input type='radio' name="commerChoose1">
+                                    <span class="exampleSHow" name="{$school_size.id}">{$school_size.size}</span>
+                                </span>
+                                    </foreach>
+                                </div>
+                            </div>
+                            <div class="schoolPopularity">
+                                <span class="schoolPopularityHead">赞助名额:</span>
+                                <input type="text" class="schoolPopularityInput sa_sposer">
+                                <span class="schoolPopularityAfter">名</span>
+                                <label class="publish_error">请输入赞助名额</label>
+                            </div>
+                            <div class="schoolActivityPublicityStyle schoolInsertAdver">
+                                <div class="headContentOne">广告植入方式:</div>
+                                <div class="schoolActivityWayChoose schoolActivityWayChooseS" style="width:380px;">
+                                    <foreach name="advertiseTypes" item="advertiseType">
+                                    <div class="choosePublicityWay">
+                                        <input  name="{$advertiseType.id}" class="PublicityWay sa_advertiseinsert" type="checkbox">{$advertiseType.advertise_name}
+                                    </div>
+                                    </foreach>
+                                    <textarea class="choosePublicityInput schoolLeaveMessage" placeholder="请自主填写赞助广告植入方式，不超过20字符"></textarea>
+
+                                </div>
+                            </div>
+                            <div class="schoolActivityStyle">
+                                <span class="schoolActivityStyleHead">活动验收方式:</span>
+                                <div class="schoolStyleWayBox">
+                                    <foreach name="check_types" item="check_type">
+                                        <input  name="{$check_type.id}" class="schoolWay sa_check" type="checkbox"><span class="locale">{$check_type.check_name}</span>
+                                    </foreach>
+                                </div>
+
+                            </div>
+                            <div class="reminder_cost_box reminder_pearl_top1">
+                                <div class="reminder_content">请仔细检查填写内容！本次发布需要消耗1颗贝壳币.</div>
+                                <div class="reminder_pearl reminder_pearl_top">
+                                    <span class="pearl_remainder">贝壳币余额：<span class="pearl_number">0</span></span>
+                                    <img class="pearl_number_help" src="/public/img/authenticaton/Event%20Details-help.png" alt="">
+                                </div>
+                            </div>
+                            <input value="提交" type="button" class="schoolConfirmButton schoolActivityApply">
+                        </div>
+                        <!-----------------------校园发布页面end---------------------------------------->
+                        <div class="publishMediaSources publishT">
+                            <div class="mediaNameBox">
+                                <span class="mediaNameHead">资源名称:</span>
+                                <input type="text" class="mediaNameInput ms_name">
+                                <label class="publish_error">请输入资源名称</label>
+                            </div>
+                            <div class="activityName activityDeadTime">
+                                <span class="activityTitle">使用期限:</span>
+                                <div class="deadTimeChooseBox">
+                                    <input id="MSBeginTime" type="text" class="beginningTime timeInput laydate-icon" />
+                                    <span class="timeHowLogo">—</span>
+                                    <input id="MSEndTime" type="text" class="endingTime timeInput laydate-icon" />
+                                </div>
+                            </div>
+                            <div class="mediaAddress common">
+                                <span class="mediaAddressHead">所在地区:</span>
+                                <div id="city3" class="mediaAddressInput">
+                                <select name="province_id" id='province3' class='prov selec province'>
+                                        <option value="0">请选择</option>
+                                        <foreach name="provinces" item="province">
+                                            <option value="{$province.area_id}">{$province.area_name}</option>
+                                        </foreach>
+                                    </select>
+                                    <select  name="city_id" id='cities3' class='city selec cities'>
+                                        <option value="0">请选择</option>
+                                    </select>
+                                    <select name="county_id" id='area3' class='dist selec area'>
+                                        <option value="0">请选择</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="academyLocationBox common_school">
+                                <span class="academyheadContent">所在院校:</span>
+                                <select id="media_sources" name="school_id" class="host_school">
+                                        <option value="">请选择</option>
+                                </select>
+                            </div>
+                            <div class="msScale">
+                                <span class="msScaleHead">校园规模:</span>
+                                <div class="msScaleIput">
+                                    <foreach name="school_sizes" item="school_size">
+                                <span class="msScaleExample">
+                                    <input type='radio' name="msScaleChoose">
+                                    <span class="exampleSHow" name="{$school_size.id}">{$school_size.size}</span>
+                                </span>
+                                    </foreach>
+                                </div>
+                            </div>
+                            <div class="msourceScale">
+                                <span class="msourceScaleHead">资源类型:</span>
+                                <div class="msourceScaleChoose">
+                                    <select name="" id="mediaSourcesChoose" class="mselec">
+                                        <option value="-1">请选择</option>
+                                        <foreach name="resources" item="resource">
+                                            <option value="{$resource.id}">{$resource.resource_name}</option>
+                                        </foreach>
+                                    </select>
+                                    <select class="mselec" name="siteSources" id="schoolSite">
+                                        <option value="">请选择</option>
+                                        <foreach name="resourceB" item="resource">
+                                            <option value="{$resource.id}">{$resource.resource_name}</option>
+                                        </foreach>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="mediaChangeBox">
+                                <div class="mspPersonalFlow personalNumber">
+                                    <span class="mspPFHead">日人流量:</span>
+                                    <input type="text" class="mspPFInput ms_flow_rate">
+                                    <span class="mspPFUnit">人</span>
+                                    <label class="publish_error">请输入日人流量</label>
+                                </div>
+                                <div class="mspPersonalFlow fansNumber">
+                                    <span class="mspPFHead fansNumberHead">粉丝数量:</span>
+                                    <input type="text" class="mspPFInput ms_number">
+                                    <span class="mspPFUnit">人</span>
+                                    <label class="publish_error">请输入粉丝数量</label>
+                                </div>
+                                <div class="mspPersonalFlow audienceNumber">
+                                    <span class="mspPFHead audienceNumberHead">日受众人数:</span>
+                                    <input type="text" class="mspPFInput ms_daynumber">
+                                    <span class="mspPFUnit">人</span>
+                                    <label class="publish_error">请输入日受众人数</label>
+                                </div>
+                                <div class="mspStadiumBox">
+                                    <div class="mspStadiumS mspStC">
+                                        <span class="mspSSHead mspStCHead">场馆面积:</span>
+                                        <input type="text" class="mspSSInput mspStInput ms_square">
+                                        <span class="mspSSUnit mspCUnit">㎡</span>
+                                        <label class="publish_error">请输入场馆面积</label>
+                                    </div>
+                                    <div class="mspStadiumC mspStC">
+                                        <span class="mspSCHead mspStCHead">容纳人数:</span>
+                                        <input type="text" class="mspStInput mspSCInput ms_container">
+                                        <span class="mspSCUnit mspCUnit">人</span>
+                                        <label class="publish_error">请输入容纳人数</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mediaSourcePrice">
+                                <span class="mspHead">资源价格:</span>
+                                <input type="text" class="mspInput ms_price">
+                                <select name="" id="mspUits">
+                                    <option value="元/天">元/天</option>
+                                    <option value="元/场">元/场</option>
+                                    <option value="元/周">元/周</option>
+                                    <option value="元/月">元/月</option>
+                                    <option value="元/季">元/季</option>
+                                    <option value="元/学期">元/学期</option>
+                                    <option value="元/年">元/年</option>
+                                </select>
+                                <label class="publish_error">请输入资源价格</label>
+                            </div>
+                            <div class="mspPrepay">
+                                <span class="mspPrepayRate">预付比例:</span>
+                                <select class="mspPrepayChoose" name="" id="">
+                                    <option value="10">10%</option>
+                                    <option value="20">20%</option>
+                                    <option value="30">30%</option>
+                                    <option value="40">40%</option>
+                                    <option value="50">50%</option>
+                                    <option value="60">60%</option>
+                                    <option value="70">70%</option>
+                                    <option value="80">80%</option>
+                                    <option value="90">90%</option>
+                                    <option value="100">100%</option>
+                                </select>
+                            </div>
+                            <div class="mspSourceDescribe">
+                                <span class="mspsDbHead">资源描述:</span>
+                                <textarea placeholder="请选择性介绍客户可能关心的的本资源相关情况，相对位置、地面材质、多媒体设备、以及使用和内容限制或者倾向，以及本资源的优秀使用案例成果等等。不超过200字符！" name="" class="mspsDbInput ms_sourcesDescribe"></textarea>
+                                <label class="publish_error">请输入资源描述</label>
+                            </div>
+                            <div class="mspPhoto">
+                                <div class="mspPhotoHead">资源照片:</div>
+                                <div class="addPhotoBox">
+                                    <div class="clickUpLoadImgExample">
+                                        <img  src="/public/img/authenticaton/upload_03.png" onclick="$('#upload_img').click()" class="upLoadImgBox" alt="">
+                                        <input id="upload_img" class="upload1" name="case_picture" accept="image/jpg,image/jpeg,image/png" type="file" style="display: none"/>
+                                        <div class="clickIpLoad">未选择任何文件</div>
+                                    </div>
+                                    <div class="clickUpLoadImgExample">
+                                        <img  src="/public/img/authenticaton/upload_03.png" class="upLoadImgBox" onclick="$('#upload_img1').click()" alt="">
+                                        <input id="upload_img1" class="upload1" name="case_picture" accept="image/jpg,image/jpeg,image/png" type="file" style="display: none"/>
+                                        <div class="clickIpLoad">未选择任何文件</div>
+                                    </div>
+                                    <div class="clickUpLoadImgExample">
+                                        <img  src="/public/img/authenticaton/upload_03.png" class="upLoadImgBox" onclick="$('#upload_img2').click()" alt="">
+                                        <input id="upload_img2" class="upload1" name="case_picture" accept="image/jpg,image/jpeg,image/png" type="file" style="display: none"/>
+                                        <div class="clickIpLoad">未选择任何文件</div>
+                                    </div>
+                                </div>
+                                <p class="mspReminder">格式为JPG、PNG，大小不超过3M，内容合法健康，数量不超过三张。</p>
+                            </div>
+                            <div class="schoolActivityStyle">
+                                <span class="schoolActivityStyleHead">活动验收方式:</span>
+                                <div class="schoolStyleWayBox">
+                                    <foreach name="check_types" item="check_type">
+                                        <input name="{$check_type.id}" class="schoolWay ms_check" type="checkbox"><span class="locale">{$check_type.check_name}</span>
+                                    </foreach>
+                                </div>
+
+                            </div>
+                            <div class="reminder_cost_box">
+                                <div class="reminder_content">请仔细检查填写内容！本次发布需要消耗1颗贝壳币.</div>
+                                <div class="reminder_pearl">
+                                    <span class="pearl_remainder">贝壳币余额：<span class="pearl_number">0</span></span>
+                                    <img class="pearl_number_help" src="/public/img/authenticaton/Event%20Details-help.png" alt="">
+                                </div>
+                            </div>
+                            <input  class="mspConfirm" type="button" value="提交">
+                        </div>
+                    </div>
+                </div>
+                <!-------------------------发布板块结尾--------------------------------------->
+            </div>
+        </div>
+        <div id="pop_up_choose_box">
+            <div class="pop_head">请选择活动学校</div>
+            <div class="pop_content">
+                <div class="cloneBox"><button school-id="0" class="choose_school" name="clone">不限</button></div>
+                <div class="pop_contentF"></div>
+            </div>
+            <div class="pop_button_box">
+                <input class="confirm_button" type="button" value="确认">
+            </div>
+        </div>
+    </div>
+    <div id="nav">
+        <div class="planar lastBox">
+            <div class='online'>在线服务</div>
+            <img class='planarP' src='/public/img/common/services.png' />
+        </div>
+        <div class="contact1 lastBox">
+            <img class='contactP' src="/public/img/common/QRsmall.png"  />
+        </div>
+        <div class="up lastBox">
+            <div class='return'>返回顶部</div>
+            <img class='upP' src="/public/img/common/returnTop.png" alt="" />
+        </div>
+        <div class="slightlyQR">
+            <img src="/public/img/common/QRcode.png" />
+
+        </div>
+        <div class="triangle"></div>
+    </div>
+</block>
+

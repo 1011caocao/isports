@@ -1,0 +1,111 @@
+<include file="Index/header" />
+<body>
+
+<div id="wrapper">
+
+    <include file="Index/nav"/>
+
+
+    <div id="page-wrapper">
+
+        <div class="container-fluid" >
+
+            <!-- Page Heading -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <ol class="breadcrumb">
+                        <li>
+                            <i class="fa fa-dashboard"></i>  <a href="/admin/resourcePublish">校园活动发布管理</a>
+                        </li>
+                        <li class="active">
+                            <i class="fa fa-table"></i>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+            <!-- /.row -->
+            <div class="row">
+                <form action="/admin/menu/index" method="get">
+                </form>
+            </div>
+            <div>
+                <button id="button-add" type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>添加 </button>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="page-header">
+                        <h1 class="text-center">{$resourceInfo.name}</h1>
+                    </div>
+                    <!--传媒资源-->
+                    <div class="container-fluid panel panel-default">
+                        <div class="row panel-default">
+                            <h5 class="panel-heading detailHeading">详细信息</h5>
+                            <div class="row">
+                                <div class="col-md-4">所在地区:&nbsp;&nbsp;{$resourceInfo.province_name}{$resourceInfo.city_name}{$resourceInfo.county_name}</div>
+                                <div class="col-md-4">预付比例:&nbsp;&nbsp;{$resourceInfo.prepay_ratio}%</div>
+                                <div class="col-md-4">使用期限:&nbsp;&nbsp;{$resourceInfo.activity_start_time|date="Y-m-d",###}<span>&nbsp;&nbsp;至&nbsp;&nbsp;</span>{$resourceInfo.activity_end_time|date="Y-m-d",###}</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4">所在院校:&nbsp;&nbsp;{$resourceInfo.school_name}</div>
+                                <div class="col-md-4">校园规模:&nbsp;&nbsp;{$resourceInfo.size}人</div>
+                                <div class="col-md-4">资源类型:&nbsp;&nbsp;{$resourceInfo.resource_aname}</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4">粉丝数量:&nbsp;&nbsp;{$resourceInfo.people}人</div>
+                                <div class="col-md-4">资源价格:&nbsp;&nbsp;{$resourceInfo.unit}</div>
+                                <div class="col-md-4">资源类型:&nbsp;&nbsp;{$resourceInfo.resource_bname}</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4">活动验收方式:&nbsp;&nbsp;
+                                    <span class="activityCheck">{$resourceInfo.check_type}</span>
+                                </div>
+                            </div>
+                            <div class="schoolActivity">
+                                <div class="row panel-default">
+                                    <h5 class="panel-heading detailHeading panelExtra">资源描述</h5>
+                                    <div class="row activityPublcity extraPadding">
+                                        {$resourceInfo.other}
+                                    </div>
+                                </div>
+                                <div class="panel-default">
+                                    <h5 class="panel-heading detailHeading">资源照片</h5>
+                                    <div class="row picturePadding">
+                                        <foreach name="resourceInfo.img" item="resourceImg">
+                                        <div class="col-sm-6 col-md-3">
+                                            <a href="" class="thumbnail">
+                                                <img  src="{$resourceImg.resource_path}" class="img-rounded img-responsive">
+                                            </a>
+                                        </div>
+                                        </foreach>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <!-- /.row -->
+            <button type="button" id= "check-resource" class="btn btn-primary btn-lg btn-block" attr-id="{$resourceInfo.id}" style="width: 50%;margin: 5% auto;">审核通过</button>
+        </div>
+        <!-- /.container-fluid -->
+
+    </div>
+    <!-- /#page-wrapper -->
+
+</div>
+<!-- /#wrapper -->
+<!-- Morris Charts JavaScript -->
+<script>
+    var SCOPE = {
+        'jump_url' : '/admin/ResourcePublish/index', //跳转URL
+        'check_resource_url' : '/admin/ResourcePublish/checkResource', //审核url
+    }
+</script>
+<include file="Index/footer" />
+
+
+
+
+

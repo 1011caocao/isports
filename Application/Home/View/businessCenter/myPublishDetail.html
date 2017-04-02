@@ -1,0 +1,363 @@
+<extend name="Layout:index_base"/>
+<block name="css">
+    <link rel="stylesheet" href="/public/css/authentication/myActivityDetail.css" />
+</block>
+<block name="js">
+    <script src="/public/js/require/require.js" defer async="true" data-main='/public/js/authentication/myActivityDetail'></script>
+    <script>
+        var scope={
+        }
+    </script>
+</block>
+<block name="main">
+<div class="header"></div>
+ <block class="content">
+    <div class="w">
+        <div class="left l">
+            <h2>{$myPublish.name}</h2>
+            <div class="activityAbout">
+                <span class='l actDate'>发布时间:<span class="actDateNew">{$myPublish.add_time|date="Y.m.d",###}</span></span>
+                <span class='l actTime'>浏览次数：<span class='actNumber'>{$myPublish.read_total}次</span></span>
+
+                <span class='r actCompany'><a href='../commercialActivity/companyMessage.html'>{$myPublish.name}</a></span>
+            </div>
+            <div class="activityDetail">
+                <div class="type">
+                    <span class="actType l">活动类型：{$myPublish.activity_name}</span>
+                    <span class="deadLine l">
+								申请期限：
+								<span class="typeLeft">{$myPublish.apply_start_time|date="Y.m.d",###}-{$myPublish.apply_end_time|date="Y.m.d",###}</span>
+							</span>
+                </div>
+                <div class="type">
+                    <span class="actType l">经费预算：{$myPublish.money}元</span>
+                    <span class="deadLine l">
+								活动时间：
+								<span class="typeLeft">{$myPublish.activity_start_time|date="Y.m.d",###}-{$myPublish.activity_end_time|date="Y.m.d",###}</span>
+							</span>
+                </div>
+                <div class="type">
+                    <span class="actType l">预付比例：{$myPublish.prepay_ratio}%</span>
+                    <span class="deadLine l">
+								活动地点：
+								<span class="typeLeft"><?php echo $myPublish['province_name']? $myPublish['province_name'].$myPublish['city_name'].$myPublish['county_name']: '全国不限'?></span>
+							</span>
+                </div>
+            </div>
+            <div class="contentDetail">
+                <div class="actDetail">
+                    <p class="first">学校规模：{$myPublish.school_size}</p>
+                    <p>人气要求：{$myPublish.popular}人</p>
+                    <p>活动申请名额：{$myPublish.apply_total}</p>
+                    <p>活动宣传方式：{$myPublish['campaign_name']?$myPublish['campaign_name']:$myPublish['advertise_name']}</p>
+                    <p>验收方式：{$myPublish['check_name']?$myPublish['check_name']:$myPublish['check_type']}</p>
+                    <p>已申请人数：{$myPublish.apply_ing}</p>
+                    <p class="success_number">已成功申请人数：{$myPublish.apply_success}</p>
+
+                </div>
+
+            </div>
+        </div>
+        <div class="right">
+            <div class="editor_offline_box">
+                <input type="hidden" name="{$myPublish.id}" class="offlineMessage">
+                <a href="javascript:void(0)" class="personal_oofline personalB
+                " type="button" name="<?php echo I('get.style') ?>">下线</a>
+            </div>
+        </div>
+    </div>
+    <div class="personalTabsBox">
+        <div class="personalHeadBox">
+            <input class="personalTabButton waitFiltrate changeTabColor" type="button" value="申请详情">
+            <input class="personalTabButton waitComment" type="button" value="评论">
+        </div>
+        <div class="waitFiltrateBox">
+            <div class="waitFiltrateContentBox">
+                <foreach name="applyLists" item="applyList">
+                <div class="waitFiltrateExample">
+                    <div class="waitFiltrateHead">
+                        <span class="headLogo">
+                            <img class="headLogoI" src="{$applyList.portrait}"/>
+                        </span>
+                        <span class="waitFiltrateCh">{$applyList['company_name']?$applyList['company_name']:$applyList['real_name']}</span>
+                        <span class="waitFiltrateDate">{$applyList.add_time|date="Y.m.d",###}</span>
+                        <span class="waitFiltrateTime">{$applyList.add_time|date="H:s",###}</span>
+                    </div>
+                    <div class="waitFiltrateContent">
+                        {$applyList.content}
+                    </div>
+                    <div class="addCommentContentBox">
+                        <div class="addCommentBox">
+                            <textarea placeholder="可输入0-100字符，请确认输入内容将康合法！" class="addInputComment"></textarea>
+                            <div class="addInputButton">
+                                <input type="button" value="出价低">
+                                <input type="button" value="经验少">
+                                <input type="button" value="信用差">
+                                <input type="button" value="实力弱">
+                                <input type="button" value="出价低">
+                                <input type="button" value="经验少">
+                                <input type="button" value="信用差">
+                                <input type="button" value="实力弱">
+                                <input type="button" value="出价低">
+                                <input type="button" value="经验少">
+                                <input type="button" value="信用差">
+                                <input type="button" value="实力弱">
+                            </div>
+                        </div>
+                        <div class="addCommentButtonBox">
+                            <input class="addCommentButton addCommentCancelButton" type="button" value="取消">
+                            <input class="addCommentButton addCommentConfirmButton" type="button" value="确定">
+                        </div>
+                    </div>
+                    <div class="commentJudgeBox">
+                        <button name="{$applyList.id}" <if condition="($applyList.status eq -2)">style="display:none"</if> class="commentJudgeB commentJudgePass <if condition='$applyList.status eq 1'> commentPassActive </if>">通过</button>
+                       <button  name="{$applyList.id}" <if condition="$applyList.status eq 1">style="display:none"</if>class="commentJudgeB commentJudgeNo <if condition='$applyList.status eq -2'> commentPassActive </if>"> 不匹配</button>
+                    </div>
+                </div>
+                </foreach>
+            </div>
+            <div class="pagesBox">{$pageRes}</div>
+        </div>
+        <div class="waitCommentBox">
+            <div class="waitCommentContentBox1">
+                <div class="waitCommentExample">
+                    <div class="waitCommentEHBox">
+                            <span class="waitCommImg">
+                                <img class="headLogoI" src="/public/img/commercialActivity/baishikele_little.png"/>
+                            </span>
+                        <span class="waitCommH">成都理工大学爱乐协会</span>
+                        <span class="waitCommDate">2016.12.20</span>
+                        <span class="waitCommTime">18:34</span>
+                        <input class="clickComment" type="button" value="评论">
+                    </div>
+                    <div class="waitCommentContentBox">
+                        <div class="waitCommentStar">
+                                <div  class="waitCommentStarImgB"></div>
+                            <span class="waitCommentStarExample">本次合作十分顺利，效果极佳!</span>
+                        </div>
+                        <div class="waitCommentInputBox">
+                            <textarea class="waitCommentInputText" placeholder="可输入0~100字符，请确保输入内容健康合法!"></textarea>
+                            <div class="waitCommentInputTab">
+                                <button class="tabButton">执行力强</button>
+                                <Button class="tabButton">信誉好</Button>
+                                <button class="tabButton">团队nice</button>
+                                <button class="tabButton">组织到位</button>
+                                <button class="tabButton">活动十分圆满</button>
+                                <button class="tabButton">非常棒的一次合作</button>
+                                <button class="tabButton">组织到位</button>
+                                <button class="tabButton">非常棒的一次合作</button>
+                                <button class="tabButton">执行力强</button>
+                                <button class="tabButton">信誉好</button>
+
+                            </div>
+                        </div>
+                        <div class="waitCommentCancelConfirm">
+                            <input class="waitCommentCancel waitCommentB" type="button" value="取消">
+                            <input class="waitCommentConfirm waitCommentB"  type="button" value="确认">
+                        </div>
+                    </div>
+                </div>
+                <div class="waitCommentExample">
+                    <div class="waitCommentEHBox">
+                            <span class="waitCommImg">
+                                <img class="headLogoI" src="/public/img/commercialActivity/baishikele_little.png"/>
+                            </span>
+                        <span class="waitCommH">成都理工大学爱乐协会</span>
+                        <span class="waitCommDate">2016.12.20</span>
+                        <span class="waitCommTime">18:34</span>
+                        <input class="clickComment" type="button" value="评论">
+                    </div>
+                    <div class="waitCommentContentBox">
+                        <div class="waitCommentStar">
+                                <span id="star_1" class="waitCommentStarImgB"></span>
+                            <span class="waitCommentStarExample">本次合作十分顺利，效果极佳!</span>
+                        </div>
+                        <div class="waitCommentInputBox">
+                            <textarea class="waitCommentInputText" placeholder="可输入0~100字符，请确保输入内容健康合法!"></textarea>
+                            <div class="waitCommentInputTab">
+                                <button class="tabButton">执行力强</button>
+                                <Button class="tabButton">信誉好</Button>
+                                <button class="tabButton">团队nice</button>
+                                <button class="tabButton">组织到位</button>
+                                <button class="tabButton">活动十分圆满</button>
+                                <button class="tabButton">非常棒的一次合作</button>
+                                <button class="tabButton">组织到位</button>
+                                <button class="tabButton">非常棒的一次合作</button>
+                                <button class="tabButton">执行力强</button>
+                                <button class="tabButton">信誉好</button>
+
+                            </div>
+                        </div>
+                        <div class="waitCommentCancelConfirm">
+                            <input class="waitCommentCancel waitCommentB" type="button" value="取消">
+                            <input class="waitCommentConfirm waitCommentB"  type="button" value="确认">
+                        </div>
+                    </div>
+                </div>
+                <div class="waitCommentExample">
+                    <div class="waitCommentEHBox">
+                            <span class="waitCommImg">
+                                <img class="headLogoI" src="/public/img/commercialActivity/baishikele_little.png"/>
+                            </span>
+                        <span class="waitCommH">成都理工大学爱乐协会</span>
+                        <span class="waitCommDate">2016.12.20</span>
+                        <span class="waitCommTime">18:34</span>
+                        <input class="clickComment" type="button" value="评论">
+                    </div>
+                    <div class="waitCommentContentBox">
+                        <div class="waitCommentStar">
+                                <span id="star_2" class="waitCommentStarImgB"></span>
+                            <span class="waitCommentStarExample">本次合作十分顺利，效果极佳!</span>
+                        </div>
+                        <div class="waitCommentInputBox">
+                            <textarea class="waitCommentInputText" placeholder="可输入0~100字符，请确保输入内容健康合法!"></textarea>
+                            <div class="waitCommentInputTab">
+                                <button class="tabButton">执行力强</button>
+                                <Button class="tabButton">信誉好</Button>
+                                <button class="tabButton">团队nice</button>
+                                <button class="tabButton">组织到位</button>
+                                <button class="tabButton">活动十分圆满</button>
+                                <button class="tabButton">非常棒的一次合作</button>
+                                <button class="tabButton">组织到位</button>
+                                <button class="tabButton">非常棒的一次合作</button>
+                                <button class="tabButton">执行力强</button>
+                                <button class="tabButton">信誉好</button>
+
+                            </div>
+                        </div>
+                        <div class="waitCommentCancelConfirm">
+                            <input class="waitCommentCancel waitCommentB" type="button" value="取消">
+                            <input class="waitCommentConfirm waitCommentB"  type="button" value="确认">
+                        </div>
+                    </div>
+                </div>
+                <div class="waitCommentExample">
+                    <div class="waitCommentEHBox">
+                            <span class="waitCommImg">
+                                <img class="headLogoI" src="/public/img/commercialActivity/baishikele_little.png"/>
+                            </span>
+                        <span class="waitCommH">成都理工大学爱乐协会</span>
+                        <span class="waitCommDate">2016.12.20</span>
+                        <span class="waitCommTime">18:34</span>
+                        <input class="clickComment" type="button" value="评论">
+                    </div>
+                    <div class="waitCommentContentBox">
+                        <div class="waitCommentStar">
+                                <span id="star_3" class="waitCommentStarImgB"></span>
+                            <span class="waitCommentStarExample">本次合作十分顺利，效果极佳!</span>
+                        </div>
+                        <div class="waitCommentInputBox">
+                            <textarea class="waitCommentInputText" placeholder="可输入0~100字符，请确保输入内容健康合法!"></textarea>
+                            <div class="waitCommentInputTab">
+                                <button class="tabButton">执行力强</button>
+                                <Button class="tabButton">信誉好</Button>
+                                <button class="tabButton">团队nice</button>
+                                <button class="tabButton">组织到位</button>
+                                <button class="tabButton">活动十分圆满</button>
+                                <button class="tabButton">非常棒的一次合作</button>
+                                <button class="tabButton">组织到位</button>
+                                <button class="tabButton">非常棒的一次合作</button>
+                                <button class="tabButton">执行力强</button>
+                                <button class="tabButton">信誉好</button>
+
+                            </div>
+                        </div>
+                        <div class="waitCommentCancelConfirm">
+                            <input class="waitCommentCancel waitCommentB" type="button" value="取消">
+                            <input class="waitCommentConfirm waitCommentB"  type="button" value="确认">
+                        </div>
+                    </div>
+                </div>
+                <div class="waitCommentExample">
+                    <div class="waitCommentEHBox">
+                            <span class="waitCommImg">
+                                <img class="headLogoI" src="/public/img/commercialActivity/baishikele_little.png"/>
+                            </span>
+                        <span class="waitCommH">成都理工大学爱乐协会</span>
+                        <span class="waitCommDate">2016.12.20</span>
+                        <span class="waitCommTime">18:34</span>
+                        <input class="clickComment" type="button" value="评论">
+                    </div>
+                    <div class="waitCommentContentBox">
+                        <div class="waitCommentStar">
+                                <span id="star_4" class="waitCommentStarImgB"></span>
+                            <span class="waitCommentStarExample">本次合作十分顺利，效果极佳!</span>
+                        </div>
+                        <div class="waitCommentInputBox">
+                            <textarea class="waitCommentInputText" placeholder="可输入0~100字符，请确保输入内容健康合法!"></textarea>
+                            <div class="waitCommentInputTab">
+                                <button class="tabButton">执行力强</button>
+                                <Button class="tabButton">信誉好</Button>
+                                <button class="tabButton">团队nice</button>
+                                <button class="tabButton">组织到位</button>
+                                <button class="tabButton">活动十分圆满</button>
+                                <button class="tabButton">非常棒的一次合作</button>
+                                <button class="tabButton">组织到位</button>
+                                <button class="tabButton">非常棒的一次合作</button>
+                                <button class="tabButton">执行力强</button>
+                                <button class="tabButton">信誉好</button>
+
+                            </div>
+                        </div>
+                        <div class="waitCommentCancelConfirm">
+                            <input class="waitCommentCancel waitCommentB" type="button" value="取消">
+                            <input class="waitCommentConfirm waitCommentB"  type="button" value="确认">
+                        </div>
+                    </div>
+                </div>
+                <div class="waitCommentExample">
+                    <div class="waitCommentEHBox">
+                            <span class="waitCommImg">
+                                <img class="headLogoI" src="/public/img/commercialActivity/baishikele_little.png"/>
+                            </span>
+                        <span class="waitCommH">成都理工大学爱乐协会</span>
+                        <span class="waitCommDate">2016.12.20</span>
+                        <span class="waitCommTime">18:34</span>
+                        <input class="clickComment" type="button" value="评论">
+                    </div>
+                    <div class="waitCommentContentBox">
+                        <div class="waitCommentStar">
+                                <span id="star_5" class="waitCommentStarImgB"></span>
+                            <span class="waitCommentStarExample">本次合作十分顺利，效果极佳!</span>
+                        </div>
+                        <div class="waitCommentInputBox">
+                            <textarea class="waitCommentInputText" placeholder="可输入0~100字符，请确保输入内容健康合法!"></textarea>
+                            <div class="waitCommentInputTab">
+                                <button class="tabButton">执行力强</button>
+                                <Button class="tabButton">信誉好</Button>
+                                <button class="tabButton">团队nice</button>
+                                <button class="tabButton">组织到位</button>
+                                <button class="tabButton">活动十分圆满</button>
+                                <button class="tabButton">非常棒的一次合作</button>
+                                <button class="tabButton">组织到位</button>
+                                <button class="tabButton">非常棒的一次合作</button>
+                                <button class="tabButton">执行力强</button>
+                                <button class="tabButton">信誉好</button>
+
+                            </div>
+                        </div>
+                        <div class="waitCommentCancelConfirm">
+                            <input class="waitCommentCancel waitCommentB" type="button" value="取消">
+                            <input class="waitCommentConfirm waitCommentB"  type="button" value="确认">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="waitCommentPages">上一页和下一页</div>
+        </div>
+
+</div>
+</block>
+</block>
+<div id="popUp">
+    <h2>抱歉</h2>
+    <p class='firstOne'>你当前没有认证传媒公司或校园社团身份，无法进行申请</p>
+    <p class='secondOne'>请选择一种身份后前去认证！</p>
+    <div class="buttonBxo">
+        <input class='l mediaCompany' type="button" value='传媒公司' />
+        <input class='r schoolClub' type="button" value='校园社团'/>
+    </div>
+    <div class="close"></div>
+</div>
+</body>
+</html>

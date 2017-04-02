@@ -1,0 +1,58 @@
+ .personalTabsBox{width:1024px;margin:0 auto;margin-top:30px;}
+ .personalTabsBox .personalHeadBox{width:100%;height:70px;border-bottom:2px solid #ff9700}
+ .personalTabsBox .personalHeadBox .personalTabButton{display:block;width:133px;height:70px;float:left;font-size:24px;font-weight:700;outline:0;border-top:1px solid #dcdcdc;background:#fff}
+ .personalTabsBox .personalHeadBox .waitFiltrate{border-top-left-radius:6px;border-left:1px solid #dcdcdc;border-top-right-radius:6px;}
+
+ .personalTabsBox .personalHeadBox .changeTabColor{background:#ff9700;color:#fff;border:0}
+ .personalTabsBox .waitFiltrateBox{width:100%;}
+ .personalTabsBox .waitFiltrateBox .waitFiltrateExample{position:relative;width:1022px;border-radius:6px;border:1px solid #dcdcdc;margin-top:10px;}
+ .personalTabsBox .waitFiltrateBox .waitFiltrateExample .waitFiltrateHead{width:1009px;padding-left:15px;height:40px}
+ .personalTabsBox .waitFiltrateBox .waitFiltrateExample .waitFiltrateHead span{display:block;float:left;height:40px;line-height:40px}
+ .personalTabsBox .waitFiltrateBox .waitFiltrateExample .waitFiltrateHead .headLogo .headLogoI{display:block;width:20px;height:20px;margin-top:10px;border-radius:10px;}
+ .personalTabsBox .waitFiltrateBox .waitFiltrateExample .waitFiltrateHead .waitFiltrateCh{width:179px;font-size:16px;letter-spacing:1px;text-align:center;font-weight:bold;}
+ .personalTabsBox .waitFiltrateBox .waitFiltrateExample .waitFiltrateHead .waitFiltrateDate{width:85px;text-align:center;font-size:10px}
+ .personalTabsBox .waitFiltrateBox .waitFiltrateExample .waitFiltrateHead .waitFiltrateTime{width:40px;font-size:10px;text-align:center}
+ .personalTabsBox .waitFiltrateBox .waitFiltrateExample .waitFiltrateContent{width:720px;margin-left:15px;font-size:14px;line-height:18px;padding-top:4px;padding-bottom:20px}
+ .personalTabsBox .waitFiltrateBox .waitFiltrateExample .addCommentContentBox{width:100%;display:none;height:153px;border-top:1px solid #dcdcdc}
+ .personalTabsBox .waitFiltrateBox .waitFiltrateExample .addCommentContentBox .addCommentBox{width:100%;height:105px;padding-top:9px}
+ .personalTabsBox .waitFiltrateBox .waitFiltrateExample .addCommentContentBox .addCommentBox .addInputComment{display:block;float:left;height:81px;width:602px;resize:none;outline:0;border-radius:6px;padding:9px 13px;font-family:'Microsoft Yahei',Arial,Helvetica,sans-self;margin-left:18px}
+ .personalTabsBox .waitFiltrateBox .waitFiltrateExample .addCommentContentBox .addCommentBox .addInputButton{width:338px;float:left;height:104px;padding-left:20px}
+ .personalTabsBox .waitFiltrateBox .waitFiltrateExample .addCommentContentBox .addCommentBox .addInputButton input{display:block;width:65px;height:22px;font-size:12px;background:#fff;border:1px solid #dbdbdb;border-radius:4px;float:left;cursor:pointer;color:#bababa;outline:0;margin-right:18px;margin-bottom:14px;font-family:'Microsoft Yahei',Arial,Helvetica,sans-self}
+ .personalTabsBox .waitFiltrateBox .waitFiltrateExample .addCommentContentBox .addCommentBox .addInputButton .buttonActive{background:#ff9700;border:1px solid #ff9700;color:#fff}
+ .personalTabsBox .waitFiltrateBox .waitFiltrateExample .addCommentContentBox .addCommentButtonBox{width:166px;height:26px;margin:5px auto}
+ .personalTabsBox .waitFiltrateBox .waitFiltrateExample .addCommentContentBox .addCommentButtonBox .addCommentButton{display:block;float:left;width:72px;height:26px;background:#fff;border:1px solid #5e5e5e;outline:0;border-radius:6px;cursor:pointer;font-size:12px;color:#5e5e5e;margin-right:10px}
+ .personalTabsBox .waitFiltrateBox .waitFiltrateExample .commentJudgeBox{width:64px;height:72px;position:absolute;top:40px;right:38px;}
+ .personalTabsBox .waitFiltrateBox .waitFiltrateExample .commentJudgeBox .commentJudgeB{width:62px;height:24px;margin-bottom:10px;color:#5e5e5e;outline:0;background:#fff;border:1px solid #707070;border-radius:4px;font-size:14px;cursor:pointer;font-family:'Microsoft Yahei',Arial,Helvetica,sans-self}
+ .personalTabsBox .waitFiltrateBox .waitFiltrateExample .commentJudgeBox .passNo{
+    border:0;
+}
+ .personalTabsBox .waitCommentContentBox1 .waitCommentExample{width:1022px;border:1px solid #dcdcdc;border-radius:6px;margin-top:10px}
+ .personalTabsBox .waitCommentContentBox1 .waitCommentExample .waitCommentEHBox{width:966px;height:50px;padding-left:18px;padding-right:40px}
+ .personalTabsBox .waitCommentContentBox1 .waitCommentExample .waitCommentEHBox span{display:block;height:50px;float:left;line-height:50px;text-align:center}
+ .personalTabsBox .waitCommentContentBox1 .waitCommentExample .waitCommentEHBox .waitCommImg{width:20px}
+ .personalTabsBox .waitCommentContentBox1 .waitCommentExample .waitCommentEHBox .waitCommImg img{margin-top:15px;display:block;width:20px;height:20px;border-radius:10px;}
+ .personalTabsBox .waitCommentContentBox1 .waitCommentExample .waitCommentEHBox .waitCommH{padding:0 5px;font-size:16px;letter-spacing:1px;font-weight:bold;}
+ .personalTabsBox .waitCommentContentBox1 .waitCommentExample .waitCommentEHBox .waitCommDate{padding:0 10px;font-size:10px}
+ .personalTabsBox .waitCommentContentBox1 .waitCommentExample .waitCommentEHBox .waitCommTime{padding:0 3px;font-size:10px}
+ .personalTabsBox .waitCommentContentBox1 .waitCommentExample .waitCommentEHBox .clickComment{float:right;display:block;width:62px;height:24px;cursor:pointer;border:1px solid #707070;background:#fff;outline:0;font-size:14px;border-radius:3px;color:#5e5e5e;margin-top:12px;margin-right:3px;font-family:'Microsoft Yahei',Arial,Helvetica,sans-self}
+ .personalTabsBox .waitCommentContentBox1 .waitCommentExample .waitCommentContentBox{display:none;width:1024px;height:192px;border-top:1px solid #dcdcdc}
+ .personalTabsBox .waitCommentContentBox1 .waitCommentExample .waitCommentContentBox .waitCommentStar{width:1006px;padding-left:18px;height:44px}
+ .personalTabsBox .waitCommentContentBox1 .waitCommentExample .waitCommentContentBox .waitCommentStar .waitCommentStarImgB{display:block;float:left;width:158px;height:24px;padding:10px 0}
+ .personalTabsBox .waitCommentContentBox1 .waitCommentExample .waitCommentContentBox .waitCommentStar .waitCommentStarImgB a{display:block;height:24px;float:left}
+ .personalTabsBox .waitCommentContentBox1 .waitCommentExample .waitCommentContentBox .waitCommentStar .waitCommentStarExample{display:block;float:left;width:194px;line-height:44px;font-size:12px;color:#bbb;text-align:center}
+ .personalTabsBox .waitCommentContentBox1 .waitCommentExample .waitCommentContentBox .waitCommentInputBox{width:1006px;height:104px;padding-left:18px}
+ .personalTabsBox .waitCommentContentBox1 .waitCommentExample .waitCommentContentBox .waitCommentInputBox .waitCommentInputTab{width:354px;height:104px;float:left;padding-left:20px}
+ .personalTabsBox .waitCommentContentBox1 .waitCommentExample .waitCommentContentBox .waitCommentInputBox .waitCommentInputTab .tabButton{display:block;float:left;padding:0 8px;height:24px;border:1px solid #dcdcdc;border-radius:3px;font-size:12px;background:#fff;color:#bbb;outline:0;margin-right:18px;margin-bottom:12px;font-family:'Microsoft Yahei',Arial,Helvetica,sans-self;cursor:pointer;}
+ .personalTabsBox .waitCommentContentBox1 .waitCommentExample .waitCommentContentBox .waitCommentInputBox .waitCommentInputText{display:block;width:602px;height:81px;outline:0;float:left;resize:none;border-radius:6px;padding:8px 13px;font-family:'Microsoft Yahei',Arial,Helvetica,sans-self}
+ .personalTabsBox .waitCommentContentBox1 .waitCommentExample .waitCommentCancelConfirm{width:168px;height:26px;margin:5px auto}
+ .personalTabsBox .waitCommentContentBox1 .waitCommentExample .waitCommentCancelConfirm .waitCommentB{display:block;width:72px;height:26px;float:left;cursor:pointer;border:1px solid #5e5e5e;color:#5e5e5e;outline:0;background:#fff;margin-right:11px;border-radius:3px;font-family:'Microsoft Yahei',Arial,Helvetica,sans-self}
+#nav{display:block}
+/*
+ ***动态添加样式
+*/
+ .personalTabsBox .waitCommentContentBox1 .waitCommentExample .waitCommentContentBox .waitCommentInputBox .waitCommentInputTab .buttonActive{
+    background:#ff9700;color:#fff;border:1px solid #ff9700;
+}
+ .personalTabsBox .waitCommentContentBox1 .waitCommentExample .waitCommentEHBox .commentActive{
+    background:#ff9700;color:#fff;border:1px solid #ff9700;
+}

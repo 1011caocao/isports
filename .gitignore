@@ -1,0 +1,8 @@
+Application/Runtime/
+html/.idea/workspace.xml
+html/ShellWeb/node_modules/
+html/ShellWeb/gulpfile.js
+html/ShellWeb/bower.json
+html/ShellWeb/package.json
+Application/Common/Conf/db.php
+Public/upload/

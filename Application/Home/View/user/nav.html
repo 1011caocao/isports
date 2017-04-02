@@ -1,0 +1,31 @@
+<?php 
+$menus = D("Menu")->getUserMenus();
+ ?>
+<div class="left">
+    <div class="leftMenu">
+        <div class="personalLogo">
+            <div class="originalLogo">
+            	<img class="originalLogoImg" src="{$Think.session.USER.portrait}"/>	
+            </div>
+            <div class="phoneNumber">{$Think.session.USER.phone}</div>
+            <span class="personalEditor"></span>
+        </div>
+        <div cState="f" class="persoanlCenter pcFirst">
+        	<volist name="menus" id="menu">
+        	<!-- 主分类 -->
+            <div class="centerHead">
+                <img class="centerImg" src="{$menu['img_path']}"/>
+                <span class="centerHead1">{$menu['name']}</span>
+            </div>
+	            <volist name="menu['item']" id="v">
+	            <!-- 有menuActive名表示选中-->
+		            <a href="/{$v['c']}/{$v['f']}" class="example {$v['f']|getHomeActive}">
+		                <div class="hLogo"></div>
+		                <div class="options">{$v['name']}</div>
+		            </a>
+	            </volist>
+	            <div class="personalBorderBottom"></div>
+            </volist>
+        </div>
+    </div>
+</div>

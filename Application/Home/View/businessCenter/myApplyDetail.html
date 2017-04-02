@@ -1,0 +1,166 @@
+<extend name="Layout:index_base"/>
+<block name="css">
+    <link rel="stylesheet" href="/public/css/authentication/myApplicationDetail.css" />
+</block>
+<block name="js">
+    <script src="/public/js/require/require.js" defer async="true" data-main='/public/js/authentication/myApplicationDetail'></script>
+    <script>
+        var scope={
+        }
+    </script>
+</block>
+<block name="main">
+<div class="header"></div>
+<div class="content">
+    <div class="w">
+        <div class="left">
+            <h2>{$row.name}</h2>
+            <div class="activityAbout">
+                <span class='l actDate'>发布时间:<span class="actDateNew">{$row.add_time|date="Y-m-d",###}</span></span>
+                <span class='l actTime'>浏览次数：<span class='actNumber'>{$row.read_total}次</span></span>
+
+                <span class='r actCompany'><a href='../commercialActivity/companyMessage.html'>{$row.company_name}</a></span>
+            </div>
+            <div class="activityDetail">
+                <div class="type">
+                    <span class="actType l">类型：{$row['activity_name']?$row['activity_name']:$row['resource_aname']}</span>
+                    <span class="deadLine l" <if condition="I('get.style') eq 3">style="display:none"</if>>
+								申请期限：
+								<span class="typeLeft">{$row.apply_start_time|date="Y.m.d",###}-{$row.apply_end_time|date="Y.m.d",###}</span>
+							</span>
+                </div>
+                <div class="type">
+                    <span class="actType l">活动预算：{$row.money}元</span>
+                    <span class="deadLine l">
+								活动时间：
+								<span class="typeLeft">{$row.activity_start_time|date="Y.m.d",###}-{$row.activity_end_time|date="Y.m.d",###}</span>
+							</span>
+                </div>
+                <div class="type">
+                    <span class="actType l">预付比例：{$row.prepay_ratio}%</span>
+                    <!--<span class="deadLine l">-->
+								<!--活动地点：-->
+								<!--<span class="typeLeft">四川省成都市学校不限</span>-->
+							<!--</span>-->
+                </div>
+            </div>
+            <div class="contentDetail">
+                <div class="actDetail">
+                    <p class="first">学校规模：{$row.school_size}</p>
+                    <p>活动申请名额:{$row.apply_total}</p>
+                    <p>验收方式：{$row.check_name}</p>
+                    <p>已申请人数：{$row.apply_ing}</p>
+                    <p class="success_number">已成功申请人数：{$row.apply_success}</p>
+
+                </div>
+                <div class="leaveMessageApply">
+                    <div class="lmApplyHead">留言申请:</div>
+                    <div class="lmApplyBox">{$myApplyDetail.content}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="personalTabsBox">
+        <div class="personalHeadBox">
+            <input class="personalTabButton waitFiltrate changeTabColor" type="button" value="申请详情">
+        </div>
+        <div class="waitFiltrateBox">
+            <!--处理中状态-->
+            <div class="waitFiltrateContentBox dealWidthBefore"<if condition="$myApplyDetail.status eq 1">style="display:block"</if>>
+                <div class="waitFiltrateExample">
+                    <div class="waitFiltrateHead">
+                        <span class="headLogo">
+                            <img class="headLogoI" src="{$Think.session.USER.portrait}"/>
+                        </span>
+                        <span class="waitFiltrateCh">{$Think.session.USER.real_name}</span>
+                        <span class="waitFiltrateDate">{$myApplyDetail.add_time|date="Y-m-d",###}</span>
+                        <span class="waitFiltrateTime">{$myApplyDetail.add_time|date="h:i:s",###}</span>
+                    </div>
+                    <div class="waitFiltrateContent">
+                        {$myApplyDetail.content}
+                    </div>
+                    <div class="commentJudgeBox">
+                        <button class="commentJudgeB">处理中</button>
+                    </div>
+                </div>
+            </div>
+            <!--评论状态-->
+            <div class="waitCommentContentBox1 commentStatu" <if condition="($myApplyDetail.status eq 2) AND ($myApplyDetail.apply_comment eq '')">style="display:block"</if>>
+                <div class="waitCommentExample">
+                    <div class="waitCommentEHBox">
+                            <span class="waitCommImg">
+                                <img class="headLogoI" src="{$Think.session.USER.portrait}"/>
+                            </span>
+                        <span class="waitCommH">{$Think.session.USER.real_name}</span>
+                        <span class="waitCommDate">{$myApplyDetail.add_time|date="Y-m-d",###}</span>
+                        <span class="waitCommTime">{$myApplyDetail.add_time|date="h:i:s",###}</span>
+                        <input class="clickComment" type="button" value="评论">
+                    </div>
+                    <div class="waitCommentContentBox">
+                        <div class="waitCommentStar">
+                            <div class="waitCommentStarImgB"></div>
+                            <span class="waitCommentStarExample">本次合作十分顺利，效果极佳!</span>
+                        </div>
+                        <div class="waitCommentInputBox">
+                            <textarea class="waitCommentInputText" placeholder="可输入0~100字符，请确保输入内容健康合法!"></textarea>
+                            <div class="waitCommentInputTab">
+                                <button class="tabButton">执行力强</button>
+                                <Button class="tabButton">信誉好</Button>
+                                <button class="tabButton">团队nice</button>
+                                <button class="tabButton">组织到位</button>
+                                <button class="tabButton">活动十分圆满</button>
+                                <button class="tabButton">非常棒的一次合作</button>
+                                <button class="tabButton">组织到位</button>
+                                <button class="tabButton">非常棒的一次合作</button>
+                                <button class="tabButton">执行力强</button>
+                                <button class="tabButton">信誉好</button>
+
+                            </div>
+                        </div>
+                        <div class="waitCommentCancelConfirm">
+                            <input class="waitCommentCancel waitCommentB" type="button" value="取消">
+                            <input class="waitCommentConfirm waitCommentB"  type="button" value="确认">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--处理后状态-->
+            <div class="waitFiltrateContentBox commentAfter" <if condition="$myApplyDetail.status eq -1">style="display:block"</if>>
+                <div class="waitFiltrateExample">
+                    <div class="waitFiltrateHead">
+                        <span class="headLogo">
+                            <img class="headLogoI" src="{$Think.session.USER.portrait}"/>
+                        </span>
+                        <span class="waitFiltrateCh">{$Think.session.USER.real_name}</span>
+                        <span class="waitFiltrateDate">{$myApplyDetail.add_time|date="Y-m-d",###}</span>
+                        <span class="waitFiltrateTime">{$myApplyDetail.add_time|date="h:i:s",###}</span>
+                    </div>
+                    <div class="waitFiltrateContent">
+                        {$myApplyDetail.reason}
+                    </div>
+                    <div class="commentJudgeBox">
+                        <button class="commentJudgeB passNo">未通过</button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+</div>
+</div>
+    </block>
+<div class="popBox">
+
+</div>
+<div id="popUp">
+    <h2>抱歉</h2>
+    <p class='firstOne'>你当前没有认证传媒公司或校园社团身份，无法进行申请</p>
+    <p class='secondOne'>请选择一种身份后前去认证！</p>
+    <div class="buttonBxo">
+        <input class='l mediaCompany' type="button" value='传媒公司' />
+        <input class='r schoolClub' type="button" value='校园社团'/>
+    </div>
+    <div class="close"></div>
+</div>
+</body>
+</html>

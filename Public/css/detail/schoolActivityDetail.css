@@ -1,0 +1,531 @@
+.content{
+    width:100%;
+    height:1703px;
+    background:#fff;
+}
+.content .w{
+    width:1024px;
+    height:1703px;
+    margin:0 auto;
+
+    overflow: hidden;
+}
+.content .w h1{
+    width:100%;
+    height:36px;
+    margin-top:40px;
+    font-size:36px;
+    line-height:36px;
+}
+.identityCardMesssage{
+    width:650px;
+    height:116px;
+    border-radius:6px;
+    background:#fff4e6;
+    margin-top:20px;
+    padding-left:20px;
+    overflow: hidden;
+}
+.identityCardMesssage .identityTitle{
+    margin-top:18px;
+    width:100%;
+    height:19px;
+    font-size:14px;
+    line-height:19px;
+    color:#ff9700;
+    font-weight:bold;
+
+}
+.identityCardMesssage .identityTitle .identityTitleBox{
+    width:170px;
+    height:100%;
+    float:left;
+}
+.identityCardMesssage .identityTitle .identityP{
+    margin-left:9px;
+}
+.identityCardMesssage .detailBox{
+    width:100%;
+    height:32px;
+
+
+}
+.identityCardMesssage .detailBox .commentN{
+    display:block;
+    width:200px;
+    height:32px;
+    line-height:32px;
+    font-size:14px;
+}
+.identityCardMesssage .firstBox{
+    margin-top:5px;
+}
+
+.identityCardMesssage .firstBox .city{
+    width:152px;
+    height:32px;
+    line-height:32px;
+    font-size:14px;
+}
+.identityCardMesssage .firstBox .realName{
+    width:165px;
+    height:32px;
+    line-height:32px;
+    font-size:14px;
+}
+.identityCardMesssage .cooperationTimes{
+    width:152px;
+    height:32px;
+    line-height:32px;
+    font-size:14px;
+}
+.identityCardMesssage .starLevel{
+    width:165px;
+    height:32px;
+    line-height:32px;
+    font-size:14px;
+}
+.identityCardMesssage .starLevel .personalStar{
+    width:85px;
+    text-align: center;
+    line-height: 36px;
+    height:32px;
+    margin-right:10px;
+}
+.showStripe{
+    width:80px;
+    height:22px;
+    background:#ff9700;
+    margin-top:19px;
+    margin-left:1px;
+}
+.owner{
+    width:100%;
+    height:35px;
+    line-height:35px;
+    font-size:34px;
+    margin-top:21px;
+    font-weight:bold;
+}
+.ownerMessage{
+    width:1008px;
+    height:462px;
+
+    padding-left:16px;
+    overflow: hidden;
+}
+.enterprise{
+    width:100%;
+    height:24px;
+    font-size:14px;
+    color:#ff9600;
+    font-weight:bold;
+    line-height:24px;
+    margin-top:24px;
+
+}
+.enterprise .schoolAtLogo{
+    float:left;
+    width:22px;
+    height:24px;
+}
+.enterprise .ownerName{
+    padding:0 5px 0 6px;
+    font-size:18px;
+    line-height:24px;
+    height:24px;
+    float:left;
+    display:block;
+}
+.enterprise .schoolAcHelp{
+    margin-top:4px;
+    cursor:pointer;
+}
+.ownerMessage p{
+    width:100%;
+    height:42px;
+    line-height:42px;
+    font-size:16px;
+}
+.ownerMessage p .secondEn{
+    margin-left:7px;
+}
+.ownerMessage p.firstEn{
+    margin-top:6px;
+}
+.enterpriseIntroduce{
+    width:533px;
+    position:relative;
+
+}
+.enterpriseIntroduce .profile{
+    position:absolute;
+    width:72px;
+    top:15px;
+    left:0;
+}
+.enterpriseIntroduce .profileDetail{
+    width:455px;
+    padding-left:2px;
+    font-size:15px;
+    line-height: 20px;
+    text-align: justify;
+    margin-left:72px;
+    padding:15px 0px;
+}
+.enterpriseElegant{
+    width:533px;
+    height:111px;
+
+}
+.enterpriseElegant .profile{
+    width:72px;
+    height:103px;
+
+    padding-top:8px;
+}
+.enterpriseElegant .profileDetail{
+    width:457px;
+    height:103px;
+
+    font-size:15px;
+
+    padding-top:8px;
+
+}
+.enterpriseElegant .profileDetail div{
+    width:146px;
+    height:93px;
+    margin-right:9px;
+    background:black;
+}
+.enterpriseElegant .profileDetail div.lastP{
+    margin-right:0;
+}
+.showStripe1{
+    width:80px;
+    height:22px;
+    background:#ff9700;
+
+    margin-left:1px;
+}
+.historyCooperation{
+    width:100%;
+    height:36px;
+    line-height:36px;
+    font-size:36px;
+    font-weight:bold;
+    margin-top:25px;
+}
+.historyBox{
+    width:1024px;
+    height:672px;
+
+    margin-top:24px;
+}
+.historyBox .historyHead{
+    width:1024px;
+    height:48px;
+    background:#ff9700;
+}
+.historyBox .historyHead span{
+    display:block;
+    /*font-weight:bold;*/
+}
+.historyBox .historyHead .cooperationCom{
+    width:250px;
+    height:48px;
+    line-height: 48px;
+    text-align: center;
+    font-size:18px;
+
+}
+.historyBox .historyHead .cooperationLo{
+    width:300px;
+    height:48px;
+    text-align: center;
+    font-size:18px;
+    line-height: 48px;
+}
+.historyBox .historyHead .projectName{
+    width:120px;
+    height:48px;
+    text-align: center;
+    font-size:18px;
+    line-height: 48px;
+}
+.historyBox .historyHead .projectMoney{
+    width:236px;
+    height:48px;
+    text-align: center;
+    font-size:18px;
+    line-height: 48px;
+}
+.historyBox .historyHead .projectStar{
+    width:118px;
+    height:48px;
+    text-align: center;
+    font-size:18px;
+    line-height: 48px;
+}
+.historyBox .historyList{
+    width:1024px;
+    height:625px;
+
+}
+.historyBox .historyList .historyExample{
+    width:100%;
+    height:103px;
+    border-bottom:2px solid #efefef;
+    cursor:pointer;
+}
+.historyBox .historyList .historyExample span{
+    line-height:103px;
+    text-align:center;
+    height:103px;
+    font-size:14px;
+    /*font-weight:bold;*/
+}
+.historyBox .historyList .historyExample .companyName{
+    width:250px;
+
+
+}
+.historyBox .historyList .historyExample .companyLog{
+    width:300px;
+}
+.historyBox .historyList .historyExample .companyLog img{
+    margin-top:8px;
+}
+.historyBox .historyList .historyExample .companypName{
+    width:120px;
+}
+.historyBox .historyList .historyExample .companyMoney{
+    width:207px;
+    height:71px;
+    line-height:20px;
+    padding:13px 16px 16px 16px;
+    font-size:14px;
+    text-align: justify;
+}
+.historyBox .historyList .historyExample .starBox{
+    width:115px;
+}
+.historyBox .nextAndPrev{
+    width:100%;
+    height:162px;
+
+}
+.historyBox .nextAndPrev .npBox{
+    float:right;
+    width:255px;
+    height:34px;
+
+    margin-top:58px;
+}
+.historyBox .nextAndPrev .npBox .prev{
+    width:50px;
+    height:34px;
+    cursor:pointer;
+    margin-left:3px;
+}
+.historyBox .nextAndPrev .npBox .prev img{
+    margin-left:8px;
+}
+.historyBox .nextAndPrev .npBox .prev img.prePage2{
+    display:none;
+}
+.historyBox .nextAndPrev .npBox .numberBox{
+    width:148px;
+    height:34px;
+
+    line-height:34px;
+    font-size:14px;
+    font-weight:bold;
+
+}
+.historyBox .nextAndPrev .npBox .numberBox span{
+    display:block;
+    float:left;
+    height:34px;
+    padding:0 10px;
+    cursor:pointer;
+}
+.historyBox .nextAndPrev .npBox .numberBox span.one{
+    color:#ff9501;
+}
+.historyBox .nextAndPrev .npBox .next{
+    width:50px;
+    height:34px;
+    cursor:pointer;
+    margin-right:3px;
+}
+.historyBox .nextAndPrev .npBox .next img{
+    margin-left:8px;
+}
+.historyBox .nextAndPrev .npBox .next img.nextPage2{
+    display:none;
+}
+
+
+
+.showStripe2{
+    width:80px;
+    height:22px;
+    background:#ff9700;
+
+    margin-left:1px;
+}
+.commentHead{
+    width:100%;
+    height:64px;
+    margin-top:10px;
+
+}
+.commentHead h3{
+    width:165px;
+    height:65px;
+    line-height: 65px;
+    font-size:34px;
+}
+.commentHead .number{
+    width:105px;
+    height:65px;
+    text-align:center;
+    line-height:80px;
+    font-size:18px;
+}
+.commentBox{
+    width:1024px;
+
+    height:385px;
+
+}
+.commentExample{
+    width:1024px;
+    height:92px;
+    background:#fff0d9;
+    margin-bottom:5px;
+}
+.commentExample .commentBox{
+    width:800px;
+    height:92px;
+
+    padding-left:13px;
+}
+.commentExample .commentBox .star{
+    width:105px;
+    height:14px;
+
+    margin-top:8px;
+}
+.commentExample .commentBox .commentDe{
+    width:100%;
+    height:14px;
+    line-height:14px;
+    font-weight:bold;
+    font-size:14px;
+    margin-top:12px;
+}
+.commentDate{
+    width:126px;
+    height:9px;
+    margin-top:19px;
+    font-size:12px;
+    line-height:9px;
+    font-weight:bold;
+}
+.yearDate{
+    float:left;
+}
+.commentTime{
+    float:right;
+}
+.commentExample .commentSchool{
+    width:205px;
+    height:92px;
+
+    line-height:92px;
+
+    font-size:16px;
+    font-weight:bold;
+
+}
+
+
+.schollImg{
+    width:53px;
+    height:92px;
+
+}
+.schollImg img{
+    margin-top:36px;
+    margin-left:28px;
+}
+.schoolName{
+    width:151px;
+    height:92px;
+
+}
+
+
+.schoolnextAndPrev{
+    width:1024px;
+    height:116px;
+
+}
+
+
+.schoolnextAndPrev .npBox{
+    float:right;
+    width:255px;
+    height:34px;
+
+    margin-top:24px;
+}
+.schoolnextAndPrev .npBox .prev{
+    width:50px;
+    height:34px;
+    cursor:pointer;
+    margin-left:3px;
+}
+.schoolnextAndPrev .npBox .prev img{
+    margin-left:8px;
+}
+.schoolnextAndPrev .npBox .prev img.prePage2{
+    display:none;
+}
+.schoolnextAndPrev .npBox .numberBox{
+    width:148px;
+    height:34px;
+
+    line-height:34px;
+    font-size:14px;
+    font-weight:bold;
+
+}
+.schoolnextAndPrev .npBox .numberBox span{
+    display:block;
+    float:left;
+    height:34px;
+    padding:0 10px;
+    cursor:pointer;
+}
+.schoolnextAndPrev .npBox .numberBox span.one{
+    color:#ff9501;
+}
+.schoolnextAndPrev .npBox .next{
+    width:50px;
+    height:34px;
+    cursor:pointer;
+    margin-right:3px;
+}
+.schoolnextAndPrev .npBox .next img{
+    margin-left:8px;
+}
+.schoolnextAndPrev .npBox .next img.nextPage2{
+    display:none;
+}
+#nav{
+    display:block;
+}

@@ -1,0 +1,125 @@
+<extend name="Layout:index_base"/>
+<block name="css">
+    <link rel="stylesheet" href="/public/css/entertainmentTalents/entertainmentApplyDetail.css"></block>
+<block name="js">
+    <script src="/public/js/require/require.js" defer async="true" data-main='/public/js/entertainmentTalents/entertainmentApplyDetail.js'></script>
+</block>
+<block name="main">
+<div class="header"></div>
+<div class="personalIntroduceBox">
+   <div class="personalIntroduceW">
+       <div class="personalPictureBox">
+           <div class="personalLogo"></div>
+           <div class="personalName">{$row.real_name}</div>
+           <div class="personalAddress">
+               <span class="address">{$row.city_name}</span>
+           </div>
+       </div>
+       <div class="personalContent">
+           <div class="personalPrice personalI"><span class="personalIhead">价格:</span><span class="money">{$row.price}/场</span></div>
+           <div class="personalType personalI"><span class="personalIhead">类型:</span><span class="type">主持人</span></div>
+           <div class="personalHeight personalI"><span class="personalIhead">身高:</span><span class="height">175cm</span></div>
+           <div class="personalIntroduceDescribe">
+               <span class="personalIntroDesH">自我简介:</span>
+               <div class="personalIntrDetail">{$row.description}</div>
+           </div>
+       </div>
+   </div>
+</div>
+<div class="personalShowTabBox">
+    <div class="w">
+        <span class="personalShowTab visualTalentShow personalShowActive">形象才艺展示</span>
+        <span class="personalShowTab relativeCertificate">相关证书</span>
+        <span class="personalShowTab talentShowVideo">才艺视频链接</span>
+    </div>
+
+</div>
+<div class="personalShowTabChangeBox">
+    <div class="personalShowTabChange visualTalentShowTab">
+        <div class="visualTalentPictureShow">
+        	<volist name="row['company_img']" id="img">
+            <div class="visualTalentPictureBox">
+                <div class="PictureBox">
+                    <img src="{$img.img_path}" alt="">
+                </div>
+                <div class="personalDescribeBox">
+                    <h4>{$img.name}</h4>
+                    <div class="personalShowLogo"></div>
+                    <div class="personalDescribe"></div><!-- 简介 -->
+                </div>
+            </div>
+            </volist>
+        </div>
+        <div class="leaveMessageApply">
+            <span class="leaveMessageHead">留言申请：</span>
+            <textarea name="" id="inputLeaveMessage" placeholder="可输入20-100字。请仔细阅读活动详情，并且查看发布人信息及合作历史后留言申请。根据活动要求突出本社团团队优势，以及相关精彩案例。对方同意申请后将受到回执以及联系方式，未通过也将收到回执。"></textarea>
+        </div>
+        <p class="personalAttention">注: 所有活动只能申请一次。请仔细检查填写内容！本次申请需要消耗1颗贝壳币</p>
+        <div class="confirmButton">
+            <input type="button" class="confirmApply" value="确认申请">
+            <div class="pearlRemain">
+                <span class="pearlHead">贝壳币余额:</span>
+                <span class="pearlNumber">0</span>
+                <img class="personalHelp" src="/public/img/commercialActivity/Event%20Details-help.png" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="personalShowTabChange talentShowVideoTab">
+        <div class="personalLinkBox">
+            <div class="personalImgLink">
+                <div class="clickExamine">
+                    <div class="clickExamineHead">点击查看</div>
+                </div>
+                <div class="personalExplain">优酷视频个人主页</div>
+            </div>
+        </div>
+        <div class="leaveMessageApply">
+            <span class="leaveMessageHead">留言申请：</span>
+            <textarea name="" id="talentVideoInputLeaveMessage" placeholder="可输入20-100字。请仔细阅读活动详情，并且查看发布人信息及合作历史后留言申请。根据活动要求突出本社团团队优势，以及相关精彩案例。对方同意申请后将受到回执以及联系方式，未通过也将收到回执。"></textarea>
+        </div>
+        <p class="personalAttention">注: 所有活动只能申请一次。请仔细检查填写内容！本次申请需要消耗1颗贝壳币</p>
+        <div class="confirmButton">
+            <input type="button" class="confirmApply" value="确认申请">
+            <div class="pearlRemain">
+                <span class="pearlHead">贝壳币余额:</span>
+                <span class="pearlNumber">0</span>
+                <img class="personalHelp" src="/public/img/commercialActivity/Event%20Details-help.png" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="personalShowTabChange relativeCertificateTab">
+        <div class="talentShowPictureBox">
+            <dl class="talentShowP">
+                <dt class="talentShowImg"><img src="" alt=""></dt>
+                <dd class="talentShowHead">标题标题标题标题</dd>
+            </dl>
+            <dl class="talentShowP">
+                <dt class="talentShowImg"><img src="" alt=""></dt>
+                <dd class="talentShowHead">标题标题标题标题</dd>
+            </dl>
+            <dl class="talentShowP talentShowLast">
+                <dt class="talentShowImg"><img src="" alt=""></dt>
+                <dd class="talentShowHead">标题标题标题标题</dd>
+            </dl>
+        </div>
+        <div class="leaveMessageApply">
+            <span class="leaveMessageHead">留言申请：</span>
+            <textarea name="" id="talentInputLeaveMessage" placeholder="可输入20-100字。请仔细阅读活动详情，并且查看发布人信息及合作历史后留言申请。根据活动要求突出本社团团队优势，以及相关精彩案例。对方同意申请后将受到回执以及联系方式，未通过也将收到回执。"></textarea>
+        </div>
+        <p class="personalAttention">注: 所有活动只能申请一次。请仔细检查填写内容！本次申请需要消耗1颗贝壳币</p>
+        <div class="confirmButton">
+            <input type="button" class="confirmApply" value="确认申请">
+            <div class="pearlRemain">
+                <span class="pearlHead">贝壳币余额:</span>
+                <span class="pearlNumber">0</span>
+                <img class="personalHelp" src="/public/img/commercialActivity/Event%20Details-help.png" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+</block>
+
+
+
+</body>
+</html>

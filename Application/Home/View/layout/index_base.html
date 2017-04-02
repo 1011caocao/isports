@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>爱贝壳</title>
+    <link rel="shortcut icon" href="/public/logo.ico"/>
+    <link rel="bookmark" href="/public/logo.ico"/>
+</head>
+<link rel="stylesheet" href="/public/css/common/header.css" />
+<link rel="stylesheet" href="/public/css/common/footer.css" />
+<block name="css">
+</block>
+<block name="js">
+</block>
+<script>
+    (function(){
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        }
+        else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+<!--<script src="http://cdn.bootcss.com/html5shiv/r29/html5.js"></script>-->
+<script>
+    var scope = new Object();
+</script>
+<!--<link rel="stylesheet" href="/public/css/common/commonIE8.css" />-->
+<body>
+<header>
+
+    <div class="w_top">
+        <div class='top'>
+            <div class="login l">
+                <div class='address l'><span class='addressCity'></span></div>
+                <div class="help l"><a href='#' class="helpBox">帮助</a></div>
+                <div class="help l"><a href='#' class="helpBox">反馈</a></div>
+                <div class="help l"><a href='#' class="helpBox helpLast">投诉</a></div>
+            </div>
+            <div class="loginBox">
+                <div class="newsFind">
+                    <a href="" class='news'>消息</a>
+                    <a href="" class='find'>发现</a>
+                </div>
+                <div class="loginEnroll">
+                    <empty name="Think.session.USER.id">
+                        <div class="replaceBox">
+                            <img class='personalLogo' src="/public/img/index/default_personal_logo.png" alt="" />
+                            <a href="/login/login" class='Login'>登录</a>
+                            <a href="/login/enroll" class='Enroll'>注册</a>
+                        </div>
+                        <else />
+                        <div class="replaceBox slideDown">
+                            <img class="personalLogo" src="{$Think.session.USER.portrait}"/>
+                            <a class="dataUser" href="#">{$Think.session.USER.phone}</a>
+                        </div>
+                    </empty>
+                    <div class="personalTriangle"></div>
+                    <ul class="personalCenter">
+                        <li><a href="/user/index" class='personal'>个人中心</a></li>
+                        <li><a href="/businessCenter/myPublish">我的发布</a></li>
+                        <li><a href="/businessCenter/myApply">我的申请</a></li>
+                        <li><a href="/businessCenter/myResource">我的资源</a></li>
+                        <li><a href="/businessCenter/myart">我的演艺</a></li>
+                        <!--<li><a href="/businessCenter/drafts">草稿箱</a></li>-->
+                        <li><a href="#" class='exit'>退出</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class='w_nav'>
+
+        <div class="nav l">
+            <div class="logo upToIndex"></div>
+            <ul class="headNav">
+                <!-- 选中为class为mainFirstBorder -->
+                <li class='mainFirst'><a class='<?php if(strtolower(CONTROLLER_NAME)=="index"){echo "mainFirstBorder";}else{echo "borderActive";}?>' href="/">
+                    主页
+                </a>
+                </li>
+                <li><a class='<?php if(strtolower(CONTROLLER_NAME)=="business"){echo "mainFirstBorder";}else{echo "borderActive";}?>'  href="/business" >商业活动</a>
+
+                </li>
+                <li><a class='<?php if(strtolower(CONTROLLER_NAME)=="group"){echo "mainFirstBorder";}else{echo "borderActive";}?>'  href="/group" >校园活动</a>
+
+                </li>
+                <li><a class='<?php if(strtolower(CONTROLLER_NAME)=="resource"){echo "mainFirstBorder";}else{echo "borderActive";}?>'  href="/resource" >传媒资源</a>
+
+                </li>
+                <li><a class='<?php if(strtolower(CONTROLLER_NAME)=="art"){echo "mainFirstBorder";}else{echo "borderActive";}?>' href="/art"> 演艺人才</a> </li>
+                <!-- <li class='loveBei'><a  href="" class='loveBeike <?php if(strtolower(CONTROLLER_NAME)==""){echo "mainFirstBorder";}else{echo "borderActive";}?>' >爱贝壳</a></li> -->
+
+            </ul>
+        </div>
+        <div class='send_commend r'>
+            <a href='/businessCenter/publish' class='send'>发布</a>
+        </div>
+    </div>
+</header>
+<block name="main"></block>
+<footer>
+    <div class="pictureCropBox"></div>
+    <div class="pictureCrop">
+        <div class="container">
+            <div class="imageBox">
+                <div class="thumbBox"></div>
+                <div class="spinner" style="display: none"></div>
+            </div>
+            <div class="action">
+                <!-- <input type="file" id="file" style=" width: 200px">-->
+                <div class="new-contentarea tc"> <a href="javascript:void(0)" class="upload-img">
+                    <label for="upload-file">请先选择图片...</label>
+                </a>
+                    <input type="file" class="" name="upload-file" id="upload-file" />
+                </div>
+                <input type="button" id="btnCrop"   class="Btnsty_peyton" value="OK">
+                <input type="button" id="btnZoomIn" class="Btnsty_peyton" value="+"  >
+                <input type="button" id="btnZoomOut" class="Btnsty_peyton" value="-" >
+            </div>
+            <div class="cropped"></div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footerNav">
+            <ul class='footerNav1'>
+                <li><a href="/business/index">商业活动</a></li>
+                <li><a href="/group/index">校园活动</a></li>
+                <li><a href="/resource/index">传媒资源</a></li>
+                <li><a href="/art/index">演艺人才</a></li>
+                <li><a href="">关于我们</a></li>
+            </ul>
+            <div class="aboutBox">
+                <ul class="about">
+                    <li>贝壳网www.aicowry.com</li>
+                    <li>蜀ICP备16034784号-2</li>
+                    <li>成都山楂树科技有限公司</li>
+                </ul>
+            </div>
+            <div class="companyAddress">
+                <div class="AddressBox">
+                    <div class="l detailaddress">地址:成都市高新区天府三街219号腾讯大厦B座7-12</div>
+                    <div class="l contact">联系方式:13808140654</div>
+                </div>
+            </div>
+            <div class="slightly">
+                <img src="/public/img/common/QRcode.png" />
+            </div>
+        </div>
+    </div>
+</footer>
+<div id="nav">
+    <div class="planar lastBox">
+        <div class='online'>在线服务</div>
+        <img class='planarP' src='/public/img/common/services.png'/>
+    </div>
+    <div class="contact1 lastBox">
+        <img class='contactP' src="/public/img/common/QRsmall.png"/>
+    </div>
+    <div class="up lastBox">
+        <div class='return'>返回顶部</div>
+        <img class='upP' src="/public/img/common/returnTop.png" alt="" />
+    </div>
+    <div class="slightlyQR">
+        <img src="/public/img/common/QRcode.png" />
+    </div>
+    <div class="triangle"></div>
+</div>
+</body>
+<script>
+    scope.id = {$Think.session.USER.id|default='0'};
+    scope.commercialActivit_url = 'html/commercialActivity/commercialActivity.html';
+</script>
+<script src="/public/js/require/jquery.js"></script>
+<script src="/public/js/common/common.js"></script>
+</html>

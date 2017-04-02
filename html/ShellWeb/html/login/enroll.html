@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>注册</title>
+		<link rel="shortcut icon" href="../../logo.ico"/>
+		<link rel="bookmark" href="../../logo.ico"/>
+	</head>
+	<link rel="stylesheet" href="../../css/common/newHeader.css" />
+	<link rel="stylesheet" href="../../css/login/enroll.css" />
+	
+	<script type="text/javascript" src="../../js/require/require.js" defer async="true" data-main='../../js/login/enroll.js'></script>
+	<!--[if lt IE 9]>
+	<script src="http://cdn.bootcss.com/html5shiv/r29/html5.js"></script>
+  
+  	
+ <![endif]-->
+	<body>
+		<nav>
+			<div class="w">
+				<div class="logo l"><img src="../../img/login/log-in_02.png" /></div>
+				<h1 class='l'>注册新用户</h1>
+				<div class="toolBox r">
+					<div class="tool">
+						<a href='login.html'>已有账号,直接登录</a>
+					</div>
+				</div>
+			</div>
+		</nav>
+		<div class="header"></div>
+		<div class="content">
+			<div class="w">
+				<div class="enrollBox">
+					<h3>手机号注册</h3>
+					<div class="mainContent">
+						<div class="number">
+							<span class='about'>手机号</span>
+							<input type="text" class='input phoneNumber' placeholder="输入手机号" />
+							<div class="judge l">
+								<img class='correct' src="../../img/login/correct.png" />
+								<img class='error' src="../../img/login/error.png" />
+							</div>
+							<span class="warnning">请输入正确的手机号码</span>
+						</div>
+						<div class="upwn">
+							<span class='about'>密码</span>
+							<div class="inputBox">
+								<div class="upwnBox"><input type="password" class='input upwnNumber' placeholder="8-12位数字或字母及其组合" /></div>
+								<div class="showHide"><img src="../../img/common/hideLogo.png"/></div>
+							</div>
+							<div class="judge l">
+								<img class='correct' src="../../img/login/correct.png" />
+								<img class='error' src="../../img/login/error.png" />
+							</div>
+							<span class="warnning">请输入正确的密码</span>
+						</div>
+						<div class="confirmUpwn">
+							<span class='about'>确认密码</span>
+							<div class="inputBox">
+								<div class="upwnBox"><input type="password" class='input confirmNumber' placeholder="再次确认密码" /></div>
+								<div class='showHide'><img src="../../img/common/hideLogo.png"/></div>
+							</div>
+							<div class="judge l">
+								<img class='correct' src="../../img/login/correct.png" />
+								<img class='error' src="../../img/login/error.png" />
+							</div>
+							<span class="warnning">两次密码不一致</span>
+						</div>
+						<div class="authCode">
+							<span class='about'>验证码</span>
+							<input type="text" placeholder="输入验证码"/>
+							<button class='getCode'>获取验证码</button>
+							<span class="warnning">验证码错误</span>
+						</div>
+						<input class='confirmEnroll' type="button" value='确认' />
+						<div class="aboutBei">
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	</body>
+</html>

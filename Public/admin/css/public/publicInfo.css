@@ -1,0 +1,35 @@
+.container-fluid .row .detailHeading{
+	margin-top:0;
+}
+ .col-md-4{
+	padding-left:50px;
+	height:60px;
+	line-height:60px;
+	font-size:16px;
+}
+h5{
+	font-size:16px;
+}
+.page-header{
+	margin-top:20px;
+}
+.container-fluid .activityPublcity{
+	padding-left:65px;
+	padding-right:50px;
+	font-size:16px;
+	padding-bottom:10px;
+}
+.extraPadding{
+	padding-left:15px;
+}
+.panelExtra{
+	text-indent:15px;
+}
+.col-sm-6 .thumbnail img{
+	width:300px;
+	display:block;
+	height:180px;
+}
+.picturePadding{
+	padding-left:30px;
+}

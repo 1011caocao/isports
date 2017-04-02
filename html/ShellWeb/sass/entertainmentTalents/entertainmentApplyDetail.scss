@@ -1,0 +1,370 @@
+#nav{
+        display:block;
+}
+.personalIntroduceBox{
+    width:100%;
+    height:296px;
+    background:url(../../img/entertainmentTalents/background.jpg) no-repeat center;
+    background-size:100% 100%;
+    .personalIntroduceW{
+            width:1024px;
+            height:296px;
+            margin:0 auto;
+            .personalPictureBox{
+                width:180px;
+                height:296px;
+                float:left;
+                .personalLogo{
+                    width:180px;
+                    height:180px;
+                    background:yellowgreen;
+                    border-radius:90px;
+                    margin-top:17px;
+                }
+                .personalName{
+                    width:100%;
+                    height:45px;
+                    line-height:45px;
+                    text-align:center;
+                    font-size:30px;
+                    color:#fff;
+                    margin-top:4px;
+                }
+                .personalAddress{
+                    width:100%;
+                    height:30px;
+                    .address{
+                          display:block;
+                          float:left;
+                          margin-left:68px;
+                          padding-left:17px;
+                          background:url(../../img/common/business-Positioning.png) no-repeat;
+                          background-position: 0 5px;
+                          height:30px;
+                          font-size:14px;
+                          line-height:30px;
+                          color:#fff;
+                    }
+                }
+            }
+            .personalContent{
+                height:274px;
+                width:807px;
+                margin-top:23px;
+                float:left;
+                padding-left:37px;
+                .personalI{
+                    width:100%;
+                    heigth:42px;
+                    line-height:42px;
+                    color:#fff;
+                    font-size:20px;
+                    .personalIhead{
+                        display:block;
+                        width:72px;
+                        height:41px;
+                        float:left;
+                    }
+                }
+                .personalIntroduceDescribe{
+                    width:500px;
+                    margin-top:15px;
+                    position:relative;
+                    color:#fff;
+                    .personalIntroDesH{
+                        display:block;
+                        width:90px;
+                        font-size:18px;
+                        line-height:24px;
+                        height:24px;
+                        position:absolute;
+                        top:0;
+                        left:0;
+                    }
+                    .personalIntrDetail{
+                        width:400px;
+                        line-height:24px;
+                        font-size:14px;
+                        margin-left:90px;
+                    }
+                }
+            }
+    }
+
+}
+.personalShowTabBox{
+    width:100%;
+    height:52px;
+    background:#fff1dc;
+    .w{
+            width:1024px;
+            height:52px;
+            margin:0 auto;
+            .personalShowTab{
+                    display:block;
+                    width:330px;
+                    height:48px;
+                    line-height:48px;
+                    text-align:center;
+                    font-size:18px;
+                    letter-spacing: 2px;
+                    cursor:pointer;
+                    float:left;
+                    border-bottom:4px solid #fff1dc;
+            }
+            .relativeCertificate{
+                    margin-left:17px;
+            }
+            .talentShowVideo{
+                    margin-left:17px;
+            }
+            .personalShowActive{
+                    border-bottom:3px solid #ff9700;
+                    color:#ff9700;
+            }
+    }
+}
+.personalShowTabChangeBox{
+        width:1024px;
+        height:567px;
+        margin:0 auto;
+        overflow: hidden;
+        .personalShowTabChange{
+                width:1024px;
+                height:567px;
+
+        }
+        .visualTalentShowTab{
+                margin-top:19px;
+                .visualTalentPictureShow{
+                        width:1024px;
+                        height:329px;
+                        .visualTalentPictureBox{
+                                width:330px;
+                                height:329px;
+                                float:left;
+                                margin-right:17px;
+                                .PictureBox{
+                                        width:330px;
+                                        height:200px;
+                                        background:#ff9700;
+                                        img{
+
+                                        }
+                                }
+                                .personalDescribeBox{
+                                        width:314px;
+                                        height:129px;
+                                        padding:0 8px;
+                                        h4{
+                                                width:100%;
+                                                height:34px;
+                                                line-height:34px;
+                                                font-size:18px;
+                                                letter-spacing:1px;
+                                        }
+                                        .personalShowLogo{
+                                                width:36px;
+                                                height:4px;
+                                                background:#ff9700;
+                                                margin-top:1px;
+                                        }
+                                        .personalDescribe{
+                                                width:100%;
+                                                line-height:24px;
+                                                font-size:14px;
+                                                margin-top:6px;
+                                                letter-spacing:1px;
+                                        }
+                                }
+
+                        }
+                        .visualTalentLast{
+                                margin-right:0;
+                         }
+                }
+
+        }
+        .talentShowVideoTab{
+                display:none;
+                .personalLinkBox{
+                    width:100%;
+                    height:280px;
+                    .personalImgLink{
+                          width:213px;
+                          height:280px;
+                          overflow: hidden;
+                          .clickExamine{
+                                width:174px;
+                                height:174px;
+                                margin-top:28px;
+                                margin-left:19px;
+                                overflow: hidden;
+                                background:#363531;
+                                .clickExamineHead{
+                                      width:100%;
+                                      height:32px;
+                                      line-height:32px;
+                                      text-align:center;
+                                      color:#fff;
+                                      font-size:18px;
+                                      cursor:pointer;
+                                      letter-spacing:1px;
+                                      margin-top:106px;
+                                }
+                          }
+                    }
+                    .personalExplain{
+                          width:100%;
+                          height:34px;
+                          line-height:34px;
+                          text-align:center;
+                          font-size:14px;
+                          color:#303030;
+                          letter-spacing: 1px;
+                    }
+                }
+        }
+        .relativeCertificateTab{
+                display:none;
+                height:548px;
+                padding-top:19px;
+                .talentShowPictureBox{
+                        width:1024px;
+                        height:286px;
+                        .talentShowP{
+                                width:330px;
+                                height:286px;
+                                float:left;
+                                margin-right:17px;
+                                .talentShowImg{
+                                        width:100%;
+                                        height:200px;
+                                        background:#ff9700;
+                                        img{
+
+                                        }
+                                }
+                                .talentShowHead{
+                                        width:323px;
+                                        height:86px;
+                                        line-height:34px;
+                                        padding-left:7px;
+                                        font-size:18px;
+                                        font-weight:bold;
+                                        letter-spacing:1px;
+                                }
+                        }
+                        .talentShowLast{
+                                margin-right:0;
+                        }
+                }
+
+        }
+}
+
+
+
+.leaveMessageApply{
+      width:1016px;
+      height:82px;
+      padding-left:8px;
+      .leaveMessageHead{
+            width:82px;
+            height:82px;
+            font-size:14px;
+            line-height:14px;
+            float:left;
+      }
+      #inputLeaveMessage{
+            display:block;
+            float:left;
+            width:607px;
+            height:48px;
+            border-radius:6px;
+            outline:none;
+            padding:14px 20px;
+            line-height:20px;
+            font-family:'Microsoft Yahei','Arial','Helvetica','sans-self';
+            resize:none;
+      }
+      #talentInputLeaveMessage{
+            display:block;
+            float:left;
+            width:607px;
+            height:48px;
+            border-radius:6px;
+            outline:none;
+            padding:14px 20px;
+            line-height:20px;
+            font-family:'Microsoft Yahei','Arial','Helvetica','sans-self';
+            resize:none;
+      }
+      #talentVideoInputLeaveMessage{
+            display:block;
+            float:left;
+            width:607px;
+            height:48px;
+            border-radius:6px;
+            outline:none;
+            padding:14px 20px;
+            line-height:20px;
+            font-family:'Microsoft Yahei','Arial','Helvetica','sans-self';
+            resize:none;
+      }
+}
+.personalAttention{
+        height:38px;
+        line-height:38px;
+        padding-left:11px;
+        font-size:14px;
+        color:#ff9700;
+        letter-spacing:1px;
+}
+.confirmButton{
+      width:1011px;
+      height:66px;
+      padding-left:13px;
+      .confirmApply{
+            display:block;
+            float:left;
+            width:280px;
+            height:66px;
+            background:#ff9700;
+            border-radius:6px;
+            font-size:30px;
+            color:#fff;
+            font-family:'Microsoft Yahei','Arial','Helvetica','sans-self';
+            outline:none;
+            cursor:pointer;
+      }
+  .pearlRemain{
+        float:left;
+        padding:0 15px;
+        height:16px;
+        margin-top:48px;
+        .pearlHead{
+              width:67px;
+              display:block;
+              float:left;
+              height:16px;
+              font-size:14px;
+              line-height:20px;
+        }
+        .pearlNumber{
+              display:block;
+              float:left;
+              padding:0 8px;
+              line-height:20px;
+              text-align:center;
+              font-size:14px;
+              color:#ff9700;
+        }
+        .personalHelp{
+              display:block;
+              float:left;
+              width:16px;
+              height:16px;
+        }
+  }
+}

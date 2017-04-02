@@ -1,0 +1,220 @@
+/*---------------------header--------------------------------*/
+header,nav,footer,div,h1,h2,h3,h4,h5,a,p,span,img,button,body,div,ul,li,img,dt,dd,dl,a,p,h1,h2,h3,h4,h5,h6,input,span{
+	padding:0;margin:0;border:0;list-style:none;
+}
+article,aside,dialog,footer,header,section,footer,nav,figure,menu{display:block}
+
+.l{float:left}
+.r{
+	float:right;
+}
+body{
+	font-family:'Microsoft Yahei','Arial','Helvetica','sans-self';
+}
+nav{
+	
+	width:100%;
+	height:130px;
+	background:#ff9700;
+	position: fixed;
+	z-index: 1;
+	box-shadow:0 0 18px rgba(51,51,51,0.1); /*底边阴影*/ 
+}
+nav .w{
+	width:1024px;
+	height:130px;
+	margin:0 auto;
+}
+nav .w .logo{
+	width:190px;
+	height:130px;
+}
+.header{
+	width:100%;
+	height:130px;
+}
+nav .w .logo img{
+	width:100%;
+	height:100%;
+}
+nav .w h1{
+	padding:0 30px;
+	height:130px;
+	letter-spacing: 4px;
+	font-size:46px;
+	line-height:130px;
+	text-align: center;
+	color:#fff;
+}
+nav .w .toolBox{
+	
+	height:130px;
+	margin-right:28px;
+}
+nav .w .toolBox .tool{
+	width:100%;
+	height:18px;
+	
+	margin-top:56px;
+}
+nav .w .toolBox .tool a{
+	width:100%;
+	height:18px;
+	
+	display:block;
+	text-align: center;
+	line-height:18px;
+	font-size:18px;
+	color:#fff;
+	text-decoration: none;
+}
+
+.content{
+	width:100%;
+	height:948px;
+	background:#f3f3f3;
+}
+.content .w{
+	width:1024px;
+	height:948px;
+	background:url(/public/img/login/login-background_05.png) no-repeat;
+	background-position:0 73px;
+	margin:0 auto;
+	/*overflow: hidden;*/
+}
+.content .w .loginBox{
+	float:right;
+	width:468px;
+	height:450px;
+	background:#fff;
+	margin-top:81px;
+	box-shadow:-25px 0 25px rgba(0,0,0,0.03), /*左边阴影*/  
+    25px 0 25px rgba(0,0,0,0.03), /*右边阴影*/  
+    0 -25px 25px rgba(0,0,0,0.03), /*顶部阴影*/  
+    0 25px 25px rgba(0,0,0,0.03); /*底边阴影*/  
+    position:relative;
+}
+.reminder{
+	position:absolute;
+	width:300px;
+	height:40px;
+	display:none;
+	top:67px;
+	left:88px;
+	font-size:14px;
+	line-height:40px;
+	text-align: center;
+	color:#ff0000;
+}
+.content .w .loginBox h3{
+	width:100%;
+	height:59px;
+	border-bottom:3px solid #fed699;
+	font-size:26px;
+	color:#ff9700;
+	line-height:59px;
+	text-indent:19px;
+	letter-spacing: 2px;
+}
+.content .w .loginBox .mainCOntent{
+	width:356px;
+	height:337px;
+	
+	/*padding:52px 18px 0 18px;*/
+	padding:52px 38px 0 55px;
+}
+.content .w .loginBox .mainCOntent .phone{
+	width:100%;
+	height:40px;
+	border:2px solid #e6e6e6;
+	display:block;
+	outline:none;
+	border-radius:6px;
+	font-size:14px;
+	color:#bbbbbb;
+	text-indent:10px;
+	line-height:40px;
+	font-family: "微软雅黑";
+}
+.content .w .loginBox .mainCOntent .upwn{
+	width:100%;
+	height:40px;
+	border:2px solid #e6e6e6;
+	display:block;
+	outline:none;
+	border-radius:6px;
+	font-size:14px;
+	color:#bbbbbb;
+	text-indent:10px;
+	margin-top:29px;
+	line-height:40px;
+	font-family: "微软雅黑";
+}
+.content .w .loginBox .mainCOntent .nextBox{
+	width:100%;
+	height:19px;
+	margin-top:14px;
+	font-size:16px;
+	color:#555555;
+}
+.content .w .loginBox .mainCOntent .nextBox .loginBox{
+	width:133px;
+	height:19px;
+	float:left;
+}
+.content .w .loginBox .mainCOntent .nextBox .automate{
+	width:18px;
+	height:19px;
+	display:block;
+	border-radius:6px;
+	margin-right:12px;
+	margin-top:1px;
+}
+.content .w .loginBox .mainCOntent .nextBox .nextAuto{
+	display:block;
+	height:19px;
+	line-height:19px;
+	font-size:14px;
+}
+.content .w .loginBox .mainCOntent .nextBox .forget{
+	float:right;
+	display:block;
+	height:19px;
+	line-height:19px;
+	font-size:14px;
+	text-decoration: none;
+}
+.content .w .loginBox .mainCOntent .nextBox a{
+	color:#555555;
+}
+#login{
+	width:100%;
+	height:46px;
+	display:block;
+	margin-top:31px;
+	background:#ff9700;
+	border-radius:6px;
+	font-size:26px;
+	outline: none;
+	cursor:pointer;
+	color:#fff;
+	padding-left:40px;
+	letter-spacing: 40px;
+	font-family: "微软雅黑";
+}
+#login:hover{
+	background:#f58a00;
+}
+.content .w .loginBox .mainCOntent .new{
+	width:100%;
+	height:16px;
+	
+	margin-top:11px;
+	font-size:16px;
+	line-height:16px;
+}
+.content .w .loginBox .mainCOntent .new a
+{
+	color:#55afed;
+	text-decoration: none;
+}

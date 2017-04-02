@@ -1,0 +1,174 @@
+.content{
+	width:100%;
+	height:950px;
+	background:#f3f3f3;
+}
+
+.content .w{
+	width:1024px;
+	height:950px;
+	
+	margin:0 auto;
+}
+.content .w .enrollBox{
+	width:574px;
+	height:535px;
+	float:right;
+	margin-top:80px;
+	background:#fff;
+	padding:0 9px;
+	box-shadow:-25px 0 25px rgba(0,0,0,0.03), /*左边阴影*/  
+    25px 0 25px rgba(0,0,0,0.03), /*右边阴影*/  
+    0 -25px 25px rgba(0,0,0,0.03), /*顶部阴影*/  
+    0 25px 25px rgba(0,0,0,0.03); /*底边阴影*/  
+}
+.content .w .enrollBox h3{
+	width:100%;
+	height:58px;
+	border-bottom:3px solid #ff9700;
+	font-size:26px;
+	line-height:58px;
+	color:#ff9700;
+	text-indent:17px;
+}
+.content .w .enrollBox .mainContent{
+	width:494px;
+	height:422px;
+	
+	padding:51px 0 0 65px;
+}
+.content .w .enrollBox .mainContent .number{
+	width:100%;
+	height:46px;
+	position:relative;
+}
+.warnning{
+	position:absolute;
+	bottom:-18px;
+	left:130px;
+	font-size:12px;
+	color:red;
+	display:none;
+}
+.content .w .enrollBox .mainContent .about{
+	width:97px;
+	height:46px;
+	display:block;
+	float:left;
+	font-size:20px;
+	color:#202020;
+	text-align:right;
+	line-height:46px;
+	margin-right:22px;
+}
+.content .w .enrollBox .mainContent .input{
+	display:block;
+	float:left;
+	width:310px;
+	height:40px;
+	border-radius:6px ;
+	border:2px solid #e6e6e6;
+	font-size:14px;
+	text-indent:10px;
+	outline:none;
+	line-height:40px;
+	font-family:"微软雅黑";
+}
+.content .w .enrollBox .mainContent .upwn{
+	width:100%;
+	height:46px;
+	margin-top:28px;
+	position:relative;
+}
+.content .w .enrollBox .mainContent .confirmUpwn{
+	width:100%;
+	height:46px;
+	margin-top:28px;
+	position:relative;
+}
+.content .w .enrollBox .mainContent .authCode{
+	width:100%;
+	height:46px;
+	margin-top:28px;
+	position:relative;
+}
+.content .w .enrollBox .mainContent .authCode input{
+	float:left;
+	width:184px;
+	height:40px;
+	display:block;
+	border-radius:6px;
+	border:2px solid #e6e6e6;
+	line-height:40px;
+	font-family:"微软雅黑";
+	font-size:14px;
+	text-indent:10px;
+	outline:none;
+}
+.content .w .enrollBox .mainContent .authCode .getCode{
+	width:101px;
+	height:46px;
+	background:#ff9700;
+	border-radius:6px;
+	float:left;
+	color:#fff;
+	font-size:16px;
+	margin-left:22px;
+	outline:none;
+	cursor:pointer;
+	font-family: "微软雅黑";
+	letter-spacing: 1px;
+}
+.content .w .enrollBox .mainContent .authCode .getCode:hover{
+	background:#f58a00;
+}
+.content .w .enrollBox .mainContent .confirmEnroll{
+	width:427px;
+	height:45px;
+	border-radius:6px;
+	margin-top:39px;
+	outline:none;
+	background:#ff9700;
+	font-size:26px;
+	color:#fff;
+	cursor:pointer;
+	letter-spacing: 48px;
+	padding-left:48px;
+	font-family: "微软雅黑";
+}
+.content .w .enrollBox .mainContent .confirmEnroll:hover{
+	background:#f58a00;
+}
+.content .w .enrollBox .mainContent .aboutBei{
+	width:427px;
+	height:16px;
+	margin-top:8px;
+}
+.content .w .enrollBox .mainContent .aboutBei a{
+	float:right;
+	font-size:16px;
+	text-decoration: none;
+	color:#56afeb;
+}
+.inputBox{
+	position:relative;
+}
+.inputBox .showHide{
+	position:absolute;
+	top:15px;
+	right:70px;
+	cursor: pointer;
+}
+.judge{
+	height:100%;
+}
+.judge img{
+	margin-top:15px;
+	margin-left:20px;
+}
+.judge .correct{
+	display:none;
+}
+.judge .error{
+	display:none;
+}

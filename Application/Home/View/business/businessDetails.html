@@ -1,0 +1,100 @@
+<extend name="Layout:index_base"/>
+<block name="css">
+	<link rel="stylesheet" href="/public/css/commercialActivity/commercialActivity.css" />
+</block>
+<block name="js">
+	<script src="/public/js/require/require.js" defer async="true" data-main='/public/js/commercialActivity/commercialActivity'></script>
+</block>
+<block name="main">
+		<div class="header"></div>
+		<div class="content">
+			<div class="w">
+				<div class="left l">
+					<h2>{$row.name}</h2>
+					<div class="activityAbout">
+						<span class='l actDate'>发布时间:<span class="actDateNew">{$row.add_time|date='Y-m-d',###}</span></span>
+						<span class='l actTime'>浏览次数：<span class='actNumber'>{$row.read_total}次</span></span>
+						<span class='r actCompany'><a href='../commercialActivity/companyMessage.html'>{$row.company_name}</a></span>
+					</div>
+					<div class="activityDetail">
+						<div class="type">
+							<span class="actType l">活动类型：{$row.activity_name}</span>
+							<span class="deadLine l">
+								申请期限：
+								<span class="typeLeft">{$row.apply_start_time|date="Y.m.d",###}-{$row.apply_end_time|date="Y.m.d",###}</span>
+							</span>
+						</div>
+						<div class="type">
+							<span class="actType l">活动预算：{$row.money}元</span>
+							<span class="deadLine l">
+								活动时间：
+								<span class="typeLeft">{$row.activity_start_time|date="Y.m.d",###}-{$row.activity_end_time|date="Y.m.d",###}</span>
+							</span>
+						</div>
+						<div class="type">
+							<span class="actType l">预付比例：{$row.prepay_ratio}%</span>
+							<span class="deadLine l">
+								活动地点：
+								<span class="typeLeft"><if condition="$row['province_name']" >{$row.province_name}{$row.city_name}{$row.county_name}<else /> 全国不限</if></span>
+							</span>
+						</div>
+					</div>
+					<div class="contentDetail">
+						<div class="actDetail">
+							<p class='first'>活动学校：{$row.school_name}</p>
+							<p>学校规模：{$row.school_size}</p>
+							<p>人气要求：{$row.popular}人</p>
+							<p>活动申请名额：{$row.apply_total}</p>
+							<p>活动宣传方式：{$row.campaign_name}</p>
+							<p>验收方式：{$row.check_name}</p>
+							<p>已申请人数：{$row.apply_ing}</p>
+							<p>已成功申请人数：{$row.apply_success}</p>
+							<p>留言申请：</p>
+						</div>
+						<textarea class='extraMessage' name="apply_reason" placeholder="可输入20-100字。请仔细阅读活动详情，并且查看发布人信息及合作历史后留言申请。根据活动要求突出本社团团队优势，以及相关精彩案例。对方同意申请后将收到回执以及联系方式，未通过也将收到回执。
+"></textarea>
+						<p class='attention'>注：所有活动只能申请一次，请仔细检查留言内容哦！</p>
+						<div class="ApplyBox">
+							<button id='Apply' value="{$row.id}">确认申请</button>
+							<div class="pearlBox">
+								<span class="pearlBoxHead">贝壳币余额:</span>
+								<span class="pearlBoxNumber">{$row.icowry_coin}</span>
+								 <a href="#" class="pearlBoxHelp" ></a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="right r">
+                    <div class="publisherMessageBox">
+                        <div class="publisherMessageLgo">
+                            <div class="pMLogoImg">
+                                <img src="{$row.portrait}" alt="">
+                            </div>
+                            <p class="pMCompanyName">{$row.company_name}</p>
+                        </div>
+                        <a href="#" class="checkOutPublisherMessage">
+                            <span class="ckPMHead">查看发布人信息</span>
+                            <img class="ckPMImg" src="/public/img/commercialActivity/Next%20page2.png" alt="">
+                        </a>
+                    </div>
+				</div>
+			</div>
+		</div>
+<script type="text/javascript">
+	scope.url = '/business/businessApplyAjax';
+</script>
+</block><!--
+		<div class="popBox">
+		</div>
+		 <div id="popUp">
+			<h2>抱歉</h2>
+			<p class='firstOne'>你当前没有认证传媒公司或校园社团身份，无法进行申请</p>
+			<p class='secondOne'>请选择一种身份后前去认证！</p>
+			<div class="buttonBxo">
+				<input class='l mediaCompany' type="button" value='传媒公司' />
+				<input class='r schoolClub' type="button" value='校园社团'/>
+			</div>
+			<div class="close"></div>
+		</div> -->
+	</body>
+</html>
